@@ -2,16 +2,25 @@
 <search>
   <entry>
     <title>test</title>
-    <url>/2020/09/23/test/</url>
+    <url>/2020/09/22/test/</url>
     <content><![CDATA[<p>Test</p>
 <a id="more"></a>
-<p><img src="/2020/09/23/test/0.png" alt="0x00"></p>
+<p><img src="/2020/09/22/test/0.png" alt="0x00"></p>
 ]]></content>
       <categories>
         <category>test</category>
       </categories>
       <tags>
         <tag>0.1</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>日志</title>
+    <url>/2020/09/24/%E6%97%A5%E5%BF%97/</url>
+    <content><![CDATA[<p>今日无事发生</p>
+]]></content>
+      <tags>
+        <tag>日常</tag>
       </tags>
   </entry>
 </search>
