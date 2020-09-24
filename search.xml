@@ -1,26 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>test</title>
-    <url>/2020/09/22/test/</url>
-    <content><![CDATA[<p>Test</p>
-<a id="more"></a>
-<p><img src="/2020/09/22/test/0.png" alt="0x00"></p>
+    <title>下载自定义v2ray规则文件</title>
+    <url>/2020/08/22/%E4%B8%8B%E8%BD%BD%E8%87%AA%E5%AE%9A%E4%B9%89v2ray%E8%A7%84%E5%88%99%E6%96%87%E4%BB%B6/</url>
+    <content><![CDATA[<ul>
+<li>使用国内源下载最新<a href="https://github.com/Loyalsoldier/v2ray-rules-dat">v2Ray规则文件</a></li>
+<li>修改Path.ini文件中的路径为v2ray可执行文件所在目录即可<ul>
+<li>示例<br><img src="/2020/08/22/%E4%B8%8B%E8%BD%BD%E8%87%AA%E5%AE%9A%E4%B9%89v2ray%E8%A7%84%E5%88%99%E6%96%87%E4%BB%B6/0.png" alt="0"></li>
+</ul>
+</li>
+</ul>
 ]]></content>
       <categories>
-        <category>test</category>
+        <category>杂项</category>
       </categories>
       <tags>
-        <tag>0.1</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>日志</title>
-    <url>/2020/09/24/%E6%97%A5%E5%BF%97/</url>
-    <content><![CDATA[<p>今日无事发生</p>
-]]></content>
-      <tags>
-        <tag>日常</tag>
+        <tag>Python</tag>
+        <tag>编程</tag>
+        <tag>V2Ray</tag>
       </tags>
   </entry>
 </search>
