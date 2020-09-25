@@ -1,6 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Win10LTSC安装MicrosoftStore</title>
+    <url>/2020/08/23/Win10LTSC%E5%AE%89%E8%A3%85MicrosoftStore/</url>
+    <content><![CDATA[<h2 id="Win10-LTSC-2019"><a href="#Win10-LTSC-2019" class="headerlink" title="Win10 LTSC 2019"></a>Win10 LTSC 2019</h2><h4 id="为-Windows-10-Enterprise-LTSC-增加应用商店"><a href="#为-Windows-10-Enterprise-LTSC-增加应用商店" class="headerlink" title="为 Windows 10 Enterprise LTSC 增加应用商店"></a>为 Windows 10 Enterprise LTSC 增加应用商店</h4><a id="more"></a>
+<p><a href="https://github.com/kkkgo/LTSC-Add-MicrosoftStore">项目地址</a></p>
+<p>下载后右键管理员权限运行Add-Store.cmd</p>
+]]></content>
+      <categories>
+        <category>杂项</category>
+      </categories>
+      <tags>
+        <tag>Windows</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>日志</title>
+    <url>/2020/09/25/%E6%97%A5%E5%BF%97/</url>
+    <content><![CDATA[<div id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
+  <div class="hbe-input-container">
+  <input type="password" id="hbePass" placeholder="" />
+    <label for="hbePass">输入密码即可查看</label>
+    <div class="bottom-line"></div>
+  </div>
+  <script id="hbeData" type="hbeData" data-hmacdigest="8ec8dc7e1cc3cd770415c82490e2b45708e75f422ef67e2c73442bf671cb4b99">5403d4a3fab95be1062d9538da01e27f</script>
+</div>
+<script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
+      <categories>
+        <category>日常</category>
+      </categories>
+  </entry>
+  <entry>
     <title>Python输入和输出</title>
     <url>/2020/09/25/Python%E8%BE%93%E5%85%A5%E5%92%8C%E8%BE%93%E5%87%BA/</url>
     <content><![CDATA[<h2 id="输出格式美化"><a href="#输出格式美化" class="headerlink" title="输出格式美化"></a>输出格式美化</h2><ul>
@@ -44,20 +74,6 @@
         <tag>Python</tag>
         <tag>编程</tag>
         <tag>V2Ray</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Win10LTSC安装MicrosoftStore</title>
-    <url>/2020/08/23/Win10LTSC%E5%AE%89%E8%A3%85MicrosoftStore/</url>
-    <content><![CDATA[<h2 id="Win10-LTSC-2019"><a href="#Win10-LTSC-2019" class="headerlink" title="Win10 LTSC 2019"></a>Win10 LTSC 2019</h2><h4 id="为-Windows-10-Enterprise-LTSC-增加应用商店"><a href="#为-Windows-10-Enterprise-LTSC-增加应用商店" class="headerlink" title="为 Windows 10 Enterprise LTSC 增加应用商店"></a>为 Windows 10 Enterprise LTSC 增加应用商店</h4><a id="more"></a>
-<p><a href="https://github.com/kkkgo/LTSC-Add-MicrosoftStore">项目地址</a></p>
-<p>下载后右键管理员权限运行Add-Store.cmd</p>
-]]></content>
-      <categories>
-        <category>杂项</category>
-      </categories>
-      <tags>
-        <tag>Windows</tag>
       </tags>
   </entry>
 </search>
