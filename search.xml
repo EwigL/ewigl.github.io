@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>Win10LTSC安装MicrosoftStore</title>
-    <url>/2020/09/25/Win10LTSC%E5%AE%89%E8%A3%85MicrosoftStore/</url>
+    <url>/2020/08/25/Win10LTSC%E5%AE%89%E8%A3%85MicrosoftStore/</url>
     <content><![CDATA[<h2 id="Win10-LTSC-2019"><a href="#Win10-LTSC-2019" class="headerlink" title="Win10 LTSC 2019"></a>Win10 LTSC 2019</h2><h4 id="为-Windows-10-Enterprise-LTSC-增加应用商店"><a href="#为-Windows-10-Enterprise-LTSC-增加应用商店" class="headerlink" title="为 Windows 10 Enterprise LTSC 增加应用商店"></a>为 Windows 10 Enterprise LTSC 增加应用商店</h4><a id="more"></a>
 <p><a href="https://github.com/kkkgo/LTSC-Add-MicrosoftStore">项目地址</a></p>
 <p>下载后右键管理员权限运行Add-Store.cmd</p>
@@ -12,6 +12,24 @@
       </categories>
       <tags>
         <tag>Windows</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python输入和输出</title>
+    <url>/2020/09/25/Python%E8%BE%93%E5%85%A5%E5%92%8C%E8%BE%93%E5%87%BA/</url>
+    <content><![CDATA[<h2 id="输出格式美化"><a href="#输出格式美化" class="headerlink" title="输出格式美化"></a>输出格式美化</h2><ul>
+<li>使用表达式语句和 print() 函数。</li>
+<li>使用文件对象的 write() 方法，标准输出文件可以用 sys.stdout.</li>
+<li>可以使用 str.format() 函数来格式化输出值。</li>
+<li>可以使用 repr() 或 str() 函数将输出的值转成字符串</li>
+</ul>
+]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>编程</tag>
       </tags>
   </entry>
   <entry>
