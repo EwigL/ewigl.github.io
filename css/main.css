@@ -2309,6 +2309,9 @@ pre code {
     transform: rotateZ(-30deg);
   }
 }
+.post-body a {
+  color: #428bca;
+}
 .category-all-page .category-all-title {
   text-align: center;
 }
