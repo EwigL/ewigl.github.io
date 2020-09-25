@@ -3,7 +3,7 @@
   <entry>
     <title>Win10LTSC安装MicrosoftStore</title>
     <url>/2020/08/Win10LTSC%E5%AE%89%E8%A3%85MicrosoftStore/</url>
-    <content><![CDATA[<h2 id="Win10-LTSC-2019"><a href="#Win10-LTSC-2019" class="headerlink" title="Win10 LTSC 2019"></a>Win10 LTSC 2019</h2><h4 id="为-Windows-10-Enterprise-LTSC-增加应用商店"><a href="#为-Windows-10-Enterprise-LTSC-增加应用商店" class="headerlink" title="为 Windows 10 Enterprise LTSC 增加应用商店"></a>为 Windows 10 Enterprise LTSC 增加应用商店</h4><a id="more"></a>
+    <content><![CDATA[<h4 id="为-Windows-10-Enterprise-LTSC-增加应用商店"><a href="#为-Windows-10-Enterprise-LTSC-增加应用商店" class="headerlink" title="为 Windows 10 Enterprise LTSC 增加应用商店"></a>为 Windows 10 Enterprise LTSC 增加应用商店</h4><a id="more"></a>
 <p><a href="https://github.com/kkkgo/LTSC-Add-MicrosoftStore">项目地址</a></p>
 <p>下载后右键管理员权限运行Add-Store.cmd</p>
 ]]></content>
