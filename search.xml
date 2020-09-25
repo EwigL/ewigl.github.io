@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>Python输入和输出</title>
-    <url>/2020/09/25/Python%E8%BE%93%E5%85%A5%E5%92%8C%E8%BE%93%E5%87%BA/</url>
+    <url>/2020/09/01/Python%E8%BE%93%E5%85%A5%E5%92%8C%E8%BE%93%E5%87%BA/</url>
     <content><![CDATA[<h2 id="输出格式美化"><a href="#输出格式美化" class="headerlink" title="输出格式美化"></a>输出格式美化</h2><ul>
 <li>使用表达式语句和 print() 函数。<a id="more"></a></li>
 <li>使用文件对象的 write() 方法，标准输出文件可以用 sys.stdout.</li>
@@ -10,7 +10,7 @@
 <li>可以使用 repr() 或 str() 函数将输出的值转成字符串</li>
 </ul>
 <blockquote>
-<p>示例：+号填充、右对齐、二十位、保留小数点后两位<br>    <img src="/2020/09/25/Python%E8%BE%93%E5%85%A5%E5%92%8C%E8%BE%93%E5%87%BA/0.png" alt="shili"></p>
+<p>示例：+号填充、右对齐、二十位、保留小数点后两位<br>    <img src="/2020/09/01/Python%E8%BE%93%E5%85%A5%E5%92%8C%E8%BE%93%E5%87%BA/0.png" alt="shili"></p>
 </blockquote>
 ]]></content>
       <categories>
