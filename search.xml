@@ -1,67 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Python输入和输出</title>
-    <url>/2020/09/Python%E8%BE%93%E5%85%A5%E5%92%8C%E8%BE%93%E5%87%BA/</url>
-    <content><![CDATA[<h2 id="输出格式美化"><a href="#输出格式美化" class="headerlink" title="输出格式美化"></a>输出格式美化</h2><ul>
-<li>使用表达式语句和 print() 函数。<a id="more"></a></li>
-<li>使用文件对象的 write() 方法，标准输出文件可以用 sys.stdout.</li>
-<li>可以使用 str.format() 函数来格式化输出值。</li>
-<li>可以使用 repr() 或 str() 函数将输出的值转成字符串</li>
-</ul>
-<blockquote>
-<p>示例：+号填充、右对齐、二十位、保留小数点后两位<br>    <img src="/2020/09/Python%E8%BE%93%E5%85%A5%E5%92%8C%E8%BE%93%E5%87%BA/0.png" alt="示例"></p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>笔记</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>编程</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>图书馆助手</title>
-    <url>/2020/09/%E5%9B%BE%E4%B9%A6%E9%A6%86%E5%8A%A9%E6%89%8B/</url>
-    <content><![CDATA[<ul>
-<li>利用 python 实现座位预约 Android app 的基本功能</li>
-<li>基于 request 等库发送、接收 HTTP 请求</li>
-<li>使用多线程<del>虽然没什么用…</del><a id="more"></a></li>
-<li><a href="https://github.com/EwigL/UniLibraryHelper">项目地址</a></li>
-</ul>
-<h2 id="数据抓包"><a href="#数据抓包" class="headerlink" title="数据抓包"></a>数据抓包</h2><p>&emsp;首先对应用网络请求进行抓包，因为应用未加固且请求未加密所以非常方便。<br><img src="/2020/09/%E5%9B%BE%E4%B9%A6%E9%A6%86%E5%8A%A9%E6%89%8B/0.png"><br>&emsp;根据抓取到的信息可以得到基本的 header，以及请求体。<br><img src="/2020/09/%E5%9B%BE%E4%B9%A6%E9%A6%86%E5%8A%A9%E6%89%8B/1.png"><br>&emsp;可以看出请求体格式为 json，因此需要引入对 json 进行处理的库。<br>&emsp;根据收到的 response 可以看出接收到的相应同样也为 json 格式。</p>
-<h2 id="代码编写"><a href="#代码编写" class="headerlink" title="代码编写"></a>代码编写</h2><p>&emsp;将各个功能分成了不同模块方便调试维护…</p>
-<h3 id="POST-请求相关"><a href="#POST-请求相关" class="headerlink" title="POST 请求相关"></a>POST 请求相关</h3><p>&emsp;部分代码：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># RequestsContent.py</span></span><br><span class="line"><span class="keyword">import</span> datetime <span class="comment">#请求头部分有时间戳相关数据</span></span><br><span class="line"><span class="keyword">import</span> time <span class="comment">#时间</span></span><br><span class="line"><span class="keyword">import</span> hashlib <span class="comment">#需要用到hash函数</span></span><br><span class="line"></span><br><span class="line">timeStamp = time.time() <span class="comment">#时间戳</span></span><br><span class="line">sec=(int(round(timeStamp * <span class="number">1000</span>))) <span class="comment">#精确到千位</span></span><br><span class="line"></span><br><span class="line">Cookie = <span class="string">&quot;123456789&quot;</span></span><br><span class="line">Auth = <span class="string">&quot;123456789&quot;</span></span><br><span class="line">Connection = <span class="string">&quot;Keep-Alive&quot;</span></span><br><span class="line">UA = <span class="string">&quot;User-Agent&quot;</span></span><br><span class="line"></span><br><span class="line">sign =<span class="string">&quot;sign&quot;</span></span><br><span class="line">sign2=<span class="string">&quot;sign2&quot;</span></span><br><span class="line"><span class="comment"># 各请求对header要求不一因此定义了两个方便调用</span></span><br><span class="line">Headers = &#123;<span class="string">&quot;Cookie&quot;</span>: Cookie, <span class="string">&quot;Authorization&quot;</span>: Auth, <span class="string">&quot;User-Agent&quot;</span>: UA&#125;</span><br><span class="line">aHeaders = &#123;<span class="string">&quot;Cookie&quot;</span>: Cookie, <span class="string">&quot;Authorization&quot;</span>: Auth,</span><br><span class="line">            <span class="string">&quot;User-Agent&quot;</span>: UA, <span class="string">&quot;sign&quot;</span>: sign+str(sec), <span class="string">&quot;sign2&quot;</span>: sign2,</span><br><span class="line">            <span class="string">&quot;Connection&quot;</span>: Connection&#125;</span><br><span class="line"></span><br><span class="line">url = <span class="string">&quot;htt://url&quot;</span></span><br><span class="line"><span class="comment"># 学号</span></span><br><span class="line">userPhysicalCard = <span class="string">&quot;88888888&quot;</span></span><br><span class="line"><span class="comment"># 场馆id</span></span><br><span class="line">libid = <span class="string">&quot;1&quot;</span></span><br><span class="line"><span class="string">&quot;&quot;&quot; RoomId:  ydsgafhbdbd &quot;&quot;&quot;</span></span><br><span class="line">roomId = <span class="string">&quot;gf&quot;</span></span><br><span class="line">seatNo = <span class="string">&quot;fdskjfds&quot;</span></span><br><span class="line">now_time = datetime.datetime.now()</span><br><span class="line">date = now_time + datetime.timedelta(days=<span class="number">1</span>)</span><br><span class="line">dateStr = date.strftime(<span class="string">&quot;%Y-%m-%d&quot;</span>)</span><br><span class="line"><span class="comment"># 起止时间</span></span><br><span class="line">starttime = <span class="string">&quot;06:30&quot;</span></span><br><span class="line">endtime = <span class="string">&quot;22.30&quot;</span></span><br></pre></td></tr></table></figure>
-<h3 id="获取场馆基本信息"><a href="#获取场馆基本信息" class="headerlink" title="获取场馆基本信息"></a>获取场馆基本信息</h3><p>&emsp;部分代码：<br><img src="/2020/09/%E5%9B%BE%E4%B9%A6%E9%A6%86%E5%8A%A9%E6%89%8B/3.png"><br>&emsp;可以使用json库进行json的格式化以及数据处理，输出基本场馆以及座位信息。</p>
-<p>&lt;待更新…&gt;</p>
-]]></content>
-      <categories>
-        <category>笔记</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>编程</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>日志</title>
-    <url>/2020/09/%E6%97%A5%E5%BF%97/</url>
-    <content><![CDATA[<div id="hexo-blog-encrypt" data-wpm="密码好像不对......" data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
-  <div class="hbe-input-container">
-  <input type="password" id="hbePass" placeholder="" />
-    <label for="hbePass">输入密码即可查看</label>
-    <div class="bottom-line"></div>
-  </div>
-  <script id="hbeData" type="hbeData" data-hmacdigest="8ec8dc7e1cc3cd770415c82490e2b45708e75f422ef67e2c73442bf671cb4b99">5403d4a3fab95be1062d9538da01e27f</script>
-</div>
-<script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
-      <categories>
-        <category>日常</category>
-      </categories>
-  </entry>
-  <entry>
     <title>Win10LTSC安装MicrosoftStore</title>
     <url>/2020/08/Win10LTSC%E5%AE%89%E8%A3%85MicrosoftStore/</url>
     <content><![CDATA[<h4 id="为-Windows-10-Enterprise-LTSC-增加应用商店"><a href="#为-Windows-10-Enterprise-LTSC-增加应用商店" class="headerlink" title="为 Windows 10 Enterprise LTSC 增加应用商店"></a>为 Windows 10 Enterprise LTSC 增加应用商店</h4><a id="more"></a>
@@ -99,5 +38,66 @@
         <tag>编程</tag>
         <tag>V2Ray</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>Python输入和输出</title>
+    <url>/2020/09/Python%E8%BE%93%E5%85%A5%E5%92%8C%E8%BE%93%E5%87%BA/</url>
+    <content><![CDATA[<h2 id="输出格式美化"><a href="#输出格式美化" class="headerlink" title="输出格式美化"></a>输出格式美化</h2><ul>
+<li>使用表达式语句和 print() 函数。<a id="more"></a></li>
+<li>使用文件对象的 write() 方法，标准输出文件可以用 sys.stdout.</li>
+<li>可以使用 str.format() 函数来格式化输出值。</li>
+<li>可以使用 repr() 或 str() 函数将输出的值转成字符串</li>
+</ul>
+<blockquote>
+<p>示例：+号填充、右对齐、二十位、保留小数点后两位<br>    <img src="/2020/09/Python%E8%BE%93%E5%85%A5%E5%92%8C%E8%BE%93%E5%87%BA/0.png" alt="示例"></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>编程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>图书馆助手</title>
+    <url>/2020/09/%E5%9B%BE%E4%B9%A6%E9%A6%86%E5%8A%A9%E6%89%8B/</url>
+    <content><![CDATA[<ul>
+<li>利用 python 实现座位预约 Android app 的基本功能</li>
+<li>基于 request 等库发送、接收 HTTP 请求</li>
+<li>使用多线程<del>虽然没什么用…</del><a id="more"></a></li>
+<li><a href="https://github.com/EwigL/UniLibraryHelper">项目地址</a></li>
+</ul>
+<h2 id="数据抓包"><a href="#数据抓包" class="headerlink" title="数据抓包"></a>数据抓包</h2><p>&emsp;首先对应用网络请求进行抓包，因为应用未加固且请求未加密所以非常方便。<br><img src="/2020/09/%E5%9B%BE%E4%B9%A6%E9%A6%86%E5%8A%A9%E6%89%8B/0.png"><br>&emsp;根据抓取到的信息可以得到基本的 header以及请求体，可以看出请求体格式为 json，因此需要引入对 json 进行处理的库。<br><img src="/2020/09/%E5%9B%BE%E4%B9%A6%E9%A6%86%E5%8A%A9%E6%89%8B/1.png"><br>&emsp;根据收到的 response 可以看出接收到的相应同样也为 json 格式。</p>
+<h2 id="代码编写"><a href="#代码编写" class="headerlink" title="代码编写"></a>代码编写</h2><p>&emsp;将各个功能分成了不同模块方便调试维护…</p>
+<h3 id="POST-请求相关"><a href="#POST-请求相关" class="headerlink" title="POST 请求相关"></a>POST 请求相关</h3><p>&emsp;部分代码：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># RequestsContent.py</span></span><br><span class="line"><span class="keyword">import</span> datetime <span class="comment">#请求头部分有时间戳相关数据</span></span><br><span class="line"><span class="keyword">import</span> time <span class="comment">#时间</span></span><br><span class="line"><span class="keyword">import</span> hashlib <span class="comment">#需要用到hash函数</span></span><br><span class="line"></span><br><span class="line">timeStamp = time.time() <span class="comment">#时间戳</span></span><br><span class="line">sec=(int(round(timeStamp * <span class="number">1000</span>))) <span class="comment">#精确到千位</span></span><br><span class="line"></span><br><span class="line">Cookie = <span class="string">&quot;123456789&quot;</span></span><br><span class="line">Auth = <span class="string">&quot;123456789&quot;</span></span><br><span class="line">Connection = <span class="string">&quot;Keep-Alive&quot;</span></span><br><span class="line">UA = <span class="string">&quot;User-Agent&quot;</span></span><br><span class="line"></span><br><span class="line">sign =<span class="string">&quot;sign&quot;</span></span><br><span class="line">sign2=<span class="string">&quot;sign2&quot;</span></span><br><span class="line"><span class="comment"># 各请求对header要求不一因此定义了两个方便调用</span></span><br><span class="line">Headers = &#123;<span class="string">&quot;Cookie&quot;</span>: Cookie, <span class="string">&quot;Authorization&quot;</span>: Auth, <span class="string">&quot;User-Agent&quot;</span>: UA&#125;</span><br><span class="line">aHeaders = &#123;<span class="string">&quot;Cookie&quot;</span>: Cookie, <span class="string">&quot;Authorization&quot;</span>: Auth,</span><br><span class="line">            <span class="string">&quot;User-Agent&quot;</span>: UA, <span class="string">&quot;sign&quot;</span>: sign+str(sec), <span class="string">&quot;sign2&quot;</span>: sign2,</span><br><span class="line">            <span class="string">&quot;Connection&quot;</span>: Connection&#125;</span><br><span class="line"></span><br><span class="line">url = <span class="string">&quot;htt://url&quot;</span></span><br><span class="line"><span class="comment"># 学号</span></span><br><span class="line">userPhysicalCard = <span class="string">&quot;88888888&quot;</span></span><br><span class="line"><span class="comment"># 场馆id</span></span><br><span class="line">libid = <span class="string">&quot;1&quot;</span></span><br><span class="line"><span class="string">&quot;&quot;&quot; RoomId:  ydsgafhbdbd &quot;&quot;&quot;</span></span><br><span class="line">roomId = <span class="string">&quot;gf&quot;</span></span><br><span class="line">seatNo = <span class="string">&quot;fdskjfds&quot;</span></span><br><span class="line">now_time = datetime.datetime.now()</span><br><span class="line">date = now_time + datetime.timedelta(days=<span class="number">1</span>)</span><br><span class="line">dateStr = date.strftime(<span class="string">&quot;%Y-%m-%d&quot;</span>)</span><br><span class="line"><span class="comment"># 起止时间</span></span><br><span class="line">starttime = <span class="string">&quot;06:30&quot;</span></span><br><span class="line">endtime = <span class="string">&quot;22.30&quot;</span></span><br></pre></td></tr></table></figure>
+<h3 id="获取场馆基本信息"><a href="#获取场馆基本信息" class="headerlink" title="获取场馆基本信息"></a>获取场馆基本信息</h3><p>&emsp;部分代码：<br><img src="/2020/09/%E5%9B%BE%E4%B9%A6%E9%A6%86%E5%8A%A9%E6%89%8B/3.png"><br>&emsp;可以使用json库进行json的格式化以及数据处理，输出基本场馆以及座位信息。</p>
+<p>&lt;待更新…&gt;</p>
+]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>编程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>日志</title>
+    <url>/2020/09/%E6%97%A5%E5%BF%97/</url>
+    <content><![CDATA[<div id="hexo-blog-encrypt" data-wpm="密码好像不对......" data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
+  <div class="hbe-input-container">
+  <input type="password" id="hbePass" placeholder="" />
+    <label for="hbePass">输入密码即可查看</label>
+    <div class="bottom-line"></div>
+  </div>
+  <script id="hbeData" type="hbeData" data-hmacdigest="8ec8dc7e1cc3cd770415c82490e2b45708e75f422ef67e2c73442bf671cb4b99">5403d4a3fab95be1062d9538da01e27f</script>
+</div>
+<script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
+      <categories>
+        <category>日常</category>
+      </categories>
   </entry>
 </search>
