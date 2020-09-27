@@ -1,41 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Java反编译INTERNAL_ERROR</title>
-    <url>/2020/09/Java%E5%8F%8D%E7%BC%96%E8%AF%91INTERNAL-ERROR/</url>
-    <content><![CDATA[<ul>
-<li><p>反编译时部分类遇到INTERNAL_ERROR(待解决)<a id="more"></a><br><img src="/2020/09/Java%E5%8F%8D%E7%BC%96%E8%AF%91INTERNAL-ERROR/0.png"></p>
-</li>
-<li><p>解决方案</p>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>笔记</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-        <tag>编程</tag>
-        <tag>反编译</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>图书馆助手</title>
-    <url>/2020/09/%E5%9B%BE%E4%B9%A6%E9%A6%86%E5%8A%A9%E6%89%8B/</url>
+    <url>/Blog/2020/09/%E5%9B%BE%E4%B9%A6%E9%A6%86%E5%8A%A9%E6%89%8B/</url>
     <content><![CDATA[<ul>
 <li>利用 python 实现座位预约 Android app 的基本功能</li>
 <li>基于 request 等库发送、接收 HTTP 请求</li>
 <li>使用多线程<del>虽然没什么用…</del><a id="more"></a></li>
 <li><a href="https://github.com/EwigL/UniLibraryHelper">项目地址</a></li>
 </ul>
-<h2 id="数据抓包"><a href="#数据抓包" class="headerlink" title="数据抓包"></a>数据抓包</h2><p>首先对应用网络请求进行抓包，应用未加固且请求未加密。根据抓取到的信息可以得到基本的 header 以及请求体，可以看出请求体格式为 json，因此需要引入对 json 进行处理的库。<br><img src="/2020/09/%E5%9B%BE%E4%B9%A6%E9%A6%86%E5%8A%A9%E6%89%8B/0.png"></p>
-<p>根据收到的 response 可以看出接收到的相应同样也为 json 格式。<br><img src="/2020/09/%E5%9B%BE%E4%B9%A6%E9%A6%86%E5%8A%A9%E6%89%8B/1.png"></p>
+<h2 id="数据抓包"><a href="#数据抓包" class="headerlink" title="数据抓包"></a>数据抓包</h2><p>首先对应用网络请求进行抓包，应用未加固且请求未加密。根据抓取到的信息可以得到基本的 header 以及请求体，可以看出请求体格式为 json，因此需要引入对 json 进行处理的库。<br><img src="/blog/2020/09/%E5%9B%BE%E4%B9%A6%E9%A6%86%E5%8A%A9%E6%89%8B/0.png"></p>
+<p>根据收到的 response 可以看出接收到的相应同样也为 json 格式。<br><img src="/blog/2020/09/%E5%9B%BE%E4%B9%A6%E9%A6%86%E5%8A%A9%E6%89%8B/1.png"></p>
 <h2 id="代码编写"><a href="#代码编写" class="headerlink" title="代码编写"></a>代码编写</h2><p>将各个功能分成了不同模块方便调试维护…</p>
 <h3 id="POST-请求相关"><a href="#POST-请求相关" class="headerlink" title="POST 请求相关"></a>POST 请求相关</h3><p>部分代码：</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># RequestsContent.py</span></span><br><span class="line"><span class="keyword">import</span> datetime <span class="comment">#请求头部分有时间戳相关数据</span></span><br><span class="line"><span class="keyword">import</span> time <span class="comment">#时间</span></span><br><span class="line"><span class="keyword">import</span> hashlib <span class="comment">#需要用到hash函数</span></span><br><span class="line"></span><br><span class="line">timeStamp = time.time() <span class="comment">#时间戳</span></span><br><span class="line">sec=(int(round(timeStamp * <span class="number">1000</span>))) <span class="comment">#精确到千位</span></span><br><span class="line"></span><br><span class="line">Cookie = <span class="string">&quot;123456789&quot;</span></span><br><span class="line">Auth = <span class="string">&quot;123456789&quot;</span></span><br><span class="line">Connection = <span class="string">&quot;Keep-Alive&quot;</span></span><br><span class="line">UA = <span class="string">&quot;User-Agent&quot;</span></span><br><span class="line"></span><br><span class="line">sign =<span class="string">&quot;sign&quot;</span></span><br><span class="line">sign2=<span class="string">&quot;sign2&quot;</span></span><br><span class="line"><span class="comment"># 各请求对header要求不一因此定义了两个方便调用</span></span><br><span class="line">Headers = &#123;<span class="string">&quot;Cookie&quot;</span>: Cookie, <span class="string">&quot;Authorization&quot;</span>: Auth, <span class="string">&quot;User-Agent&quot;</span>: UA&#125;</span><br><span class="line">aHeaders = &#123;<span class="string">&quot;Cookie&quot;</span>: Cookie, <span class="string">&quot;Authorization&quot;</span>: Auth,</span><br><span class="line">            <span class="string">&quot;User-Agent&quot;</span>: UA, <span class="string">&quot;sign&quot;</span>: sign+str(sec), <span class="string">&quot;sign2&quot;</span>: sign2,</span><br><span class="line">            <span class="string">&quot;Connection&quot;</span>: Connection&#125;</span><br><span class="line"></span><br><span class="line">url = <span class="string">&quot;htt://url&quot;</span></span><br><span class="line"><span class="comment"># 学号</span></span><br><span class="line">userPhysicalCard = <span class="string">&quot;88888888&quot;</span></span><br><span class="line"><span class="comment"># 场馆id</span></span><br><span class="line">libid = <span class="string">&quot;1&quot;</span></span><br><span class="line"><span class="string">&quot;&quot;&quot; RoomId:  ydsgafhbdbd &quot;&quot;&quot;</span></span><br><span class="line">roomId = <span class="string">&quot;gf&quot;</span></span><br><span class="line">seatNo = <span class="string">&quot;fdskjfds&quot;</span></span><br><span class="line">now_time = datetime.datetime.now()</span><br><span class="line">date = now_time + datetime.timedelta(days=<span class="number">1</span>)</span><br><span class="line">dateStr = date.strftime(<span class="string">&quot;%Y-%m-%d&quot;</span>)</span><br><span class="line"><span class="comment"># 起止时间</span></span><br><span class="line">starttime = <span class="string">&quot;06:30&quot;</span></span><br><span class="line">endtime = <span class="string">&quot;22.30&quot;</span></span><br></pre></td></tr></table></figure>
 
-<h3 id="获取场馆基本信息"><a href="#获取场馆基本信息" class="headerlink" title="获取场馆基本信息"></a>获取场馆基本信息</h3><p>部分代码：<br><img src="/2020/09/%E5%9B%BE%E4%B9%A6%E9%A6%86%E5%8A%A9%E6%89%8B/3.png"><br>可以使用 json 库进行 json 的格式化以及数据处理，输出基本场馆以及座位信息。</p>
-<h3 id="获取座位基本信息"><a href="#获取座位基本信息" class="headerlink" title="获取座位基本信息"></a><del>获取座位基本信息</del></h3><p><img src="/2020/09/%E5%9B%BE%E4%B9%A6%E9%A6%86%E5%8A%A9%E6%89%8B/4.png"></p>
+<h3 id="获取场馆基本信息"><a href="#获取场馆基本信息" class="headerlink" title="获取场馆基本信息"></a>获取场馆基本信息</h3><p>部分代码：<br><img src="/blog/2020/09/%E5%9B%BE%E4%B9%A6%E9%A6%86%E5%8A%A9%E6%89%8B/3.png"><br>可以使用 json 库进行 json 的格式化以及数据处理，输出基本场馆以及座位信息。</p>
+<h3 id="获取座位基本信息"><a href="#获取座位基本信息" class="headerlink" title="获取座位基本信息"></a><del>获取座位基本信息</del></h3><p><img src="/blog/2020/09/%E5%9B%BE%E4%B9%A6%E9%A6%86%E5%8A%A9%E6%89%8B/4.png"></p>
 <h3 id="登陆操作"><a href="#登陆操作" class="headerlink" title="登陆操作"></a><del>登陆操作</del></h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"><span class="keyword">import</span> RequestsContent <span class="keyword">as</span> RC</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">LOGIN</span>():</span></span><br><span class="line">    send_data = &#123;<span class="string">&quot;intf_code&quot;</span>: <span class="string">&quot;QRY_LOGIN&quot;</span>,</span><br><span class="line">                 <span class="string">&quot;params&quot;</span>: &#123;<span class="string">&quot;userPhysicalCard&quot;</span>: RC.userPhysicalCard, </span><br><span class="line">                 <span class="string">&quot;password&quot;</span>: RC.pwd, </span><br><span class="line">                 <span class="string">&quot;imei&quot;</span>: RC.imei, </span><br><span class="line">                 <span class="string">&quot;pushid&quot;</span>: <span class="string">&quot;123459879&quot;</span>, </span><br><span class="line">                 <span class="string">&quot;os&quot;</span>: <span class="string">&quot;android&quot;</span>, </span><br><span class="line">                 <span class="string">&quot;wmac&quot;</span>: RC.wmac, </span><br><span class="line">                 <span class="string">&quot;version&quot;</span>: <span class="string">&quot;2.8.8&quot;</span>, </span><br><span class="line">                 <span class="string">&quot;tversion&quot;</span>: RC.sec, </span><br><span class="line">                 <span class="string">&quot;md5username&quot;</span>: <span class="string">&quot;123456789&quot;</span>&#125;&#125;</span><br><span class="line"></span><br><span class="line">    res_data = requests.post(RC.url, headers=RC.aHeaders,</span><br><span class="line">                             data=json.dumps(send_data))</span><br><span class="line">    res_json = res_data.json()</span><br><span class="line">    print(json.dumps(res_json, indent=<span class="number">4</span>, separators=(<span class="string">&#x27;,&#x27;</span>, <span class="string">&#x27;:&#x27;</span>),ensure_ascii=<span class="literal">False</span>))</span><br><span class="line">    <span class="comment"># print(res_json[&quot;result_data&quot;][&quot;token&quot;])</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span>():</span></span><br><span class="line">    LOGIN()</span><br><span class="line">    <span class="keyword">return</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
 
 <h3 id="抢座-ToDo"><a href="#抢座-ToDo" class="headerlink" title="抢座(ToDo)"></a>抢座(ToDo)</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> RequestsContent <span class="keyword">as</span> RC</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">RequestSeat</span>():</span></span><br><span class="line">    send_data = &#123;<span class="string">&quot;intf_code&quot;</span>: <span class="string">&quot;UPD_PRE_SEAT&quot;</span>,</span><br><span class="line">                 <span class="string">&quot;params&quot;</span>: &#123;<span class="string">&quot;seatNo&quot;</span>: RC.seatNo,</span><br><span class="line">                            <span class="string">&quot;roomId&quot;</span>: RC.roomId,</span><br><span class="line">                            <span class="string">&quot;dateStr&quot;</span>: RC.dateStr,</span><br><span class="line">                            <span class="string">&quot;startHour&quot;</span>: RC.starttime,</span><br><span class="line">                            <span class="string">&quot;endHour&quot;</span>: RC.endtime,</span><br><span class="line">                            <span class="string">&quot;userPhysicalCard&quot;</span>: RC.userPhysicalCard,</span><br><span class="line">                            <span class="string">&quot;version&quot;</span>: <span class="string">&quot;2.8.8&quot;</span>&#125;&#125;</span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        res_data = requests.post(</span><br><span class="line">            RC.url, headers=RC.aHeaders, data=json.dumps(send_data))</span><br><span class="line">        print(res_data.status_code)</span><br><span class="line">        res_json = res_data.json()</span><br><span class="line">        print(json.dumps(res_json, indent=<span class="number">4</span>,</span><br><span class="line">                         separators=(<span class="string">&#x27;,&#x27;</span>, <span class="string">&#x27;:&#x27;</span>), ensure_ascii=<span class="literal">False</span>))</span><br><span class="line">    <span class="keyword">except</span>:</span><br><span class="line">        print(<span class="string">&quot;connection error&quot;</span>)</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;&quot;</span></span><br></pre></td></tr></table></figure>
@@ -47,13 +28,30 @@
         <category>笔记</category>
       </categories>
       <tags>
-        <tag>编程</tag>
         <tag>Python</tag>
       </tags>
   </entry>
   <entry>
+    <title>Java反编译INTERNAL_ERROR</title>
+    <url>/Blog/2020/09/Java%E5%8F%8D%E7%BC%96%E8%AF%91INTERNAL-ERROR/</url>
+    <content><![CDATA[<ul>
+<li><p>反编译时部分类遇到INTERNAL_ERROR(待解决)<a id="more"></a><br><img src="/blog/2020/09/Java%E5%8F%8D%E7%BC%96%E8%AF%91INTERNAL-ERROR/0.png"></p>
+</li>
+<li><p>解决方案</p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>问题</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>反编译</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Win10LTSC安装MicrosoftStore</title>
-    <url>/2020/08/Win10LTSC%E5%AE%89%E8%A3%85MicrosoftStore/</url>
+    <url>/Blog/2020/08/Win10LTSC%E5%AE%89%E8%A3%85MicrosoftStore/</url>
     <content><![CDATA[<h4 id="为-Windows-10-Enterprise-LTSC-增加应用商店"><a href="#为-Windows-10-Enterprise-LTSC-增加应用商店" class="headerlink" title="为 Windows 10 Enterprise LTSC 增加应用商店"></a>为 Windows 10 Enterprise LTSC 增加应用商店</h4><a id="more"></a>
 <p><a href="https://github.com/kkkgo/LTSC-Add-MicrosoftStore">项目地址</a></p>
 <p>下载后右键管理员权限运行Add-Store.cmd</p>
@@ -67,12 +65,12 @@
   </entry>
   <entry>
     <title>下载自定义v2ray规则文件</title>
-    <url>/2020/08/%E4%B8%8B%E8%BD%BD%E8%87%AA%E5%AE%9A%E4%B9%89v2ray%E8%A7%84%E5%88%99%E6%96%87%E4%BB%B6/</url>
+    <url>/Blog/2020/08/%E4%B8%8B%E8%BD%BD%E8%87%AA%E5%AE%9A%E4%B9%89v2ray%E8%A7%84%E5%88%99%E6%96%87%E4%BB%B6/</url>
     <content><![CDATA[<ul>
 <li>使用国内源下载最新<a href="https://github.com/Loyalsoldier/v2ray-rules-dat">v2Ray 规则文件</a><a id="more"></a></li>
 <li><a href="https://github.com/EwigL/download-v2ray-rules-dat">项目地址</a></li>
 <li>修改 Path.ini 文件中的路径为 v2ray 可执行文件所在目录即可<ul>
-<li>示例<br><img src="/2020/08/%E4%B8%8B%E8%BD%BD%E8%87%AA%E5%AE%9A%E4%B9%89v2ray%E8%A7%84%E5%88%99%E6%96%87%E4%BB%B6/0.png" alt="0"></li>
+<li>示例<br><img src="/blog/2020/08/%E4%B8%8B%E8%BD%BD%E8%87%AA%E5%AE%9A%E4%B9%89v2ray%E8%A7%84%E5%88%99%E6%96%87%E4%BB%B6/0.png" alt="0"></li>
 </ul>
 </li>
 </ul>
@@ -81,7 +79,6 @@
         <category>杂项</category>
       </categories>
       <tags>
-        <tag>编程</tag>
         <tag>Python</tag>
         <tag>V2Ray</tag>
       </tags>
