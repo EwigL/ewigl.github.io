@@ -1,5 +1,5 @@
 body {
-  background-color: #2F3242;
+  /* background-color: #2F3242; */
   background-color: #eeeeee;
 }
 svg {
@@ -21,10 +21,11 @@ svg {
   font-family: Roboto;
   font-weight: 300;
 }
-.message-box h1 {
+.message-box h1 .message-box p{
   font-size: 60px;
   line-height: 46px;
   margin-bottom: 40px;
+  color: black;
 }
 .buttons-con .action-link-wrap {
   margin-top: 40px;
