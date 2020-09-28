@@ -15,26 +15,6 @@
       </tags>
   </entry>
   <entry>
-    <title>下载自定义v2ray规则文件</title>
-    <url>/2020/08/%E4%B8%8B%E8%BD%BD%E8%87%AA%E5%AE%9A%E4%B9%89v2ray%E8%A7%84%E5%88%99%E6%96%87%E4%BB%B6/</url>
-    <content><![CDATA[<ul>
-<li>使用国内源下载最新<a href="https://github.com/Loyalsoldier/v2ray-rules-dat">v2Ray 规则文件</a><a id="more"></a></li>
-<li><a href="https://github.com/EwigL/download-v2ray-rules-dat">项目地址</a></li>
-<li>修改 Path.ini 文件中的路径为 v2ray 可执行文件所在目录即可<ul>
-<li>示例<br><img src="/2020/08/%E4%B8%8B%E8%BD%BD%E8%87%AA%E5%AE%9A%E4%B9%89v2ray%E8%A7%84%E5%88%99%E6%96%87%E4%BB%B6/0.png" alt="0"></li>
-</ul>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>杂项</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>V2Ray</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>图书馆助手</title>
     <url>/2020/09/%E5%9B%BE%E4%B9%A6%E9%A6%86%E5%8A%A9%E6%89%8B/</url>
     <content><![CDATA[<ul>
@@ -63,6 +43,26 @@
       </categories>
       <tags>
         <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>下载自定义v2ray规则文件</title>
+    <url>/2020/08/%E4%B8%8B%E8%BD%BD%E8%87%AA%E5%AE%9A%E4%B9%89v2ray%E8%A7%84%E5%88%99%E6%96%87%E4%BB%B6/</url>
+    <content><![CDATA[<ul>
+<li>使用国内源下载最新<a href="https://github.com/Loyalsoldier/v2ray-rules-dat">v2Ray 规则文件</a><a id="more"></a></li>
+<li><a href="https://github.com/EwigL/download-v2ray-rules-dat">项目地址</a></li>
+<li>修改 Path.ini 文件中的路径为 v2ray 可执行文件所在目录即可<ul>
+<li>示例<br><img src="/2020/08/%E4%B8%8B%E8%BD%BD%E8%87%AA%E5%AE%9A%E4%B9%89v2ray%E8%A7%84%E5%88%99%E6%96%87%E4%BB%B6/0.png" alt="0"></li>
+</ul>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>杂项</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>V2Ray</tag>
       </tags>
   </entry>
 </search>
