@@ -21,6 +21,31 @@
       </tags>
   </entry>
   <entry>
+    <title>偶然发现的某盘&quot;漏洞&quot;</title>
+    <url>/2020/10/%E5%81%B6%E7%84%B6%E5%8F%91%E7%8E%B0%E7%9A%84%E6%9F%90%E7%9B%98%E6%BC%8F%E6%B4%9E/</url>
+    <content><![CDATA[<ul>
+<li><p>偶然得到一个网盘链接但是没有密码<a id="more"></a><br><img src="/2020/10/%E5%81%B6%E7%84%B6%E5%8F%91%E7%8E%B0%E7%9A%84%E6%9F%90%E7%9B%98%E6%BC%8F%E6%B4%9E/0.png" alt="0"></p>
+</li>
+<li><p>习惯性的 f12，一眼就看到一个 fileview…这是明示<br><img src="/2020/10/%E5%81%B6%E7%84%B6%E5%8F%91%E7%8E%B0%E7%9A%84%E6%9F%90%E7%9B%98%E6%BC%8F%E6%B4%9E/3.png" alt="3"></p>
+</li>
+<li><p>展开，发现了一个 id 为 folder 的元素,而且还有两个链接<br><img src="/2020/10/%E5%81%B6%E7%84%B6%E5%8F%91%E7%8E%B0%E7%9A%84%E6%9F%90%E7%9B%98%E6%BC%8F%E6%B4%9E/1.png" alt="1"><br><img src="/2020/10/%E5%81%B6%E7%84%B6%E5%8F%91%E7%8E%B0%E7%9A%84%E6%9F%90%E7%9B%98%E6%BC%8F%E6%B4%9E/666.jpg" alt="666"></p>
+</li>
+<li><p>点击链接即可访问子文件夹<br><img src="/2020/10/%E5%81%B6%E7%84%B6%E5%8F%91%E7%8E%B0%E7%9A%84%E6%9F%90%E7%9B%98%E6%BC%8F%E6%B4%9E/2.png" alt="2"><br><img src="/2020/10/%E5%81%B6%E7%84%B6%E5%8F%91%E7%8E%B0%E7%9A%84%E6%9F%90%E7%9B%98%E6%BC%8F%E6%B4%9E/666.jpg" alt="666"></p>
+</li>
+<li><p>限制：只可以访问子文件夹以及子文件夹中的文件,无法访问分享根目录文件。</p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>web</tag>
+        <tag>前端</tag>
+        <tag>安全</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>图书馆助手</title>
     <url>/2020/09/%E5%9B%BE%E4%B9%A6%E9%A6%86%E5%8A%A9%E6%89%8B/</url>
     <content><![CDATA[<ul>
@@ -49,31 +74,6 @@
       </categories>
       <tags>
         <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>偶然发现的某盘&quot;漏洞&quot;</title>
-    <url>/2020/10/%E5%81%B6%E7%84%B6%E5%8F%91%E7%8E%B0%E7%9A%84%E6%9F%90%E7%9B%98%E6%BC%8F%E6%B4%9E/</url>
-    <content><![CDATA[<ul>
-<li><p>偶然得到一个网盘链接但是没有密码<a id="more"></a><br><img src="/2020/10/%E5%81%B6%E7%84%B6%E5%8F%91%E7%8E%B0%E7%9A%84%E6%9F%90%E7%9B%98%E6%BC%8F%E6%B4%9E/0.png" alt="0"></p>
-</li>
-<li><p>习惯性的 f12，一眼就看到一个 fileview…这是明示<br><img src="/2020/10/%E5%81%B6%E7%84%B6%E5%8F%91%E7%8E%B0%E7%9A%84%E6%9F%90%E7%9B%98%E6%BC%8F%E6%B4%9E/3.png" alt="3"></p>
-</li>
-<li><p>展开，发现了一个 id 为 folder 的元素,而且还有两个链接<br><img src="/2020/10/%E5%81%B6%E7%84%B6%E5%8F%91%E7%8E%B0%E7%9A%84%E6%9F%90%E7%9B%98%E6%BC%8F%E6%B4%9E/1.png" alt="1"><br><img src="/2020/10/%E5%81%B6%E7%84%B6%E5%8F%91%E7%8E%B0%E7%9A%84%E6%9F%90%E7%9B%98%E6%BC%8F%E6%B4%9E/666.jpg" alt="666"></p>
-</li>
-<li><p>点击链接即可访问子文件夹<br><img src="/2020/10/%E5%81%B6%E7%84%B6%E5%8F%91%E7%8E%B0%E7%9A%84%E6%9F%90%E7%9B%98%E6%BC%8F%E6%B4%9E/2.png" alt="2"><br><img src="/2020/10/%E5%81%B6%E7%84%B6%E5%8F%91%E7%8E%B0%E7%9A%84%E6%9F%90%E7%9B%98%E6%BC%8F%E6%B4%9E/666.jpg" alt="666"></p>
-</li>
-<li><p>限制：只可以访问子文件夹以及子文件夹中的文件,无法访问分享根目录文件。</p>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>笔记</category>
-      </categories>
-      <tags>
-        <tag>web</tag>
-        <tag>前端</tag>
-        <tag>安全</tag>
       </tags>
   </entry>
 </search>
