@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>下载自定义v2ray规则文件</title>
-    <url>/2020/08/%E4%B8%8B%E8%BD%BD%E8%87%AA%E5%AE%9A%E4%B9%89v2ray%E8%A7%84%E5%88%99%E6%96%87%E4%BB%B6/</url>
+    <url>/Blog/2020/08/%E4%B8%8B%E8%BD%BD%E8%87%AA%E5%AE%9A%E4%B9%89v2ray%E8%A7%84%E5%88%99%E6%96%87%E4%BB%B6/</url>
     <content><![CDATA[<ul>
 <li>使用国内源下载最新<a href="https://github.com/Loyalsoldier/v2ray-rules-dat">v2Ray 规则文件</a><a id="more"></a></li>
 <li><a href="https://github.com/EwigL/download-v2ray-rules-dat">项目地址</a></li>
@@ -21,8 +21,26 @@
       </tags>
   </entry>
   <entry>
+    <title>Steam手动添加愿望单</title>
+    <url>/Blog/2020/10/Steam%E6%89%8B%E5%8A%A8%E6%B7%BB%E5%8A%A0%E6%84%BF%E6%9C%9B%E5%8D%95/</url>
+    <content><![CDATA[<ul>
+<li>在浏览器无法显示锁区游戏时手动添加任意游戏至愿望单<a id="more"></a>
+
+</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">javascript:AddToWishlist( AppID,</span><br><span class="line"><span class="string">&#x27;add_to_wishlist_area&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;add_to_wishlist_area_success&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;add_to_wishlist_area_fail&#x27;</span>,</span><br><span class="line"><span class="string">&quot;1_4_4__145_2&quot;</span>,</span><br><span class="line"><span class="string">&#x27;add_to_wishlist_area2&#x27;</span> );</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>杂项</category>
+      </categories>
+      <tags>
+        <tag>web</tag>
+        <tag>游戏</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>图书馆助手</title>
-    <url>/2020/09/%E5%9B%BE%E4%B9%A6%E9%A6%86%E5%8A%A9%E6%89%8B/</url>
+    <url>/Blog/2020/09/%E5%9B%BE%E4%B9%A6%E9%A6%86%E5%8A%A9%E6%89%8B/</url>
     <content><![CDATA[<ul>
 <li>利用 python 实现座位预约 Android app 的基本功能</li>
 <li>基于 request 等库发送、接收 HTTP 请求</li>
@@ -53,26 +71,8 @@
       </tags>
   </entry>
   <entry>
-    <title>Steam手动添加愿望单</title>
-    <url>/2020/10/Steam%E6%89%8B%E5%8A%A8%E6%B7%BB%E5%8A%A0%E6%84%BF%E6%9C%9B%E5%8D%95/</url>
-    <content><![CDATA[<ul>
-<li>在浏览器无法显示锁区游戏时手动添加任意游戏至愿望单<a id="more"></a>
-
-</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">javascript:AddToWishlist( AppID,</span><br><span class="line"><span class="string">&#x27;add_to_wishlist_area&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;add_to_wishlist_area_success&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;add_to_wishlist_area_fail&#x27;</span>,</span><br><span class="line"><span class="string">&quot;1_4_4__145_2&quot;</span>,</span><br><span class="line"><span class="string">&#x27;add_to_wishlist_area2&#x27;</span> );</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>杂项</category>
-      </categories>
-      <tags>
-        <tag>web</tag>
-        <tag>游戏</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>偶然发现的某盘&quot;漏洞&quot;</title>
-    <url>/2020/10/%E5%81%B6%E7%84%B6%E5%8F%91%E7%8E%B0%E7%9A%84%E6%9F%90%E7%9B%98%E6%BC%8F%E6%B4%9E/</url>
+    <url>/Blog/2020/10/%E5%81%B6%E7%84%B6%E5%8F%91%E7%8E%B0%E7%9A%84%E6%9F%90%E7%9B%98%E6%BC%8F%E6%B4%9E/</url>
     <content><![CDATA[<ul>
 <li><p>偶然得到一个网盘链接但是没有密码<a id="more"></a><br><img src="https://cdn.jsdelivr.net/gh/xingjiahui/CDN@latest/2020/10/19/b996dcd03a4f2276be76ab40e40bcd1b.png" alt="0"></p>
 </li>
