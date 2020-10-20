@@ -2964,3 +2964,9 @@ mark.search-keyword {
     padding: 10px 12px;
   }
 }
+body {
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 50% 50%;
+  background-size: 100% 100%;
+}
