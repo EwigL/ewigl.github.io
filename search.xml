@@ -53,19 +53,6 @@
       </tags>
   </entry>
   <entry>
-    <title>overflow属性demo</title>
-    <url>/2020/10/overflow%E5%B1%9E%E6%80%A7demo/</url>
-    <content><![CDATA[<p><a href="https://ewigl.github.io/Licht/OverFlowDemo">Demo</a></p>
-]]></content>
-      <categories>
-        <category>笔记</category>
-      </categories>
-      <tags>
-        <tag>web</tag>
-        <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Steam手动添加愿望单</title>
     <url>/2020/10/Steam%E6%89%8B%E5%8A%A8%E6%B7%BB%E5%8A%A0%E6%84%BF%E6%9C%9B%E5%8D%95/</url>
     <content><![CDATA[<ul>
@@ -105,7 +92,20 @@
       <tags>
         <tag>web</tag>
         <tag>前端</tag>
-        <tag>安全</tag>
+        <tag>网安</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>前端-overflow属性demo</title>
+    <url>/2020/10/overflow%E5%B1%9E%E6%80%A7demo/</url>
+    <content><![CDATA[<p><a href="https://ewigl.github.io/Licht/OverFlowDemo">Demo</a></p>
+]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>web</tag>
+        <tag>前端</tag>
       </tags>
   </entry>
 </search>
