@@ -3,7 +3,7 @@
 
     <head>
         <meta charset="UTF-8">
-        <title>Document</title>
+        <title>实时显示时间</title>
         <style>
             #time {
                 width: 50%;
@@ -16,6 +16,10 @@
             }
         </style>
         <script>
+            window.onload = function() {
+                showtime();
+            }
+
             function showtime() {
                 var sdom = document.getElementById("time");
                 var now = new Date(); //用来得到当前的时间
@@ -29,7 +33,7 @@
     </head>
 
     <body>
-        <div id="time">显示时间</div>
+        <div id="time"></div>
     </body>
 
 </html>
