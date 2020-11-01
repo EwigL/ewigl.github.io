@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Via</title>
+    <style type="text/css">
+      div p {
+        text-align: center;
+        background: -webkit-linear-gradient(
+          left,
+          #147b96,
+          #e6d205 25%,
+          #147b96 50%,
+          #e6d205 75%,
+          #147b96
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -webkit-background-size: 200% 100%;
+        -webkit-animation: runs 3s infinite linear;
+      }
+      .search_bar {
+        box-shadow: 0 0 18px rgba(70, 70, 40, 0.255);
+        -webkit-animation: fadeIn 2.5s;
+        animation: fadeIn 2.5s;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 50px;
+        display: table;
+        vertical-align: middle;
+        width: 80%;
+        height: 40px;
+        max-width: 400px;
+        margin: 10px auto;
+      }
+
+      @-webkit-keyframes runs {
+        0% {
+          background-position: 0 0;
+        }
+        100% {
+          background-position: -100% 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div><p class="search_bar">Search</p></div>
+  </body>
+</html>
