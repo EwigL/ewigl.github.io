@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>秒表</title>
+        <style>
+            .timer {
+                width: 128px;
+                height: 192px;
+                margin: 96px auto;
+                padding: 20px;
+                border: 1px solid black;
+                border-radius: 8px;
+                text-align: center;
+            }
+            
+            .timer span {
+                font-size: 22px;
+            }
+            
+            .timer button {
+                width: 100px;
+                height: 30px;
+                margin-top: 20px;
+            }
+        </style>
+        <script>
+            function $(id) {
+                return document.getElementById(id);
+            }
+
+            function doubleNum(n) {
+                if (n < 10) {
+                    return "0" + n;
+                } else {
+                    return n;
+                }
+
+            }
+
+            var i = 0; //总秒数
+            var timer = null;
+            var isRunning = false;
+
+            window.onload = function() {
+
+                $("start").onclick = function() {
+                    if (isRunning == false) {
+                        timer = setInterval(function() {
+                            isRunning = true;
+                            i++;
+                            $("sec").innerHTML = doubleNum(i % 60);
+                            $("min").innerHTML = doubleNum(parseInt(i / 60) % 60);
+                            $("hour").innerHTML = doubleNum(parseInt(i / 3600));
+                        }, 1000)
+                    } else {
+                        return;
+                    }
+
+                }
+
+                $("pause").onclick = function() {
+                    clearInterval(timer);
+                    isRunning = false;
+                }
+
+                $("reset").onclick = function() {
+                    clearInterval(timer);
+                    i = 0;
+                    $("sec").innerHTML = "00"
+                    $("min").innerHTML = "00"
+                    $("hour").innerHTML = "00"
+
+                }
+
+                var j = 0;
+                var timer1 = null;
+                var isRunning1 = false;
+
+
+                function startTimer1() {
+                    timer1 = setInterval(function() {
+                        isRunning1 = true;
+                        j++;
+                        $("sec1").innerHTML = doubleNum(j % 60);
+                        $("min1").innerHTML = doubleNum(parseInt(j / 60) % 60);
+                        $("hour1").innerHTML = doubleNum(parseInt(j / 3600));
+                    }, 1000)
+                }
+
+                function stopTimer1() {
+                    clearInterval(timer1);
+                }
+
+
+                function resetTimer1() {
+                    clearInterval(timer1);
+                    j = 0;
+                }
+
+                $("sp1").onclick = function() {
+                    if (!isRunning1) {
+                        startTimer1();
+                        $("sp1").innerHTML = "暂停";
+                        isRunning1 = true;
+                    } else {
+                        stopTimer1();
+                        $("sp1").innerHTML = "开始";
+                        isRunning1 = false;
+                    }
+                }
+
+
+                $("reset1").onclick = function() {
+                    clearInterval(timer1);
+                    isRunning1 = false;
+                    j = 0;
+                    $("sp1").innerHTML = "开始";
+                    $("sec1").innerHTML = "00"
+                    $("min1").innerHTML = "00"
+                    $("hour1").innerHTML = "00"
+
+                }
+
+
+            }
+        </script>
+    </head>
+
+    <body>
+        <div id="timer0" class="timer">
+            <span id="hour">00</span>
+            <span>:</span>
+            <span id="min">00</span>
+            <span>:</span>
+            <span id="sec">00</span>
+            <br/>
+            <button id="start">开始</button>
+            <button id="pause">暂停</button>
+            <button id="reset">复位</button>
+
+            </span>
+        </div>
+
+        <div id="timer1" class="timer">
+            <span id="hour1">00</span>
+            <span>:</span>
+            <span id="min1">00</span>
+            <span>:</span>
+            <span id="sec1">00</span>
+            <br/>
+            <button id="sp1">开始</button>
+            <button id="reset1">复位</button>
+
+            </span>
+        </div>
+    </body>
+
+</html>

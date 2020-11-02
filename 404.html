@@ -1,14 +1,129 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
 
-<head>
-    <meta charset="UTF-8" />
-    <title>404</title>
-    <link rel="stylesheet" href="/Licht/css/404.css" />
-</head>
+    <head>
+        <meta charset="UTF-8" />
+        <title>404</title>
+        <style>
+            body {
+                /* background-color: #2F3242; */
+                background-color: #eeeeee;
+            }
+            
+            svg {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                margin-top: -250px;
+                margin-left: -400px;
+            }
+            
+            .message-box {
+                height: 200px;
+                width: 380px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                margin-top: -100px;
+                margin-left: 50px;
+                color: #000;
+                font-family: Roboto;
+                font-weight: 300;
+            }
+            
+            .message-box h1 {
+                font-size: 60px;
+                line-height: 46px;
+                margin-bottom: 40px;
+            }
+            
+            .buttons-con .action-link-wrap {
+                margin-top: 40px;
+            }
+            
+            .buttons-con .action-link-wrap a {
+                background: #68c950;
+                padding: 8px 25px;
+                border-radius: 4px;
+                color: #FFF;
+                font-weight: bold;
+                font-size: 14px;
+                transition: all 0.3s linear;
+                cursor: pointer;
+                text-decoration: none;
+                margin-right: 10px
+            }
+            
+            .buttons-con .action-link-wrap a:hover {
+                background: #5A5C6C;
+                color: #fff;
+            }
+            
+            #Polygon-1,
+            #Polygon-2,
+            #Polygon-3,
+            #Polygon-4,
+            #Polygon-4,
+            #Polygon-5 {
+                -webkit-animation: float 1s infinite ease-in-out alternate;
+                animation: float 1s infinite ease-in-out alternate;
+            }
+            
+            #Polygon-2 {
+                -webkit-animation-delay: .2s;
+                animation-delay: .2s;
+            }
+            
+            #Polygon-3 {
+                -webkit-animation-delay: .4s;
+                animation-delay: .4s;
+            }
+            
+            #Polygon-4 {
+                -webkit-animation-delay: .6s;
+                animation-delay: .6s;
+            }
+            
+            #Polygon-5 {
+                -webkit-animation-delay: .8s;
+                animation-delay: .8s;
+            }
+            
+            @-webkit-keyframes float {
+                100% {
+                    -webkit-transform: translateY(20px);
+                    transform: translateY(20px);
+                }
+            }
+            
+            @keyframes float {
+                100% {
+                    -webkit-transform: translateY(20px);
+                    transform: translateY(20px);
+                }
+            }
+            
+            @media (max-width: 450px) {
+                svg {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    margin-top: -250px;
+                    margin-left: -190px;
+                }
+                .message-box {
+                    top: 50%;
+                    left: 50%;
+                    margin-top: -100px;
+                    margin-left: -190px;
+                    text-align: center;
+                }
+            }
+        </style>
+    </head>
 
-<body>
-    <svg width="380px" height="500px" viewBox="0 0 837 1045" <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+    <body>
+        <svg width="380px" height="500px" viewBox="0 0 837 1045" <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
         <path
           d="M353,9 L626.664028,170 L626.664028,487 L353,642 L79.3359724,487 L79.3359724,170 L353,9 Z"
           id="Polygon-1"
@@ -46,17 +161,17 @@
         ></path>
       </g>
     </svg>
-    <div class="message-box">
-        <h1>404</h1>
-        <p>找不到页面</p>
-        <div class="buttons-con">
-            <div class="action-link-wrap">
-                <a onclick="history.back(-1)" class="link-button link-back-button">返回上一页</a
+        <div class="message-box">
+            <h1>404</h1>
+            <p>找不到页面</p>
+            <div class="buttons-con">
+                <div class="action-link-wrap">
+                    <a onclick="history.back(-1)" class="link-button link-back-button">返回上一页</a
           >
           <a href="https://ewigl.github.io/" class="link-button">返回主页面</a>
+                </div>
             </div>
         </div>
-    </div>
-</body>
+    </body>
 
 </html>
