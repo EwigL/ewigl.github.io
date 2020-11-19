@@ -51,9 +51,13 @@
                 var aButtons = oDiv1.getElementsByTagName("button");
                 var oInput = document.getElementById("input1");
 
+                oInput.onfocus = function() {
+                    oInput.setAttribute("placeholder", "请输入内容");
+                }
                 aButtons[0].onclick = function() {
                     if (!oInput.value) {
-                        alert("输入内容不可为空");
+                        // alert("输入内容不可为空");
+                        oInput.setAttribute("placeholder", "输入内容不可为空");
                     } else {
                         var newDiv = document.createElement("div");
                         var oText = document.createTextNode(oInput.value);
@@ -82,7 +86,7 @@
 
     <body>
         <div id="div1">
-            <input type="text" id="input1" placeholder="输入内容">
+            <input type="text" id="input1" placeholder="请输入内容">
             <button>增加</button>
             <button>删除</button>
             <button>拷贝</button>
