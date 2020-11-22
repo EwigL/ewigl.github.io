@@ -79,7 +79,7 @@
             var oInput = document.getElementById("input0")
 
             oInput.onfocus = function () {
-                oInput.setAttribute("placeholder", "请输入内容，按ctrl+enter提交");
+                oInput.setAttribute("placeholder", "请输入内容，ctrl+enter增加，ctrl+del删除");
             }
             aButtons[0].onclick = function () {
                 if (!oInput.value) {
@@ -92,7 +92,7 @@
                     newDiv.style.backgroundColor = randomColor();
 
                     oDiv2.appendChild(newDiv);
-                    oInput.setAttribute("placeholder", "请输入内容，按ctrl+enter提交");
+                    oInput.setAttribute("placeholder", "请输入内容，ctrl+enter增加，ctrl+del删除");
                     oInput.value = "";
                 }
 
@@ -149,6 +149,9 @@
                 if (e.ctrlKey && witch == 13) {
                     aButtons[0].onclick();
                 }
+                if (e.ctrlKey && witch == 46) {
+                    aButtons[1].onclick();
+                }
             }
 
 
@@ -165,7 +168,7 @@
     <p id="p2"></p>
     <!-- <div id="msg"></div> -->
     <div id="div1">
-        <input type="text" id="input0" placeholder="请输入内容，按ctrl+enter提交">
+        <input type="text" id="input0" placeholder="请输入内容，ctrl+enter增加，ctrl+del删除">
         <button>增加</button>
         <button>删除</button>
         <button>拷贝</button>
