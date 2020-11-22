@@ -1,43 +1,44 @@
 <!DOCTYPE html>
 <html>
 
-    <head>
-        <meta charset="utf-8">
-        <title>Temp1</title>
-        <script src="jQuery/jquery-3.5.1.min.js"></script>
-        <script>
-            document.write("arr = [5, 6, 9, 8, 7];<br/>");
-            var arr = [5, 6, 9, 8, 7];
+<head>
+    <meta charset="utf-8">
+    <title>事件</title>
+    <style>
+        div {
+            width: 320px;
+            height: 640px;
+            margin: 10px auto;
+            background-color: gray;
+            border: 1px solid black;
+        }
 
-            for (var i = 0; i < arr.length; i++) {
-                document.write("for," + i + "," + arr[i] + "<br/>");
-            }
+        button {
+            width: 64px;
+            height: 32px;
+            border-radius: 16px;
+            outline: none;
+        }
 
-            for (i in arr) {
-                document.write("forIn," + i + "," + arr[i] + "<br/>");
-            }
+        input {
+            width: 200px;
+            height: 28px;
+            border: 1px solid black;
+            border-radius: 16px;
+            /* padding: 0px; */
+            outline: none;
+        }
+    </style>
+    <!-- <script src="jQuery/jquery-3.5.1.min.js"></script> -->
+    <script src="js/lichtool.js"></script>
+    <script>
+    </script>
+</head>
 
-            arr.forEach(function(item, index, arr) {
-                document.write("forEach," + index + "," + item + "<br/>");
-
-            });
-
-            var someone = {
-                name: "licht",
-                age: 21,
-                gender: "male",
-            }
-
-            document.write('someone = {name: "licht",age: 21,gender: "male",}<br/>');
-
-            for (i in someone) {
-                document.write("对象遍历," + i + "," + someone[i] + "<br/>");
-            }
-        </script>
-    </head>
-
-    <body>
-
-    </body>
+<body style="text-align: center;">
+    <button id="btn">按钮</button>
+    <input type="text" name="name0" id="txt0" style="text-align: center;"></input>
+    <div id="div0"></div>
+</body>
 
 </html>
