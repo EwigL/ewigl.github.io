@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>跟随鼠标提示框</title>
+    <style>
+        a {
+            padding: 20px;
+            margin: 64px;
+            display: inline-block;
+            text-align: center;
+            width: 64px;
+            height: 32px;
+            border: 1px solid black;
+            border-radius: 16px;
+            text-decoration: none;
+        }
+
+        div {
+            width: 256px;
+            height: 128px;
+            border-radius: 16px;
+            background-color: lightgray;
+            display: none;
+            position: absolute;
+        }
+    </style>
+    <!-- <script src="jQuery/jquery-3.5.1.min.js"></script> -->
+    <!-- <script src="js/lichtool.js"></script> -->
+    <script>
+        window.onload = function () {
+            var msg = ["点击使用百度搜索C", "点击使用百度搜索Java", "点击使用百度搜索Python", "点击使用百度搜索Golang"]
+
+            var aAs = document.getElementsByTagName("a");
+            var oDiv = document.getElementById("msg");
+
+            for (var i = 0; i < aAs.length; i++) {
+                aAs[i].index = i;
+                aAs[i].onmouseover = function () {
+                    // alert(this.index);
+                    oDiv.innerHTML = msg[this.index];
+                    oDiv.style.display = "block";
+                }
+                aAs[i].onmouseout = function () {
+                    oDiv.style.display = "none";
+                }
+                aAs[i].onmousemove = function (ev) {
+                    var e = ev || window.event;
+                    oDiv.style.left = e.clientX + 4 + "px";
+                    oDiv.style.top = e.clientY + 4 + "px";
+                }
+            }
+        }
+    </script>
+</head>
+
+<body style="text-align: center;width: auto;">
+    <a href="https://www.baidu.com/s?wd=C">C</a>
+    <a href="https://www.baidu.com/s?wd=Java">Java</a>
+    <a href="https://www.baidu.com/s?wd=Python">Python</a>
+    <a href="https://www.baidu.com/s?wd=Golang">Golang</a>
+    <div id="msg"></div>
+</body>
+
+</html>

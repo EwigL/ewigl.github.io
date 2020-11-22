@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>事件对象</title>
+    <style>
+    </style>
+    <!-- <script src="jQuery/jquery-3.5.1.min.js"></script> -->
+    <!-- <script src="js/lichtool.js"></script> -->
+    <script>
+        /* 
+        事件对象
+            button属性：
+                0左
+                1中
+                2右
+                3←
+                4→
+
+        获取当前鼠标位置
+            clientX、Y
+            pageX、Y
+            screenX、Y
+        */
+        window.onload = function () {
+
+            var oP0 = document.getElementById("p0");
+            var oP1 = document.getElementById("p1");
+            var oP2 = document.getElementById("p2");
+            var oP3 = document.getElementById("p3");
+
+            document.onmousedown = function (ev) {
+                var e = ev || window.event;
+                oP0.innerText = "鼠标事件对象的button属性:" + e.button;
+
+            }
+
+            document.onmousemove = function (ev) {
+                var e = ev || window.event;
+                oP1.innerText = "clientX,Y:" + e.clientX + "," + e.clientY;
+                oP2.innerText = "pageX,Y:" + e.pageX + "," + e.pageY;
+                oP3.innerText = "screenX,Y:" + e.screenX + "," + e.screenY;
+            }
+        }
+    </script>
+</head>
+
+<body style="text-align: center;">
+    <!-- <button id="btn">空按钮</button> -->
+    <p id="p0"></p>
+    <p id="p1"></p>
+    <p id="p2"></p>
+    <p id="p3"></p>
+</body>
+
+</html>
