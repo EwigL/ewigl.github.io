@@ -79,7 +79,7 @@
             var oInput = document.getElementById("input0")
 
             oInput.onfocus = function () {
-                oInput.setAttribute("placeholder", "请输入内容");
+                oInput.setAttribute("placeholder", "请输入内容，按ctrl+enter提交");
             }
             aButtons[0].onclick = function () {
                 if (!oInput.value) {
@@ -92,7 +92,7 @@
                     newDiv.style.backgroundColor = randomColor();
 
                     oDiv2.appendChild(newDiv);
-                    oInput.setAttribute("placeholder", "请输入内容");
+                    oInput.setAttribute("placeholder", "请输入内容，按ctrl+enter提交");
                     oInput.value = "";
                 }
 
