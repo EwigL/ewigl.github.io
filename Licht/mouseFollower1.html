@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>鼠标跟随动画</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        dot {
+            display: block;
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            background-color: white;
+            border-radius: 50%;
+        }
+
+        #div0 {
+            width: 400px;
+            height: 400px;
+            background: url(imgs/flower.webp) no-repeat;
+            position: absolute;
+        }
+
+        body {
+            background-color: black;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var oDiv = document.getElementById("div0");
+            var aDots = document.getElementsByTagName("dot");
+
+            document.onmousemove = function (ev) {
+                var e = ev || window.event;
+                oDiv.style.left = e.clientX - 200 + "px";
+                oDiv.style.top = e.clientY - 200 + "px";
+
+                for (var i = aDots.length - 1; i > 0; i--) {
+                    aDots[i].style.left = aDots[i - 1].offsetLeft + "px";
+                    aDots[i].style.top = aDots[i - 1].offsetTop + "px";
+                }
+
+                aDots[0].style.left = e.clientX + "px";
+                aDots[0].style.top = e.clientY + "px";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div id="div0"></div>
+    <dot></dot>
+    <dot></dot>
+    <dot></dot>
+    <dot></dot>
+    <dot></dot>
+    <dot></dot>
+    <dot></dot>
+    <dot></dot>
+    <dot></dot>
+    <dot></dot>
+    <dot></dot>
+    <dot></dot>
+    <dot></dot>
+    <dot></dot>
+    <dot></dot>
+    <dot></dot>
+
+</body>
+
+</html>

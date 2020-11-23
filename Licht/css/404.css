@@ -52,12 +52,7 @@ svg {
     color: #fff;
 }
 
-#Polygon-1,
-#Polygon-2,
-#Polygon-3,
-#Polygon-4,
-#Polygon-4,
-#Polygon-5 {
+#Polygon-1, #Polygon-2, #Polygon-3, #Polygon-4, #Polygon-4, #Polygon-5 {
     -webkit-animation: float 1s infinite ease-in-out alternate;
     animation: float 1s infinite ease-in-out alternate;
 }
