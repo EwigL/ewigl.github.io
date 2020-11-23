@@ -38,7 +38,17 @@
             window.event.srcElement;
         
         this关键字永远指向当前函数主人；
-        target
+
+        事件冒泡：
+            由内向外逐级触发
+        事件捕获：
+            由外向内触发
+
+        阻止事件冒泡：
+        事件对象的属性和方法：
+            cancelBubble
+            stopPropagation()
+
         */
 
         window.onload = function () {
@@ -54,14 +64,28 @@
             }
 
             for (var i = 0; i < aDivs.length; i++) {
-                aDivs[i].onclick = function () {
+                aDivs[i].onclick = function (ev) {
+                    var e = ev || window.event;
                     alert(this.id);
+                    // e.cancelBubble = true;
+                    // e.stopPropagation();
+                    stopBubble(e);
                 }
+            }
+
+            //封装跨浏览器兼容阻止事件冒泡函数
+            function stopBubble(e) {
+                /* 
+                if (e.stopPropagation) {
+                    e.stopPropagation();
+                } else {
+                    e.cancelBubble = true;
+                } */
+                e.stopPropagation ? e.stopPropagation() : e.cancelBubble = true;
             }
 
         }
     </script>
-
 
 </head>
 
