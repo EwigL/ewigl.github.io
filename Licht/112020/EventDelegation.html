@@ -6,22 +6,125 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>事件委托</title>
     <style>
+        #div1 {
+            width: 400px;
+            height: 100px;
+            background-color: lightslategray;
+            margin: auto;
+            text-align: center;
+        }
+
+        #div2 {
+            width: 400px;
+            height: 500px;
+            background-color: slategray;
+            margin: auto;
+        }
+
+        #input0 {
+            width: 380px;
+            height: 32px;
+            font-size: 18px;
+            text-align: center;
+            border-radius: 16px;
+            outline: none;
+            margin: auto;
+            display: block;
+        }
+
+        #div1 button {
+            width: 100px;
+            height: 30px;
+            font-size: 18px;
+            margin-top: 8px;
+            border-radius: 16px;
+            outline: none;
+        }
+
+        node {
+            text-align: center;
+            display: block;
+            height: 20px;
+            border-bottom: 1px dashed black;
+            padding: 2px;
+        }
     </style>
     <script src="../js/lichtool.js"></script>
     <script>
         /* 
-        
+        事件委托：
+            1.找到当前节点父节点或祖先节点
+            2.将事件添加到父节点或祖先节点上
+            3.找到并判断触发对象，进行后续操作
 
          */
         window.onload = function () {
+            var oDiv1 = document.getElementById("div1");
+            var oDiv2 = document.getElementById("div2");
+            var aButtons = oDiv1.getElementsByTagName("button");
+            var oInput = document.getElementById("input0")
 
+            // 事件委托
+            oDiv2.onclick = function (ev) {
+                var e = ev || window.event;
+                var target = e.target || window.event.srcElement;
+                // 判断是否为添加的节点
+                if (target.nodeName.toLowerCase() == "node") {
+                    target.style.backgroundColor = randomColor();
+                }
+            }
 
+            oInput.onfocus = function () {
+                oInput.setAttribute("placeholder", "请输入内容，ctrl+enter增加，ctrl+del删除");
+            }
+            aButtons[0].onclick = function () {
+                if (!oInput.value) {
+                    // alert("输入内容不可为空");
+                    oInput.setAttribute("placeholder", "输入内容不可为空");
+                } else {
+                    var newDiv = document.createElement("node");
+                    var oText = document.createTextNode(oInput.value);
+                    newDiv.appendChild(oText);
+                    newDiv.style.backgroundColor = randomColor();
+
+                    oDiv2.appendChild(newDiv);
+                    oInput.setAttribute("placeholder", "请输入内容，ctrl+enter增加，ctrl+del删除");
+                    oInput.value = "";
+                }
+            }
+
+            aButtons[1].onclick = function () {
+                oDiv2.removeChild(oDiv2.lastChild);
+            }
+
+            aButtons[2].onclick = function () {
+                oDiv2.appendChild(oDiv2.lastChild.cloneNode(true));
+            }
+
+            oInput.onkeydown = function (ev) {
+                var e = ev || window.event;
+                var witch = e.keyCode || e.witch;
+                if (e.ctrlKey && witch == 13) {
+                    aButtons[0].onclick();
+                }
+                if (e.ctrlKey && witch == 46) {
+                    aButtons[1].onclick();
+                }
+            }
         }
     </script>
 </head>
 
 <body>
-
+    <div id="div1">
+        <input type="text" id="input0" placeholder="请输入内容，ctrl+enter增加，ctrl+del删除">
+        <button>增加</button>
+        <button>删除</button>
+        <button>拷贝</button>
+    </div>
+    <div id="div2">
+        <div style="text-align: center;">点击节点随机改变颜色</div>
+    </div>
 </body>
 
 </html>

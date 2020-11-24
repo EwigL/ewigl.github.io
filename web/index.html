@@ -34,7 +34,7 @@
 <meta property="og:description" content="OverFlow   显示时间   简易定时器   节点操作   文档碎片操作：减少重排，提高效率一般：123456for (var i &#x3D; 0; i &lt; 10000; i++) &amp;#123;    var newDiv &#x3D; document.createElement(&quot;div&quot;);    document.body.appendChild(newDiv);&amp;#125">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-11-01T06:43:54.000Z">
-<meta property="article:modified_time" content="2020-11-24T03:23:12.291Z">
+<meta property="article:modified_time" content="2020-11-24T04:57:49.243Z">
 <meta property="article:author" content="EwigLicht Lee">
 <meta property="article:tag" content="学习">
 <meta name="twitter:card" content="summary">
@@ -328,6 +328,9 @@
 <li><a href="https://ewigl.github.io/Licht/112020/preDef">跨浏览器兼容阻止默认浏览器行为</a></li>
 <li><a href="https://ewigl.github.io/Licht/112020/dragFram">拖拽窗口</a></li>
 <li><a href="https://ewigl.github.io/Licht/112020/EventDelegation">事件委托</a></li>
+<li><a href="https://ewigl.github.io/Licht/112020/eventListener">事件监听器</a>  </li>
+<li>跨浏览器兼容：  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 跨浏览器兼容添加事件监听器</span></span><br><span class="line"> <span class="function"><span class="keyword">function</span> <span class="title">addEvent</span>(<span class="params">node, eventType, funcName</span>) </span>&#123;</span><br><span class="line">    node.addEventListener ?</span><br><span class="line">        node.addEventListener(eventType, funcName, <span class="literal">false</span>) :</span><br><span class="line">        node.attachEvent(<span class="string">&quot;on&quot;</span> + eventType, funcName);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">          <span class="comment">// 跨浏览器兼容移除事件监听器</span></span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">removeEvent</span>(<span class="params">node, eventType, funcName</span>) </span>&#123;</span><br><span class="line">      node.removeEventListener ?</span><br><span class="line">          node.removeEventListener(eventType, funcName) :</span><br><span class="line">          node.detachEvent(<span class="string">&quot;on&quot;</span> + eventType, funcName);</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure></li>
+<li></li>
 </ul>
 
       </div>

@@ -30,7 +30,7 @@
         }
     </style>
 
-    <script src="js/lichtool.js"></script>
+    <script src="../js/lichtool.js"></script>
     <script>
         /* 
         传统事件绑定：
@@ -51,49 +51,23 @@
 
         */
         window.onload = function () {
-            var oBtn0 = document.getElementById("btn0");
-            var oBtn1 = document.getElementById("btn1");
-            var oBtn2 = document.getElementById("btn2");
+            var oBtn = document.getElementById("btn0");
             var aDivs = document.getElementsByTagName("div");
 
-            addEvent(oBtn0, "click", changeColor);
-
-            oBtn1.onclick = function () {
-                removeEvent(oBtn0, "click", changeColor);
-            };
-            oBtn2.onclick = function () {
-                addEvent(oBtn0, "click", changeColor);
-            }
-
-            function changeColor() {
+            oBtn.addEventListener("click", function () {
+                // alert("6666666");
                 for (var i = 0; i < aDivs.length; i++) {
                     aDivs[i].style.backgroundColor = randomColor();
                 }
-            }
 
-            // 跨浏览器兼容添加事件监听器
-            function addEvent(node, eventType, funcName) {
-                node.addEventListener ?
-                    node.addEventListener(eventType, funcName, false) :
-                    node.attachEvent("on" + eventType, funcName);
-            }
-
-            // 跨浏览器兼容移除事件监听器
-            function removeEvent(node, eventType, funcName) {
-                node.removeEventListener ?
-                    node.removeEventListener(eventType, funcName) :
-                    node.detachEvent("on" + eventType, funcName);
-            }
-
+            }, false);
         }
 
     </script>
 </head>
 
 <body style="text-align: center;">
-    <button id="btn0">随机改变div颜色</button>
-    <button id="btn1">移除btn0监听器</button>
-    <button id="btn2">添加btn0监听器</button>
+    <button id="btn0">点击随机改变div颜色</button>
     <div id="div0">
         <div id="div1">
             <div id="div2"></div>
