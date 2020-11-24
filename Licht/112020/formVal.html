@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表单验证</title>
+    <style>
+        #div0 {
+            background-color: lightgray;
+            text-align: center;
+            border: 1px solid black;
+            width: 256px;
+            height: 256px;
+            margin: 100px auto;
+        }
+
+        #div0 div {
+            float: left;
+            background-color: gray;
+            margin-left: 16px;
+            margin-top: 8px;
+            width: 64px;
+            height: 20px;
+            line-height: 20px;
+        }
+
+        input {
+            outline: none;
+            margin-top: 20px;
+            border-radius: 16px;
+            width: 240px;
+            height: 32px;
+        }
+
+        span {
+            height: 32px;
+            font-size: 12px;
+            margin: 16px;
+        }
+    </style>
+    <script>
+
+        window.onload = function () {
+            var userName = document.getElementById("username");
+            var password = document.getElementById("pwd");
+            var info = document.getElementById("info");
+            var aTestDivs = document.getElementsByClassName("testpwd");
+
+            // 失焦事件
+            userName.onblur = function () {
+                var userNameValue = userName.value;
+                // 先判断用户名长度
+                if (userNameValue.length < 6 || userNameValue.length > 18) {
+                    info.style.color = "red";
+                    info.innerHTML = "用户名长度不符合要求！";
+                } else if (!/[a-zA-Z]/.test(userNameValue[0])) {
+                    info.style.color = "red";
+                    info.innerHTML = "首字母必须使用字母！";
+                } else if (/\W/.test(userNameValue)) {
+                    info.style.color = "red";
+                    info.innerHTML = "用户名必须由字母、数字、下划线组成！";
+
+                } else {
+                    info.style.color = "green";
+                    info.innerHTML = "√该用户名可用。";
+                }
+            }
+
+            // 密码框键盘事件
+            password.onkeyup = function () {
+                var pwdValue = this.value;
+
+                for (var i = 0; i < aTestDivs.length; i++) {
+                    aTestDivs[i].style.backgroundColor = "gray";
+                }
+                if (pwdValue.length >= 8) {
+                    // 开始验证密码强度
+                    if (/^\d+$/.test(pwdValue) || /^[a-z]+$/.test(pwdValue) || /^[A-Z]+$/.test(pwdValue)) {
+                        aTestDivs[0].style.backgroundColor = "green";
+                    } else if (/\d/.test(pwdValue) && /[a-z]/.test(pwdValue) && /[A-Z]/.test(pwdValue)) {
+                        aTestDivs[2].style.backgroundColor = "red";
+                    } else {
+                        aTestDivs[1].style.backgroundColor = "orange";
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div id="div0">
+        <input type="text" id="username" placeholder="用户名" />
+        <span id="info">6-18个字符，可使用字母、数字、下划线；以字母开头</span>
+        <input type="password" id="pwd" placeholder="密码" />
+        <div class="testpwd">弱鸡</div>
+        <div class="testpwd">还行</div>
+        <div class="testpwd">挺强</div>
+        <span>密码至少八位</span>
+    </div>
+
+
+</body>
+
+</html>
