@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>动态操作表格</title>
+    <style>
+        #tb0 tr td {
+            width: 100px;
+            height: 32px;
+        }
+
+        #tb0 tr td button {
+            width: 100px;
+            height: 32px;
+        }
+    </style>
+    <script src="../js/lichtool.js"></script>
+    <script>
+        window.onload = function () {
+            var oRow = document.getElementById("row");
+            var oCol = document.getElementById("col");
+            var oBtn = document.getElementById("btn0");
+            var oTb0 = document.getElementById("tb0");
+
+            oTb0.onclick = function (ev) {
+                var e = ev || window.event;
+                var target = e.target || window.event.srcElement;
+                if (target.nodeName.toLowerCase() == "button") {
+                    oTb0.removeChild(target.parentNode.parentNode);
+                }
+            }
+
+
+            oBtn.onclick = function () {
+                if (!oRow.value || !oCol.value) {
+                    alert("请输入行与列");
+                } else {
+                    for (var i = 0; i < oRow.value; i++) {
+                        var oTr = document.createElement("tr");
+                        oTr.style.backgroundColor = randomColor();
+                        for (var j = 0; j < oCol.value; j++) {
+                            var oTd = document.createElement("td");
+                            oTr.appendChild(oTd);
+                        }
+                        var oClose = document.createElement("td");
+                        oClose.innerHTML = "<button>删除当前行</button>";
+                        oTr.appendChild(oClose);
+                        oTb0.appendChild(oTr);
+                    }
+                }
+
+            }
+
+        }
+
+    </script>
+</head>
+
+<body>
+    <input type="text" placeholder="行" id="row" />
+    <input type="text" placeholder="列" id="col" />
+    <button id="btn0">生成</button>
+    <table id="tb0" border="1"></table>
+</body>
+
+</html>

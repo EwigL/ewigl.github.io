@@ -13,7 +13,7 @@ function stopBubble(e) {
     e.stopPropagation ? e.stopPropagation() : e.cancelBubble = true;
 }
 
-// 拖拽窗口函数（不限制出界）
+// 允许拖拽窗口函数（不限制出界）
 function dragable(node) {
     node.onmousedown = function (ev) {
         var e = ev || window.event;
@@ -34,7 +34,7 @@ function dragable(node) {
     }
 }
 
-// 拖拽窗口函数（限制出界）
+// 允许拖拽窗口函数（限制出界）
 function limitedDragable(node) {
     node.onmousedown = function (ev) {
         var e = ev || window.event;
@@ -65,7 +65,6 @@ function limitedDragable(node) {
             node.style.top = t + "px";
         }
     }
-
     document.onmouseup = function (ev) {
         document.onmousemove = null;
     }

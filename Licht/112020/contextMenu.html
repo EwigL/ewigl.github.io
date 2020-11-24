@@ -33,10 +33,13 @@
 
             var oMenu = document.getElementById("menu");
 
+            // 按下右键时动作
             document.onmousedown = function (ev) {
                 var e = ev || window.event;
                 if (e.buttons == 2) {
+                    // 显示div
                     oMenu.style.display = "block";
+                    // 定位
                     oMenu.style.left = e.clientX + "px";
                     oMenu.style.top = e.clientY + "px";
                 } else {
