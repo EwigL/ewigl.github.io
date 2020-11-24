@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-cn">
 
 <head>
     <meta charset="UTF-8">
@@ -51,23 +51,49 @@
 
         */
         window.onload = function () {
-            var oBtn = document.getElementById("btn0");
+            var oBtn0 = document.getElementById("btn0");
+            var oBtn1 = document.getElementById("btn1");
+            var oBtn2 = document.getElementById("btn2");
             var aDivs = document.getElementsByTagName("div");
 
-            oBtn.addEventListener("click", function () {
-                // alert("6666666");
+            addEvent(oBtn0, "click", changeColor);
+
+            oBtn1.onclick = function () {
+                removeEvent(oBtn0, "click", changeColor);
+            };
+            oBtn2.onclick = function () {
+                addEvent(oBtn0, "click", changeColor);
+            }
+
+            function changeColor() {
                 for (var i = 0; i < aDivs.length; i++) {
                     aDivs[i].style.backgroundColor = randomColor();
                 }
+            }
 
-            }, false);
+            // 跨浏览器兼容添加事件监听器
+            function addEvent(node, eventType, funcName) {
+                node.addEventListener ?
+                    node.addEventListener(eventType, funcName, false) :
+                    node.attachEvent("on" + eventType, funcName);
+            }
+
+            // 跨浏览器兼容移除事件监听器
+            function removeEvent(node, eventType, funcName) {
+                node.removeEventListener ?
+                    node.removeEventListener(eventType, funcName) :
+                    node.detachEvent("on" + eventType, funcName);
+            }
+
         }
 
     </script>
 </head>
 
 <body style="text-align: center;">
-    <button id="btn0">点击随机改变div颜色</button>
+    <button id="btn0">随机改变div颜色</button>
+    <button id="btn1">移除btn0监听器</button>
+    <button id="btn2">添加btn0监听器</button>
     <div id="div0">
         <div id="div1">
             <div id="div2"></div>
