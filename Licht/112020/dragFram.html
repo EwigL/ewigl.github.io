@@ -6,16 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>拖拽窗口</title>
     <style>
-        #div0 {
+        div {
             text-align: center;
             width: 192px;
             height: 192px;
-            background-color: lightgray;
             border-radius: 24px;
             position: absolute;
         }
     </style>
-    <script src="js/lichtool.js"></script>
+    <script src="../js/lichtool.js"></script>
     <script>
         /* 
         拖拽三剑客：
@@ -32,17 +31,22 @@
                 Done
          */
         window.onload = function () {
-            var oDiv = document.getElementById("div0");
-            dragAble(oDiv);
+            var oDiv0 = document.getElementById("div0");
+            var oDiv1 = document.getElementById("div1");
+
+            dragable(oDiv0);
+            limitedDragable(oDiv1);
 
         }
     </script>
 </head>
 
 <body>
-    <p>鼠标按住方块拖拽(已限制出界)</p>
-    <div id="div0">
-    </div>
+    <center>
+        <p>鼠标按住方块拖拽(蓝色限制出界)</p>
+    </center>
+    <div id="div0" style="background-color: red;"></div>
+    <div id="div1" style="background-color: blue;"></div>
 </body>
 
 </html>
