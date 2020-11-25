@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>localStorage存储滑块状态</title>
+    <style>
+        #slider {
+            padding: 0px;
+            position: relative;
+            width: 640px;
+            height: 32px;
+            border: 1px solid black;
+            margin: 100px auto;
+        }
+
+        #head {
+            width: 32px;
+            height: 32px;
+            position: absolute;
+            background-color: gray;
+            left: 0px;
+        }
+
+        #body {
+            background-color: black;
+            width: 0px;
+            height: 32px;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+        }
+    </style>
+    <script>
+        /* 
+        本地存储技术：
+            localStorage：（客户端微型数据库）（IE8以下不兼容）
+                1.永久性存储；
+                2.最大5M；
+                3.只能存储String；
+            
+            cookie：
+                1.可以设置过期时间
+                2.最大存储4KB
+                3.每一个域名最多可以存储50条数据
+
+            sessionStorage：
+                1.结合后台使用     
+         */
+        /* 
+        localStorage对象：
+           setItem(name,value);
+           getItem(name);
+           removeItem();
+         */
+        window.onload = function () {
+            var slider = document.getElementById("slider");
+            var head = document.getElementById("head");
+            var body = document.getElementById("body");
+
+            // 获取localStorage中的滑块位置
+            if (!window.localStorage) {
+                alert("不支持localStorage");
+            } else {
+                var l = localStorage.getItem("headPosition");
+                head.style.left = l + "px";
+                // 填充位置
+                body.style.width = l + "px";
+            }
+
+            head.onmousedown = function (ev) {
+                var e = ev || window.event;
+                var offsetX = e.clientX - head.offsetLeft;
+
+                document.onmousemove = function (ev) {
+                    var e = ev || window.event;
+                    // 头部位置
+                    var l = e.clientX - offsetX;
+                    if (l <= 0) {
+                        l = 0;
+                    } if (l >= 608) {
+                        l = 608;
+                    }
+                    head.style.left = l + "px";
+                    // 填充位置
+                    body.style.width = l + "px";
+                    // 对滑块位置进行本地存储
+                    if (!window.localStorage) {
+                        alert("不支持localStorage");
+                    } else {
+                        localStorage.setItem("headPosition", l);
+                    }
+                }
+            }
+            document.onmouseup = function () {
+                document.onmousemove = null;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h4>刷新页面滑块状态不变</h4>
+    <div id="slider">
+        <div id="body"></div>
+        <div id="head"></div>
+    </div>
+
+</body>
+
+</html>
