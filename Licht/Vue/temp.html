@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temp</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+
+        window.onload = function () {
+
+            var msg = new Vue({
+                el: '#div0',
+                data: {
+                    msg: 'Hello Vue!'
+                }
+            })
+
+        }
+    </script>
+</head>
+
+<body>
+    <div id="div0">
+        {{ msg }}
+
+    </div>
+
+</body>
+
+</html>
