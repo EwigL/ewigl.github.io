@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>时钟</title>
+    <style>
+        #watch {
+            margin: 0px auto;
+            position: relative;
+            background-image: url(../imgs/watch.jpg);
+            width: 500px;
+            height: 500px;
+        }
+
+        #h {
+            position: absolute;
+            left: 242px;
+            /* top: 246px; */
+            top: 246px;
+            background-color: white;
+            width: 94px;
+            height: 8px;
+            transform-origin: 8px 50%;
+            /* animation: rotate 216000s linear infinite; */
+        }
+
+        #m {
+            position: absolute;
+            background-color: white;
+            left: 242px;
+            /* top: 246px; */
+            top: 247px;
+            background-color: white;
+            width: 114px;
+            height: 6px;
+            transform-origin: 8px 50%;
+            /* animation: rotate 3600s linear infinite; */
+        }
+
+        #s {
+            position: absolute;
+            background-color: red;
+            left: 242px;
+            /* top: 246px; */
+            top: 248px;
+            width: 124px;
+            height: 4px;
+            /* transition: 0.5s; */
+            transform-origin: 8px 50%;
+            /* animation: rotate 60s linear infinite; */
+        }
+
+        @keyframes rotate {
+            0% {
+                /* transform: rotate(0); */
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var h = document.getElementById("h");
+            var m = document.getElementById("m");
+            var s = document.getElementById("s");
+            var nowTime = new Date();
+            var H = nowTime.getHours();
+            var M = nowTime.getMinutes();
+            var S = nowTime.getSeconds();
+            //1s是6度，1m是6度，1h是30度；
+            h.style.transform = 'rotate(' + (H * 30 + 30 / 60 * M - 90) + 'deg)';
+            m.style.transform = 'rotate(' + (M * 6 - 90) + 'deg)';
+            s.style.transform = 'rotate(' + (S * 6 - 90) + 'deg)';
+            function clockMove() {
+                var nowTime = new Date();
+                var H = nowTime.getHours();
+                var M = nowTime.getMinutes();
+                var S = nowTime.getSeconds();
+                //1s是6度，1m是6度，1h是30度；
+                h.style.transform = 'rotate(' + (H * 30 + 30 / 60 * M - 90) + 'deg)';
+                m.style.transform = 'rotate(' + (M * 6 - 90) + 'deg)';
+                s.style.transform = 'rotate(' + (S * 6 - 90) + 'deg)';
+            }
+            var timer = setInterval(clockMove, 1000);
+        }
+    </script>
+</head>
+
+<body>
+    <div id="watch">
+        <div id="h"></div>
+        <div id="m"></div>
+        <div id="s"></div>
+    </div>
+
+</body>
+
+</html>
