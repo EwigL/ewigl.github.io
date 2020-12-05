@@ -5,22 +5,79 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>纸牌</title>
+    <style>
+        body {
+            background-color: black;
+        }
+
+        #box {
+            height: 164px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+        }
+
+        #box img {
+            position: absolute;
+            border-radius: 4px;
+            box-shadow: 0 0 1px 2px gray;
+        }
+    </style>
     <script>
         // 获取url参数函数
         function getQueryVariable(variable) {
+            // 去掉问号，获得参数
             var query = window.location.search.substring(1);
+            // 分割参数
             var vars = query.split("&");
+            // 遍历参数
             for (var i = 0; i < vars.length; i++) {
                 var pair = vars[i].split("=");
+                // 分割键/值
                 if (pair[0] == variable) { return pair[1]; }
             }
             return (false);
+        }
+        // onload函数
+        window.onload = function () {
+            // 获取纸牌数量，默认为5
+            var card_cnt = getQueryVariable("card_cnt") ? getQueryVariable("card_cnt") : 5;
+            if (card_cnt < 0) {
+                card_cnt = 5;
+                alert("？？？你有问题，小老弟。card_cnt已重置为5");
+            }
+            // alert(card_cnt);
+            var box = document.getElementById("box");
+            // 设置布局使box水平垂直居中
+            box.style.width = ((card_cnt - 1) * 32 + 118) + "px";
+            box.style.margin = "-82px 0 0 " + ((card_cnt - 1) * 32 + 118) / -2 + "px";
+            // 向box中添加指定数量img
+            for (var i = 0; i < card_cnt; i++) {
+                var card = document.createElement("img");
+                card.src = "../imgs/card.jpg";
+                // 每张纸牌间隔32px
+                card.style.left = i * 32 + "px";
+                // 将纸牌添加到box中
+                box.appendChild(card);
+            }
+            // 添加box的点击函数，利用事件委托判断触发对象并升起纸牌
+            box.onclick = function (ev) {
+                var e = ev || window.event;
+                var target = e.target || window.event.srcElement;
+                // 如果为某img触发，改变样式升起纸牌
+                if (target.nodeName.toLowerCase() == "img") {
+                    (target.style.top == "-32px") ?
+                        (target.style.top = "0px") :
+                        (target.style.top = "-32px");
+                }
+            }
+
         }
     </script>
 </head>
 
 <body>
-
+    <div id="box"></div>
 </body>
 
 </html>
