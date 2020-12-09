@@ -69,3 +69,25 @@ function limitedDragable(node) {
         document.onmousemove = null;
     }
 }
+
+var dict = `#A
+zh:字母a
+#aPPLe
+zh:苹果
+#all
+zh:所有
+#allow
+zh:允许
+#banana
+zh:香蕉
+#connect
+zh:连接
+#dog
+zh:狗
+#do
+zh:做，进行
+#down
+zh:下面，向下，沿着，跌落，击倒...
+#download
+zh:下载
+`

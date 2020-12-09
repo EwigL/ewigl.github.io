@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>简易英汉词典</title>
+    <style>
+        #div0 {
+            color: white;
+            margin: 128px auto;
+            border: 1px solid black;
+            background-color: gray;
+            border-radius: 16px;
+            width: 320px;
+            height: 320px;
+            padding: 16px;
+            text-align: center;
+        }
+
+        #engInput {
+            width: 256px;
+            margin-top: 24px;
+            text-align: center;
+            outline: none;
+            height: 24px;
+            font-size: 16px;
+            border: 1px solid black;
+            border-radius: 12px;
+        }
+
+        #zh {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: black;
+            width: 200px;
+            height: 200px;
+            margin: 18px auto;
+            vertical-align: middle;
+            text-align: center;
+            background-color: lightgray;
+            border: 1px solid black;
+            border-radius: 16px;
+        }
+    </style>
+    <script src="../js/lichtool.js"></script>
+    <script>
+        var aDict = dict.split("\n");
+        // alert(aDict.length);
+
+        let map = new Map();
+
+        for (var i = 0; i < aDict.length - 1; i += 2) {
+            map.set(aDict[i].substring(1).toLowerCase(), aDict[i + 1].substring(3));
+        }
+        console.log(map);
+        window.onload = function () {
+            var engInput = document.getElementById("engInput");
+            var transed = document.getElementById("zh");
+
+            engInput.onkeyup = function () {
+                var value = map.get(this.value.toLowerCase());
+                if (value) {
+                    transed.innerHTML = value;
+                } else {
+                    transed.innerHTML = "无此单词";
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div id="div0">请在控制台中查看map集合
+        <input type="text" id="engInput" placeholder="请输入英文单词,忽略大小写" />
+        <div id="zh"></div>
+    </div>
+</body>
+
+</html>

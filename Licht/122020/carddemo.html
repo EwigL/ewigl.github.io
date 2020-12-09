@@ -50,7 +50,7 @@
             var box = document.getElementById("box");
             // 设置布局使box水平垂直居中
             box.style.width = ((card_cnt - 1) * 32 + 118) + "px";
-            box.style.margin = "-82px 0 0 " + ((card_cnt - 1) * 32 + 118) / -2 + "px";
+            box.style.margin = `-82px 0 0 ${((card_cnt - 1) * 32 + 118) / -2}px`;
             // 向box中添加指定数量img
             for (var i = 0; i < card_cnt; i++) {
                 var card = document.createElement("img");
