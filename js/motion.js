@@ -18,7 +18,7 @@ NexT.motion.integrator = {
     if (!CONFIG.motion.async) this.queue = [this.queue];
     this.queue.forEach(sequence => {
       const timeline = window.anime.timeline({
-        duration: 1000,
+        duration: 100,
         easing: 'linear'
       });
       sequence.forEach(item => {
