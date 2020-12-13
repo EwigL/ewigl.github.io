@@ -1,10 +1,11 @@
+——
 <!DOCTYPE html>
 <html lang="zh-cn">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>简易选项卡</title>
+    <title>简易选项卡_JQ</title>
     <style>
         #div0 {
             text-align: center;
@@ -29,47 +30,37 @@
             border: 1px solid black;
             display: none;
             margin: 10px auto;
-            /* display: flex; */
             align-items: center;
             justify-content: center;
         }
     </style>
 
+    <script src="../jQuery/jquery-3.5.1.min.js"></script>
     <script>
-        window.onload = function () {
-            var oDiv0 = document.getElementById("div0");
-            var aButtons = oDiv0.getElementsByTagName("button");
-            var aDivs = oDiv0.getElementsByTagName("div");
+        $(function () {
+            var aButtons = $("#div0").find("button");
+            var aDivs = $("#div0").find("div");
 
-            for (var i = 0; i < aButtons.length; i++) {
-                aButtons[i].index = i;
-                aButtons[i].onclick = function () {
-                    //取消所有active样式，设置display为none
-                    for (var j = 0; j < aButtons.length; j++) {
-                        aButtons[j].className = "";
-                        aDivs[j].style.display = "none";
-                    }
-                    //设置点击按钮的class为active
-                    this.className = "active";
-                    aDivs[this.index].style.display = "flex";
-                    // alert(this.index);
-                }
-            }
+            aButtons.click(function () {
+                aButtons.attr("class", "");
+                aDivs.css("display", "none");
 
-        }
+                $(this).attr("class", "active");
+                $(this).css("display", "flex");
+            })
+
+
+        })
     </script>
 
 </head>
 
 <body>
-
     <div id="div0">
-
         <button class="active">HTML5</button>
         <button>C</button>
         <button>Java</button>
         <button>Python</button>
-
         <div style="display: flex;">
             HTML5是构建Web内容的一种语言描述方式。HTML5是互联网的下一代标准，是构建以及呈现互联网内容的一种语言方式．被认为是互联网的核心技术之一。HTML产生于1990年，1997年HTML4成为互联网标准，并广泛应用于互联网应用的开发。
         </div>
@@ -78,8 +69,6 @@
         <div>Python是一种跨平台的计算机程序设计语言。
             是一个高层次的结合了解释性、编译性、互动性和面向对象的脚本语言。最初被设计用于编写自动化脚本(shell)，随着版本的不断更新和语言新功能的添加，越多被用于独立的、大型项目的开发。</div>
     </div>
-
-
 </body>
 
 </html>
