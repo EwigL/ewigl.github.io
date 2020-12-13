@@ -1,4 +1,3 @@
-——
 <!DOCTYPE html>
 <html lang="zh-cn">
 
@@ -46,10 +45,8 @@
                 aDivs.css("display", "none");
 
                 $(this).attr("class", "active");
-                $(this).css("display", "flex");
+                aDivs.eq($(this).index()).css("display", "flex");
             })
-
-
         })
     </script>
 
