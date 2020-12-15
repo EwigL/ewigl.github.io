@@ -25,17 +25,22 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"ewigl.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.1.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":4},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeInDown","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInDown","sidebar":"fadeInDown"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
-<meta property="og:type" content="website">
-<meta property="og:title" content="Licht&#39;s Blog">
-<meta property="og:url" content="http://ewigl.github.io/tags/%E7%BD%91%E5%AE%89/index.html">
+<meta name="description" content="setTimeout( );setInterval( ):设置定时器">
+<meta property="og:type" content="article">
+<meta property="og:title" content="前端_定时器">
+<meta property="og:url" content="http://ewigl.github.io/2020/12/%E5%89%8D%E7%AB%AF-%E5%AE%9A%E6%97%B6%E5%99%A8/index.html">
 <meta property="og:site_name" content="Licht&#39;s Blog">
+<meta property="og:description" content="setTimeout( );setInterval( ):设置定时器">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-12-15T10:11:47.000Z">
+<meta property="article:modified_time" content="2020-12-15T10:13:05.606Z">
 <meta property="article:author" content="EwigLicht Lee">
-<meta property="article:tag" content="学习">
+<meta property="article:tag" content="web">
+<meta property="article:tag" content="前端">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://ewigl.github.io/tags/%E7%BD%91%E5%AE%89/">
+<link rel="canonical" href="http://ewigl.github.io/2020/12/%E5%89%8D%E7%AB%AF-%E5%AE%9A%E6%97%B6%E5%99%A8/">
 
 
 <script class="page-configurations">
@@ -43,11 +48,11 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
-<title>标签: 网安 | Licht's Blog</title>
+<title>前端_定时器 | Licht's Blog</title>
   
 
 
@@ -250,50 +255,106 @@
 </noscript>
 
 
-    <div class="main-inner tag posts-collapse">
+    <div class="main-inner post posts-expand">
 
 
   
-  
-  
-  <div class="post-block">
-    <div class="post-content">
-      <div class="collection-title">
-        <h2 class="collection-header">网安
-          <small>标签</small>
-        </h2>
-      </div>
 
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://ewigl.github.io/2020/12/%E5%89%8D%E7%AB%AF-%E5%AE%9A%E6%97%B6%E5%99%A8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/L/GameGirl.png">
+      <meta itemprop="name" content="EwigLicht Lee">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Licht's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          前端_定时器
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
       
-    <div class="collection-year">
-      <span class="collection-header">2020</span>
+
+      <time title="创建时间：2020-12-15 18:11:47 / 修改时间：18:13:05" itemprop="dateCreated datePublished" datetime="2020-12-15T18:11:47+08:00">2020-12-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">笔记</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <ul>
+<li>setTimeout( );setInterval( ):设置定时器  <a id="more"></a>
+<ul>
+<li>clearTimeout( );clearInterval( )：清除定时器</li>
+<li>参数：(函数(名),延迟,函数参数顺延) </li>
+<li>setTimeout：执行后即停止</li>
+<li>setInterval：循环执行</li>
+</ul>
+</li>
+</ul>
+
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2020-10-08T15:13:43+08:00"
-              content="2020-10-08">
-          10-08
-        </time>
-      </div>
+    
+    
+    
 
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/10/%E5%81%B6%E7%84%B6%E5%8F%91%E7%8E%B0%E7%9A%84%E6%9F%90%E7%9B%98%E6%BC%8F%E6%B4%9E/" itemprop="url">
-            <span itemprop="name">偶然发现的某盘"漏洞"</span>
-          </a>
-      </div>
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/web/" rel="tag"># web</a>
+              <a href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag"># 前端</a>
+          </div>
 
-      
-    </header>
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2020/12/%E5%89%8D%E7%AB%AF-this%E9%87%8D%E5%AE%9A%E5%90%91/" rel="prev" title="前端_this重定向">
+                  <i class="fa fa-chevron-left"></i> 前端_this重定向
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
   </article>
+</div>
 
-    </div>
-  </div>
-  
-  
-  
+
+
+
+
 
 
 <script>
