@@ -53,6 +53,24 @@
       </tags>
   </entry>
   <entry>
+    <title>Steam手动添加愿望单</title>
+    <url>/2020/10/Steam%E6%89%8B%E5%8A%A8%E6%B7%BB%E5%8A%A0%E6%84%BF%E6%9C%9B%E5%8D%95/</url>
+    <content><![CDATA[<ul>
+<li>在浏览器无法显示锁区游戏时手动添加任意游戏至愿望单<a id="more"></a>
+
+</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">javascript:AddToWishlist( AppID,</span><br><span class="line"><span class="string">&#x27;add_to_wishlist_area&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;add_to_wishlist_area_success&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;add_to_wishlist_area_fail&#x27;</span>,</span><br><span class="line"><span class="string">&quot;1_4_4__145_2&quot;</span>,</span><br><span class="line"><span class="string">&#x27;add_to_wishlist_area2&#x27;</span> );</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>生活娱乐</category>
+      </categories>
+      <tags>
+        <tag>web</tag>
+        <tag>游戏</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>偶然发现的某盘&quot;漏洞&quot;</title>
     <url>/2020/10/%E5%81%B6%E7%84%B6%E5%8F%91%E7%8E%B0%E7%9A%84%E6%9F%90%E7%9B%98%E6%BC%8F%E6%B4%9E/</url>
     <content><![CDATA[<ul>
@@ -75,24 +93,6 @@
         <tag>web</tag>
         <tag>前端</tag>
         <tag>网安</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Steam手动添加愿望单</title>
-    <url>/2020/10/Steam%E6%89%8B%E5%8A%A8%E6%B7%BB%E5%8A%A0%E6%84%BF%E6%9C%9B%E5%8D%95/</url>
-    <content><![CDATA[<ul>
-<li>在浏览器无法显示锁区游戏时手动添加任意游戏至愿望单<a id="more"></a>
-
-</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">javascript:AddToWishlist( AppID,</span><br><span class="line"><span class="string">&#x27;add_to_wishlist_area&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;add_to_wishlist_area_success&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;add_to_wishlist_area_fail&#x27;</span>,</span><br><span class="line"><span class="string">&quot;1_4_4__145_2&quot;</span>,</span><br><span class="line"><span class="string">&#x27;add_to_wishlist_area2&#x27;</span> );</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>生活娱乐</category>
-      </categories>
-      <tags>
-        <tag>web</tag>
-        <tag>游戏</tag>
       </tags>
   </entry>
   <entry>
@@ -136,6 +136,24 @@
       </tags>
   </entry>
   <entry>
+    <title>前端_文档碎片</title>
+    <url>/2020/12/%E5%89%8D%E7%AB%AF-%E6%96%87%E6%A1%A3%E7%A2%8E%E7%89%87/</url>
+    <content><![CDATA[<ul>
+<li>文档碎片操作：减少重排，提高效率  <a id="more"></a>  
+
+</li>
+</ul>
+<p>&emsp;&emsp;将需要添加的大量元素先添加到文档碎片中，再将文档碎片添加到需要插入的位置，大大减少DOM操作，提高性能。<br> 一般：<br>  <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">10000</span>; i++) &#123;</span><br><span class="line">    <span class="keyword">var</span> newDiv = <span class="built_in">document</span>.createElement(<span class="string">&quot;div&quot;</span>);</span><br><span class="line">    <span class="built_in">document</span>.body.appendChild(newDiv);</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure><br>  改进：<br>  <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> node = <span class="built_in">document</span>.createElement(<span class="string">&quot;div&quot;</span>);</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">10000</span>; i++) &#123;</span><br><span class="line">    <span class="keyword">var</span> newDiv = <span class="built_in">document</span>.createElement(<span class="string">&quot;div&quot;</span>);</span><br><span class="line">    node.appendChild(newDiv);</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">document</span>.body.appendChild(node);</span><br></pre></td></tr></table></figure></p>
+]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>web</tag>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>前端_原生JS跨浏览器兼容实例</title>
     <url>/2020/12/%E5%89%8D%E7%AB%AF-%E5%8E%9F%E7%94%9FJS%E8%B7%A8%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%BC%E5%AE%B9%E5%AE%9E%E4%BE%8B/</url>
     <content><![CDATA[<ul>
@@ -167,24 +185,6 @@
 </ul>
 </li>
 </ul>
-]]></content>
-      <categories>
-        <category>笔记</category>
-      </categories>
-      <tags>
-        <tag>web</tag>
-        <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>前端_文档碎片</title>
-    <url>/2020/12/%E5%89%8D%E7%AB%AF-%E6%96%87%E6%A1%A3%E7%A2%8E%E7%89%87/</url>
-    <content><![CDATA[<ul>
-<li>文档碎片操作：减少重排，提高效率  <a id="more"></a>  
-
-</li>
-</ul>
-<p>&emsp;&emsp;将需要添加的大量元素先添加到文档碎片中，再将文档碎片添加到需要插入的位置，大大减少DOM操作，提高性能。<br> 一般：<br>  <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">10000</span>; i++) &#123;</span><br><span class="line">    <span class="keyword">var</span> newDiv = <span class="built_in">document</span>.createElement(<span class="string">&quot;div&quot;</span>);</span><br><span class="line">    <span class="built_in">document</span>.body.appendChild(newDiv);</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure><br>  改进：<br>  <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> node = <span class="built_in">document</span>.createElement(<span class="string">&quot;div&quot;</span>);</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">10000</span>; i++) &#123;</span><br><span class="line">    <span class="keyword">var</span> newDiv = <span class="built_in">document</span>.createElement(<span class="string">&quot;div&quot;</span>);</span><br><span class="line">    node.appendChild(newDiv);</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">document</span>.body.appendChild(node);</span><br></pre></td></tr></table></figure></p>
 ]]></content>
       <categories>
         <category>笔记</category>
