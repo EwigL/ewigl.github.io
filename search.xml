@@ -13,7 +13,7 @@
 </ul>
 ]]></content>
       <categories>
-        <category>杂项</category>
+        <category>不正经研究</category>
       </categories>
       <tags>
         <tag>Python</tag>
@@ -46,47 +46,10 @@
 <h2 id="后续"><a href="#后续" class="headerlink" title="后续"></a>后续</h2><p>由于预定座位请求头中存在自定义头部 sign，&lt;待更新&gt;…</p>
 ]]></content>
       <categories>
-        <category>笔记</category>
+        <category>不正经研究</category>
       </categories>
       <tags>
         <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Steam手动添加愿望单</title>
-    <url>/2020/10/Steam%E6%89%8B%E5%8A%A8%E6%B7%BB%E5%8A%A0%E6%84%BF%E6%9C%9B%E5%8D%95/</url>
-    <content><![CDATA[<ul>
-<li>在浏览器无法显示锁区游戏时手动添加任意游戏至愿望单<a id="more"></a>
-
-</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">javascript:AddToWishlist( AppID,</span><br><span class="line"><span class="string">&#x27;add_to_wishlist_area&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;add_to_wishlist_area_success&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;add_to_wishlist_area_fail&#x27;</span>,</span><br><span class="line"><span class="string">&quot;1_4_4__145_2&quot;</span>,</span><br><span class="line"><span class="string">&#x27;add_to_wishlist_area2&#x27;</span> );</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>杂项</category>
-      </categories>
-      <tags>
-        <tag>web</tag>
-        <tag>游戏</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>前端_mouseover与mouseenter</title>
-    <url>/2020/12/%E5%89%8D%E7%AB%AF-mouseover%E4%B8%8Emouseenter/</url>
-    <content><![CDATA[<ul>
-<li><p>mouseover(鼠标覆盖)与mouseenter(鼠标进入)  </p>
-<a id="more"></a>
-
-<p>&emsp;&emsp;mouseenter不会冒泡。它不会被它本身的子元素的状态影响到。<br>&emsp;&emsp;mouseover会被它的子元素影响到,在触发子元素的时候,mouseover会冒泡触发它的父元素。</p>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>笔记</category>
-      </categories>
-      <tags>
-        <tag>web</tag>
-        <tag>前端</tag>
       </tags>
   </entry>
   <entry>
@@ -112,6 +75,43 @@
         <tag>web</tag>
         <tag>前端</tag>
         <tag>网安</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Steam手动添加愿望单</title>
+    <url>/2020/10/Steam%E6%89%8B%E5%8A%A8%E6%B7%BB%E5%8A%A0%E6%84%BF%E6%9C%9B%E5%8D%95/</url>
+    <content><![CDATA[<ul>
+<li>在浏览器无法显示锁区游戏时手动添加任意游戏至愿望单<a id="more"></a>
+
+</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">javascript:AddToWishlist( AppID,</span><br><span class="line"><span class="string">&#x27;add_to_wishlist_area&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;add_to_wishlist_area_success&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;add_to_wishlist_area_fail&#x27;</span>,</span><br><span class="line"><span class="string">&quot;1_4_4__145_2&quot;</span>,</span><br><span class="line"><span class="string">&#x27;add_to_wishlist_area2&#x27;</span> );</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>生活娱乐</category>
+      </categories>
+      <tags>
+        <tag>web</tag>
+        <tag>游戏</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>前端_mouseover与mouseenter</title>
+    <url>/2020/12/%E5%89%8D%E7%AB%AF-mouseover%E4%B8%8Emouseenter/</url>
+    <content><![CDATA[<ul>
+<li><p>mouseover(鼠标覆盖)与mouseenter(鼠标进入)  </p>
+<a id="more"></a>
+
+<p>&emsp;&emsp;mouseenter不会冒泡。它不会被它本身的子元素的状态影响到。<br>&emsp;&emsp;mouseover会被它的子元素影响到,在触发子元素的时候,mouseover会冒泡触发它的父元素。</p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>web</tag>
+        <tag>前端</tag>
       </tags>
   </entry>
   <entry>
