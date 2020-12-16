@@ -21,6 +21,27 @@
       </tags>
   </entry>
   <entry>
+    <title>Via浏览器自定义主页</title>
+    <url>/2020/12/Via%E6%B5%8F%E8%A7%88%E5%99%A8%E8%87%AA%E5%AE%9A%E4%B9%89%E4%B8%BB%E9%A1%B5/</url>
+    <content><![CDATA[<p>&emsp;&emsp;简单的主页动画</p>
+<ul>
+<li>自定义logo:<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h4</span> <span class="attr">id</span>=<span class="string">&quot;Licht&quot;</span>&gt;</span>Licht<span class="tag">&lt;/<span class="name">h4</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<a id="more"></a></li>
+<li>自定义css:<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-id">#content</span> &#123;</span><br><span class="line">        <span class="attribute">top</span>: <span class="number">256px</span>;</span><br><span class="line">        <span class="attribute">animation</span>: fadeIn <span class="number">0.8s</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="selector-id">#Licht</span> &#123;</span><br><span class="line">        <span class="attribute">color</span>: gray;</span><br><span class="line">        <span class="attribute">width</span>: <span class="number">64px</span>;</span><br><span class="line">        <span class="attribute">margin</span>: <span class="number">0px</span> auto;</span><br><span class="line">        <span class="attribute">animation</span>: a_scale <span class="number">0.8s</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="selector-class">.search_bar</span> &#123;</span><br><span class="line">        <span class="attribute">border-bottom</span>: <span class="number">1px</span> solid gray;</span><br><span class="line">        <span class="attribute">margin-top</span>: <span class="number">64px</span>;</span><br><span class="line">        <span class="attribute">animation</span>: a_expand <span class="number">0.8s</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="selector-class">.title</span>,</span><br><span class="line">    <span class="selector-class">.url</span> &#123;</span><br><span class="line">        <span class="attribute">color</span>: gray;</span><br><span class="line">        <span class="attribute">animation</span>: a_scale <span class="number">0.8s</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="selector-class">.search</span> &#123;</span><br><span class="line">        <span class="attribute">text-align</span>: center;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="selector-id">#search_submit</span> &#123;</span><br><span class="line">        <span class="attribute">display</span>: none <span class="meta">!important</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">@keyframes</span> a_expand &#123;</span><br><span class="line">        0% &#123;</span><br><span class="line">            <span class="attribute">max-width</span>: <span class="number">25%</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        100% &#123;</span><br><span class="line">            <span class="attribute">max-width</span>: <span class="number">100%</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">@keyframes</span> a_scale &#123;</span><br><span class="line">        0% &#123;</span><br><span class="line">            <span class="attribute">transform</span>: <span class="built_in">scale</span>(<span class="number">0.4</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        100% &#123;</span><br><span class="line">            <span class="attribute">transform</span>: <span class="built_in">scale</span>(<span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">@keyframes</span> fadeIn &#123;</span><br><span class="line">        0% &#123;</span><br><span class="line">            <span class="attribute">opacity</span>: <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        100% &#123;</span><br><span class="line">            <span class="attribute">opacity</span>: <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure></li>
+<li>效果<center>
+<video id="movies" src="https://pan.iiyzf.cn/view.php/9c4b0c871dcbbe4285d48ca5037c6d0a.mp4" autoplay="true" loop="loop" width="50%"></video>
+</center></li>
+</ul>
+]]></content>
+      <categories>
+        <category>不正经研究</category>
+      </categories>
+      <tags>
+        <tag>前端</tag>
+        <tag>web</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>图书馆助手</title>
     <url>/2020/09/%E5%9B%BE%E4%B9%A6%E9%A6%86%E5%8A%A9%E6%89%8B/</url>
     <content><![CDATA[<ul>
@@ -53,6 +74,25 @@
       </tags>
   </entry>
   <entry>
+    <title>前端_mouseover与mouseenter</title>
+    <url>/2020/12/%E5%89%8D%E7%AB%AF-mouseover%E4%B8%8Emouseenter/</url>
+    <content><![CDATA[<ul>
+<li><p>mouseover(鼠标覆盖)与mouseenter(鼠标进入)  </p>
+<a id="more"></a>
+
+<p>&emsp;&emsp;mouseenter不会冒泡。它不会被它本身的子元素的状态影响到。<br>&emsp;&emsp;mouseover会被它的子元素影响到,在触发子元素的时候,mouseover会冒泡触发它的父元素。</p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>前端</tag>
+        <tag>web</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Steam手动添加愿望单</title>
     <url>/2020/10/Steam%E6%89%8B%E5%8A%A8%E6%B7%BB%E5%8A%A0%E6%84%BF%E6%9C%9B%E5%8D%95/</url>
     <content><![CDATA[<ul>
@@ -68,46 +108,6 @@
       <tags>
         <tag>web</tag>
         <tag>游戏</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>前端_this重定向</title>
-    <url>/2020/12/%E5%89%8D%E7%AB%AF-this%E9%87%8D%E5%AE%9A%E5%90%91/</url>
-    <content><![CDATA[<ul>
-<li>call();apply();bind:  this重定向函数  <a id="more"></a>
-<ul>
-<li>第一个参数均为this指向对象</li>
-<li>call()与apply()均立即调用，bind 返回的是一个新的函数</li>
-<li>call()原函数参数后移一位，apply()原函数参数作为数组传入，bind()除返回值是函数以外，参数与 call()一样  </li>
-</ul>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>笔记</category>
-      </categories>
-      <tags>
-        <tag>web</tag>
-        <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>前端_原生JS跨浏览器兼容实例</title>
-    <url>/2020/12/%E5%89%8D%E7%AB%AF-%E5%8E%9F%E7%94%9FJS%E8%B7%A8%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%BC%E5%AE%B9%E5%AE%9E%E4%BE%8B/</url>
-    <content><![CDATA[<ul>
-<li>获取事件对象属性  <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> e = ev || <span class="built_in">window</span>.event;</span><br><span class="line"><span class="keyword">var</span> witch = e.witch || e.keyCode || charCode;</span><br></pre></td></tr></table></figure>
-<a id="more"></a></li>
-<li>阻止冒泡  <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">e.stopPropagation ? </span><br><span class="line">  e.stopPropagation() : </span><br><span class="line">  e.cancelBubble = <span class="literal">true</span>;</span><br></pre></td></tr></table></figure></li>
-<li>监听器操作：  <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 跨浏览器兼容添加事件监听器</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">addEvent</span>(<span class="params">node, eventType, funcName</span>) </span>&#123;</span><br><span class="line">  node.addEventListener ?</span><br><span class="line">    node.addEventListener(eventType, funcName, <span class="literal">false</span>) :</span><br><span class="line">    node.attachEvent(<span class="string">&quot;on&quot;</span> + eventType, funcName);</span><br><span class="line">  &#125;</span><br><span class="line"><span class="comment">// 跨浏览器兼容移除事件监听器</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">removeEvent</span>(<span class="params">node, eventType, funcName</span>) </span>&#123;</span><br><span class="line">  node.removeEventListener ?</span><br><span class="line">    node.removeEventListener(eventType, funcName) :</span><br><span class="line">    node.detachEvent(<span class="string">&quot;on&quot;</span> + eventType, funcName);</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>笔记</category>
-      </categories>
-      <tags>
-        <tag>web</tag>
-        <tag>前端</tag>
       </tags>
   </entry>
   <entry>
@@ -130,9 +130,49 @@
         <category>笔记</category>
       </categories>
       <tags>
-        <tag>web</tag>
         <tag>前端</tag>
+        <tag>web</tag>
         <tag>网安</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>前端_原生JS跨浏览器兼容实例</title>
+    <url>/2020/12/%E5%89%8D%E7%AB%AF-%E5%8E%9F%E7%94%9FJS%E8%B7%A8%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%BC%E5%AE%B9%E5%AE%9E%E4%BE%8B/</url>
+    <content><![CDATA[<ul>
+<li>获取事件对象属性  <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> e = ev || <span class="built_in">window</span>.event;</span><br><span class="line"><span class="keyword">var</span> witch = e.witch || e.keyCode || charCode;</span><br></pre></td></tr></table></figure>
+<a id="more"></a></li>
+<li>阻止冒泡  <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">e.stopPropagation ? </span><br><span class="line">  e.stopPropagation() : </span><br><span class="line">  e.cancelBubble = <span class="literal">true</span>;</span><br></pre></td></tr></table></figure></li>
+<li>监听器操作：  <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 跨浏览器兼容添加事件监听器</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">addEvent</span>(<span class="params">node, eventType, funcName</span>) </span>&#123;</span><br><span class="line">  node.addEventListener ?</span><br><span class="line">    node.addEventListener(eventType, funcName, <span class="literal">false</span>) :</span><br><span class="line">    node.attachEvent(<span class="string">&quot;on&quot;</span> + eventType, funcName);</span><br><span class="line">  &#125;</span><br><span class="line"><span class="comment">// 跨浏览器兼容移除事件监听器</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">removeEvent</span>(<span class="params">node, eventType, funcName</span>) </span>&#123;</span><br><span class="line">  node.removeEventListener ?</span><br><span class="line">    node.removeEventListener(eventType, funcName) :</span><br><span class="line">    node.detachEvent(<span class="string">&quot;on&quot;</span> + eventType, funcName);</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>前端</tag>
+        <tag>web</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>前端_this重定向</title>
+    <url>/2020/12/%E5%89%8D%E7%AB%AF-this%E9%87%8D%E5%AE%9A%E5%90%91/</url>
+    <content><![CDATA[<ul>
+<li>call();apply();bind:  this重定向函数  <a id="more"></a>
+<ul>
+<li>第一个参数均为this指向对象</li>
+<li>call()与apply()均立即调用，bind 返回的是一个新的函数</li>
+<li>call()原函数参数后移一位，apply()原函数参数作为数组传入，bind()除返回值是函数以外，参数与 call()一样  </li>
+</ul>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>前端</tag>
+        <tag>web</tag>
       </tags>
   </entry>
   <entry>
@@ -153,8 +193,8 @@
         <category>笔记</category>
       </categories>
       <tags>
-        <tag>web</tag>
         <tag>前端</tag>
+        <tag>web</tag>
       </tags>
   </entry>
   <entry>
@@ -171,27 +211,8 @@
         <category>笔记</category>
       </categories>
       <tags>
-        <tag>web</tag>
         <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>前端_mouseover与mouseenter</title>
-    <url>/2020/12/%E5%89%8D%E7%AB%AF-mouseover%E4%B8%8Emouseenter/</url>
-    <content><![CDATA[<ul>
-<li><p>mouseover(鼠标覆盖)与mouseenter(鼠标进入)  </p>
-<a id="more"></a>
-
-<p>&emsp;&emsp;mouseenter不会冒泡。它不会被它本身的子元素的状态影响到。<br>&emsp;&emsp;mouseover会被它的子元素影响到,在触发子元素的时候,mouseover会冒泡触发它的父元素。</p>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>笔记</category>
-      </categories>
-      <tags>
         <tag>web</tag>
-        <tag>前端</tag>
       </tags>
   </entry>
 </search>
