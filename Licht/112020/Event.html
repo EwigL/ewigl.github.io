@@ -111,50 +111,33 @@
                 i++
             }
             window.onkeyup = function () {
-                // i = 0;
                 oInput.value = "按键已抬起";
             }
             window.onscroll = function () {
-                // oInput.style.position = "fixed";
                 oInput.value = "页面滚动";
             }
             window.onresize = function () {
                 oInput.value = "窗口大小改变";
             }
             oInput.onblur = function () {
-                this.value = "失去梦想变成烤鸡"
+                this.value = "blur"
             }
             oInput.onfocus = function () {
-                this.value = "坚持梦想获得动力"
+                this.value = "focus"
             }
             oInput.onselect = function () {
                 this.value += "666";
             }
-            oForm.onsubmit = function () {
-                alert("已提交");
-            }
-            oForm.onreset = function () {
-                alert("已重置");
-            }
         }
-
-
-
-
     </script>
 </head>
 
 <body style="text-align: center;">
+    <p>监听窗口各种事件</p>
     <button id="btn">按钮</button>
     <input type="text" name="name0" id="txt0" style="text-align: center;" />
     <div id="div0">
 
-    </div>
-    <form id="form0">
-        <input type="text" />
-        <input type="submit" />
-        <input type="reset" />
-    </form>
 </body>
 
 </html>

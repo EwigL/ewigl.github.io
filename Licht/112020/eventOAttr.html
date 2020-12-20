@@ -14,18 +14,20 @@
         }
 
         #div1 {
+            border-radius: 16px;
             width: 400px;
-            height: 100px;
+            height: 120px;
             background-color: lightslategray;
             margin: auto;
             text-align: center;
         }
 
         #div2 {
+            border-radius: 16px;
             width: 400px;
             height: 500px;
             background-color: slategray;
-            margin: auto;
+            margin: 8px auto;
         }
 
         #input0 {
@@ -35,18 +37,18 @@
             text-align: center;
             border-radius: 16px;
             outline: none;
-            margin: auto;
-            display: block;
+            margin: 16px auto;
+
         }
 
         #div1 button {
             width: 100px;
             height: 30px;
             font-size: 18px;
-            margin-top: 8px;
         }
 
         #div2 div {
+            border-radius: 8px;
             height: 20px;
             border-bottom: 1px dashed black;
             padding: 2px;
@@ -103,8 +105,6 @@
             }
 
             aButtons[2].onclick = function () {
-                // var newNode = oDiv2.lastChild.cloneNode(true);
-                // oDiv2.appendChild(newNode);
                 oDiv2.appendChild(oDiv2.lastChild.cloneNode(true));
             }
             var oButton0 = document.getElementById("btn0");
@@ -153,20 +153,17 @@
                     aButtons[1].onclick();
                 }
             }
-
-
         }
     </script>
 </head>
 
 <body style="text-align: center;width: auto;">
-    <button id="btn0">鼠标按住按钮再按功能键</button>
+    <button id="btn0">鼠标按住此按钮再按功能键</button>
     <p id="p0"></p>
-    <button id="btn1">鼠标按住按钮再按任意键</button>
+    <button id="btn1">鼠标按住此按钮再按任意键</button>
     <p id="p1"></p>
-    <button id="btn2">鼠标按住按钮再按字符键</button>
+    <button id="btn2">鼠标按住此按钮再按字符键</button>
     <p id="p2"></p>
-    <!-- <div id="msg"></div> -->
     <div id="div1">
         <input type="text" id="input0" placeholder="请输入内容，ctrl+enter增加，ctrl+del删除">
         <button>增加</button>
