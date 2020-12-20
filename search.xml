@@ -96,27 +96,6 @@
       </tags>
   </entry>
   <entry>
-    <title>前端_this重定向</title>
-    <url>/2020/12/%E5%89%8D%E7%AB%AF-this%E9%87%8D%E5%AE%9A%E5%90%91/</url>
-    <content><![CDATA[<ul>
-<li>call();apply();bind:  this重定向函数  <a id="more"></a>
-<ul>
-<li>第一个参数均为this指向对象</li>
-<li>call()与apply()均立即调用，bind 返回的是一个新的函数</li>
-<li>call()原函数参数后移一位，apply()原函数参数作为数组传入，bind()除返回值是函数以外，参数与 call()一样  </li>
-</ul>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>笔记</category>
-      </categories>
-      <tags>
-        <tag>web</tag>
-        <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Via浏览器自定义主页</title>
     <url>/2020/12/Via%E6%B5%8F%E8%A7%88%E5%99%A8%E8%87%AA%E5%AE%9A%E4%B9%89%E4%B8%BB%E9%A1%B5/</url>
     <content><![CDATA[<p>&emsp;&emsp;简单的主页动画</p>
@@ -157,13 +136,15 @@
       </tags>
   </entry>
   <entry>
-    <title>前端_原生JS跨浏览器兼容实例</title>
-    <url>/2020/12/%E5%89%8D%E7%AB%AF-%E5%8E%9F%E7%94%9FJS%E8%B7%A8%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%BC%E5%AE%B9%E5%AE%9E%E4%BE%8B/</url>
+    <title>前端_this重定向</title>
+    <url>/2020/12/%E5%89%8D%E7%AB%AF-this%E9%87%8D%E5%AE%9A%E5%90%91/</url>
     <content><![CDATA[<ul>
-<li>获取事件对象属性  <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> e = ev || <span class="built_in">window</span>.event;</span><br><span class="line"><span class="keyword">var</span> witch = e.witch || e.keyCode || charCode;</span><br></pre></td></tr></table></figure>
-<a id="more"></a></li>
-<li>阻止冒泡  <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">e.stopPropagation ? </span><br><span class="line">  e.stopPropagation() : </span><br><span class="line">  e.cancelBubble = <span class="literal">true</span>;</span><br></pre></td></tr></table></figure></li>
-<li>监听器操作：  <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 跨浏览器兼容添加事件监听器</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">addEvent</span>(<span class="params">node, eventType, funcName</span>) </span>&#123;</span><br><span class="line">  node.addEventListener ?</span><br><span class="line">    node.addEventListener(eventType, funcName, <span class="literal">false</span>) :</span><br><span class="line">    node.attachEvent(<span class="string">&quot;on&quot;</span> + eventType, funcName);</span><br><span class="line">  &#125;</span><br><span class="line"><span class="comment">// 跨浏览器兼容移除事件监听器</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">removeEvent</span>(<span class="params">node, eventType, funcName</span>) </span>&#123;</span><br><span class="line">  node.removeEventListener ?</span><br><span class="line">    node.removeEventListener(eventType, funcName) :</span><br><span class="line">    node.detachEvent(<span class="string">&quot;on&quot;</span> + eventType, funcName);</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<li>call();apply();bind:  this重定向函数  <a id="more"></a>
+<ul>
+<li>第一个参数均为this指向对象</li>
+<li>call()与apply()均立即调用，bind 返回的是一个新的函数</li>
+<li>call()原函数参数后移一位，apply()原函数参数作为数组传入，bind()除返回值是函数以外，参数与 call()一样  </li>
+</ul>
 </li>
 </ul>
 ]]></content>
@@ -176,14 +157,15 @@
       </tags>
   </entry>
   <entry>
-    <title>前端_文档碎片</title>
-    <url>/2020/12/%E5%89%8D%E7%AB%AF-%E6%96%87%E6%A1%A3%E7%A2%8E%E7%89%87/</url>
+    <title>前端_原生JS跨浏览器兼容实例</title>
+    <url>/2020/12/%E5%89%8D%E7%AB%AF-%E5%8E%9F%E7%94%9FJS%E8%B7%A8%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%BC%E5%AE%B9%E5%AE%9E%E4%BE%8B/</url>
     <content><![CDATA[<ul>
-<li>文档碎片操作：减少重排，提高效率  <a id="more"></a>  
-
+<li>获取事件对象属性  <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> e = ev || <span class="built_in">window</span>.event;</span><br><span class="line"><span class="keyword">var</span> witch = e.witch || e.keyCode || charCode;</span><br></pre></td></tr></table></figure>
+<a id="more"></a></li>
+<li>阻止冒泡  <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">e.stopPropagation ? </span><br><span class="line">  e.stopPropagation() : </span><br><span class="line">  e.cancelBubble = <span class="literal">true</span>;</span><br></pre></td></tr></table></figure></li>
+<li>监听器操作：  <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 跨浏览器兼容添加事件监听器</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">addEvent</span>(<span class="params">node, eventType, funcName</span>) </span>&#123;</span><br><span class="line">  node.addEventListener ?</span><br><span class="line">    node.addEventListener(eventType, funcName, <span class="literal">false</span>) :</span><br><span class="line">    node.attachEvent(<span class="string">&quot;on&quot;</span> + eventType, funcName);</span><br><span class="line">  &#125;</span><br><span class="line"><span class="comment">// 跨浏览器兼容移除事件监听器</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">removeEvent</span>(<span class="params">node, eventType, funcName</span>) </span>&#123;</span><br><span class="line">  node.removeEventListener ?</span><br><span class="line">    node.removeEventListener(eventType, funcName) :</span><br><span class="line">    node.detachEvent(<span class="string">&quot;on&quot;</span> + eventType, funcName);</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<p>&emsp;&emsp;将需要添加的大量元素先添加到文档碎片中，再将文档碎片添加到需要插入的位置，大大减少DOM操作，提高性能。<br> 一般：<br>  <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">10000</span>; i++) &#123;</span><br><span class="line">    <span class="keyword">var</span> newDiv = <span class="built_in">document</span>.createElement(<span class="string">&quot;div&quot;</span>);</span><br><span class="line">    <span class="built_in">document</span>.body.appendChild(newDiv);</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure><br>  改进：<br>  <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> node = <span class="built_in">document</span>.createElement(<span class="string">&quot;div&quot;</span>);</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">10000</span>; i++) &#123;</span><br><span class="line">    <span class="keyword">var</span> newDiv = <span class="built_in">document</span>.createElement(<span class="string">&quot;div&quot;</span>);</span><br><span class="line">    node.appendChild(newDiv);</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">document</span>.body.appendChild(node);</span><br></pre></td></tr></table></figure></p>
 ]]></content>
       <categories>
         <category>笔记</category>
@@ -206,6 +188,24 @@
 </ul>
 </li>
 </ul>
+]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>web</tag>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>前端_文档碎片</title>
+    <url>/2020/12/%E5%89%8D%E7%AB%AF-%E6%96%87%E6%A1%A3%E7%A2%8E%E7%89%87/</url>
+    <content><![CDATA[<ul>
+<li>文档碎片操作：减少重排，提高效率  <a id="more"></a>  
+
+</li>
+</ul>
+<p>&emsp;&emsp;将需要添加的大量元素先添加到文档碎片中，再将文档碎片添加到需要插入的位置，大大减少DOM操作，提高性能。<br> 一般：<br>  <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">10000</span>; i++) &#123;</span><br><span class="line">    <span class="keyword">var</span> newDiv = <span class="built_in">document</span>.createElement(<span class="string">&quot;div&quot;</span>);</span><br><span class="line">    <span class="built_in">document</span>.body.appendChild(newDiv);</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure><br>  改进：<br>  <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> node = <span class="built_in">document</span>.createElement(<span class="string">&quot;div&quot;</span>);</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">10000</span>; i++) &#123;</span><br><span class="line">    <span class="keyword">var</span> newDiv = <span class="built_in">document</span>.createElement(<span class="string">&quot;div&quot;</span>);</span><br><span class="line">    node.appendChild(newDiv);</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">document</span>.body.appendChild(node);</span><br></pre></td></tr></table></figure></p>
 ]]></content>
       <categories>
         <category>笔记</category>
