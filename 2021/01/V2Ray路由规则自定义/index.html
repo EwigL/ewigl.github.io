@@ -4,15 +4,13 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.2.0">
+<meta name="generator" content="Hexo 5.3.0">
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/L/favicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/L/favicon-16x16-next.png">
   <link rel="mask-icon" href="/images/logo.svg" color="#222">
-  <meta http-equiv="Cache-Control" content="no-transform">
-  <meta http-equiv="Cache-Control" content="no-siteapp">
 
 <link rel="stylesheet" href="/css/main.css">
 
@@ -23,26 +21,23 @@
 
 <script class="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"ewigl.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.1.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":4},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeInDown","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInDown","sidebar":"fadeInDown"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+    var CONFIG = {"hostname":"ewigl.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.2.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":4},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeInDown","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInDown","sidebar":"fadeInDown"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
-<meta name="description" content="使用国内源下载最新v2Ray 规则文件">
+<meta name="description" content="V2Ray路由规则自定义备份">
 <meta property="og:type" content="article">
-<meta property="og:title" content="下载自定义v2ray规则文件">
-<meta property="og:url" content="http://ewigl.github.io/2020/08/%E4%B8%8B%E8%BD%BD%E8%87%AA%E5%AE%9A%E4%B9%89v2ray%E8%A7%84%E5%88%99%E6%96%87%E4%BB%B6/index.html">
+<meta property="og:title" content="V2Ray路由规则自定义">
+<meta property="og:url" content="http://ewigl.github.io/2021/01/V2Ray%E8%B7%AF%E7%94%B1%E8%A7%84%E5%88%99%E8%87%AA%E5%AE%9A%E4%B9%89/index.html">
 <meta property="og:site_name" content="Licht&#39;s Blog">
-<meta property="og:description" content="使用国内源下载最新v2Ray 规则文件">
+<meta property="og:description" content="V2Ray路由规则自定义备份">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/xingjiahui/CDN@latest/2020/10/19/7ae6bbe7d4e5954370d94caf194ed784.png">
-<meta property="article:published_time" content="2020-08-22T13:09:25.000Z">
-<meta property="article:modified_time" content="2020-12-15T10:17:19.620Z">
+<meta property="article:published_time" content="2021-01-01T14:23:10.000Z">
+<meta property="article:modified_time" content="2021-01-01T14:44:26.042Z">
 <meta property="article:author" content="EwigLicht Lee">
-<meta property="article:tag" content="Python">
 <meta property="article:tag" content="V2Ray">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/xingjiahui/CDN@latest/2020/10/19/7ae6bbe7d4e5954370d94caf194ed784.png">
 
 
-<link rel="canonical" href="http://ewigl.github.io/2020/08/%E4%B8%8B%E8%BD%BD%E8%87%AA%E5%AE%9A%E4%B9%89v2ray%E8%A7%84%E5%88%99%E6%96%87%E4%BB%B6/">
+<link rel="canonical" href="http://ewigl.github.io/2021/01/V2Ray%E8%B7%AF%E7%94%B1%E8%A7%84%E5%88%99%E8%87%AA%E5%AE%9A%E4%B9%89/">
 
 
 <script class="page-configurations">
@@ -54,8 +49,9 @@
     lang   : 'zh-CN'
   };
 </script>
-<title>下载自定义v2ray规则文件 | Licht's Blog</title>
+<title>V2Ray路由规则自定义 | Licht's Blog</title>
   
+
 
 
 
@@ -103,7 +99,7 @@
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
-    <div class="toggle" aria-label="切换导航栏">
+    <div class="toggle" aria-label="切换导航栏" role="button">
         <span class="toggle-line"></span>
         <span class="toggle-line"></span>
         <span class="toggle-line"></span>
@@ -117,7 +113,7 @@
       <h1 class="site-title">Licht's Blog</h1>
       <i class="logo-line"></i>
     </a>
-      <p class="site-subtitle" itemprop="description">It is not our abilities that show what we truly are, it is our choices.</p>
+      <p class="site-subtitle" itemprop="description">越学习，越发现自己的无知。</p>
   </div>
 
   <div class="site-nav-right">
@@ -132,9 +128,9 @@
 <nav class="site-nav">
   <ul class="main-menu menu">
         <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
-        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">6</span></a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">5</span></a></li>
         <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">3</span></a></li>
-        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">10</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">9</span></a></li>
         <li class="menu-item menu-item-前端"><a href="/web/" rel="section"><i class="fas fa-file-code fa-fw"></i>前端</a></li>
         <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
       <li class="menu-item menu-item-search">
@@ -156,7 +152,7 @@
            placeholder="搜索..." spellcheck="false"
            type="search" class="search-input">
   </div>
-  <span class="popup-btn-close">
+  <span class="popup-btn-close" role="button">
     <i class="fa fa-times-circle"></i>
   </span>
 </div>
@@ -172,7 +168,7 @@
 </div>
         
   
-  <div class="toggle sidebar-toggle">
+  <div class="toggle sidebar-toggle" role="button">
     <span class="toggle-line"></span>
     <span class="toggle-line"></span>
     <span class="toggle-line"></span>
@@ -192,23 +188,23 @@
 
       <div class="sidebar-panel-container">
         <!--noindex-->
-        <section class="post-toc-wrap sidebar-panel">
-        </section>
+        <div class="post-toc-wrap sidebar-panel">
+        </div>
         <!--/noindex-->
 
-        <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview-wrap sidebar-panel">
           <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <img class="site-author-image" itemprop="image" alt="EwigLicht Lee"
       src="/images/L/GameGirl.png">
   <p class="site-author-name" itemprop="name">EwigLicht Lee</p>
-  <div class="site-description" itemprop="description"></div>
+  <div class="site-description" itemprop="description">越学习，越发现自己的无知。</div>
 </div>
 <div class="site-state-wrap site-overview-item animated">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">10</span>
+          <span class="site-state-item-count">9</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -221,7 +217,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-count">5</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -234,7 +230,7 @@
 
 
 
-        </section>
+        </div>
       </div>
     </div>
   </aside>
@@ -244,7 +240,7 @@
     </header>
 
     
-  <div class="back-to-top">
+  <div class="back-to-top" role="button">
     <i class="fa fa-arrow-up"></i>
     <span>0%</span>
   </div>
@@ -268,12 +264,12 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://ewigl.github.io/2020/08/%E4%B8%8B%E8%BD%BD%E8%87%AA%E5%AE%9A%E4%B9%89v2ray%E8%A7%84%E5%88%99%E6%96%87%E4%BB%B6/">
+    <link itemprop="mainEntityOfPage" href="http://ewigl.github.io/2021/01/V2Ray%E8%B7%AF%E7%94%B1%E8%A7%84%E5%88%99%E8%87%AA%E5%AE%9A%E4%B9%89/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/L/GameGirl.png">
       <meta itemprop="name" content="EwigLicht Lee">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content="越学习，越发现自己的无知。">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -281,7 +277,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          下载自定义v2ray规则文件
+          V2Ray路由规则自定义
         </h1>
 
         <div class="post-meta-container">
@@ -291,16 +287,10 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
+      
 
-      <time title="创建时间：2020-08-22 21:09:25" itemprop="dateCreated datePublished" datetime="2020-08-22T21:09:25+08:00">2020-08-22</time>
+      <time title="创建时间：2021-01-01 22:23:10 / 修改时间：22:44:26" itemprop="dateCreated datePublished" datetime="2021-01-01T22:23:10+08:00">2021-01-01</time>
     </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2020-12-15 18:17:19" itemprop="dateModified" datetime="2020-12-15T18:17:19+08:00">2020-12-15</time>
-      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
@@ -322,12 +312,8 @@
     
     <div class="post-body" itemprop="articleBody">
         <ul>
-<li>使用国内源下载最新<a target="_blank" rel="noopener" href="https://github.com/Loyalsoldier/v2ray-rules-dat">v2Ray 规则文件</a><a id="more"></a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/EwigL/download-v2ray-rules-dat">项目地址</a></li>
-<li>修改 Path.ini 文件中的路径为 v2ray 可执行文件所在目录即可<ul>
-<li>示例<br><img src="https://cdn.jsdelivr.net/gh/xingjiahui/CDN@latest/2020/10/19/7ae6bbe7d4e5954370d94caf194ed784.png" alt="0"></li>
-</ul>
-</li>
+<li>V2Ray路由规则自定义备份<a id="more"></a>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">[</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">&quot;remarks&quot;</span>: <span class="string">&quot;拦截&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;port&quot;</span>: <span class="string">&quot;&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;outboundTag&quot;</span>: <span class="string">&quot;block&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;ip&quot;</span>: [],</span><br><span class="line">    <span class="attr">&quot;domain&quot;</span>: [</span><br><span class="line">      <span class="string">&quot;domain:xxx.com&quot;</span>,</span><br><span class="line">      <span class="string">&quot;domain:yyy.com&quot;</span></span><br><span class="line">    ]</span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">&quot;remarks&quot;</span>: <span class="string">&quot;直连&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;port&quot;</span>: <span class="string">&quot;&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;outboundTag&quot;</span>: <span class="string">&quot;direct&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;ip&quot;</span>: [</span><br><span class="line">      <span class="string">&quot;geoip:private&quot;</span>,</span><br><span class="line">      <span class="string">&quot;geoip:cn&quot;</span></span><br><span class="line">    ],</span><br><span class="line">    <span class="attr">&quot;domain&quot;</span>: [</span><br><span class="line">      <span class="string">&quot;geosite:cn&quot;</span>,</span><br><span class="line">      <span class="string">&quot;domain:agefans.net&quot;</span></span><br><span class="line">    ]</span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">&quot;remarks&quot;</span>: <span class="string">&quot;代理&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;port&quot;</span>: <span class="string">&quot;0-65535&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;outboundTag&quot;</span>: <span class="string">&quot;proxy&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;ip&quot;</span>: [],</span><br><span class="line">    <span class="attr">&quot;domain&quot;</span>: []</span><br><span class="line">  &#125;</span><br><span class="line">]</span><br></pre></td></tr></table></figure></li>
 </ul>
 
     </div>
@@ -338,7 +324,6 @@
 
     <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/Python/" rel="tag"># Python</a>
               <a href="/tags/V2Ray/" rel="tag"># V2Ray</a>
           </div>
 
@@ -346,11 +331,11 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
+                <a href="/2020/12/Via%E6%B5%8F%E8%A7%88%E5%99%A8%E8%87%AA%E5%AE%9A%E4%B9%89%E4%B8%BB%E9%A1%B5/" rel="prev" title="Via浏览器自定义主页">
+                  <i class="fa fa-chevron-left"></i> Via浏览器自定义主页
+                </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2020/09/%E5%9B%BE%E4%B9%A6%E9%A6%86%E5%8A%A9%E6%89%8B/" rel="next" title="图书馆助手">
-                  图书馆助手 <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
     </footer>
@@ -392,8 +377,8 @@
 
 
 <div class="copyright">
-  &copy; 
-  <span itemprop="copyrightYear">2020</span>
+  &copy; 2020 – 
+  <span itemprop="copyrightYear">2021</span>
   <span class="with-love">
     <i class="fas fa-bolt"></i>
   </span>
@@ -408,7 +393,6 @@
 <script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
 
   
-
 <script src="/js/local-search.js"></script>
 
 
@@ -417,7 +401,6 @@
 
 
   
-
 
 
 

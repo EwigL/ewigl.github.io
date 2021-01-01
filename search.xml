@@ -1,55 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>下载自定义v2ray规则文件</title>
-    <url>/2020/08/%E4%B8%8B%E8%BD%BD%E8%87%AA%E5%AE%9A%E4%B9%89v2ray%E8%A7%84%E5%88%99%E6%96%87%E4%BB%B6/</url>
+    <title>偶然发现的某盘&quot;漏洞&quot;</title>
+    <url>/2020/10/%E5%81%B6%E7%84%B6%E5%8F%91%E7%8E%B0%E7%9A%84%E6%9F%90%E7%9B%98%E6%BC%8F%E6%B4%9E/</url>
     <content><![CDATA[<ul>
-<li>使用国内源下载最新<a href="https://github.com/Loyalsoldier/v2ray-rules-dat">v2Ray 规则文件</a><a id="more"></a></li>
-<li><a href="https://github.com/EwigL/download-v2ray-rules-dat">项目地址</a></li>
-<li>修改 Path.ini 文件中的路径为 v2ray 可执行文件所在目录即可<ul>
-<li>示例<br><img src="https://cdn.jsdelivr.net/gh/xingjiahui/CDN@latest/2020/10/19/7ae6bbe7d4e5954370d94caf194ed784.png" alt="0"></li>
-</ul>
+<li><p>偶然得到一个网盘链接但是没有密码<a id="more"></a><br><img src="https://cdn.jsdelivr.net/gh/xingjiahui/CDN@latest/2020/10/19/b996dcd03a4f2276be76ab40e40bcd1b.png" alt="0"></p>
+</li>
+<li><p>习惯性的 f12，一眼就看到一个 fileview…<br><img src="https://cdn.jsdelivr.net/gh/xingjiahui/CDN@latest/2020/10/19/6afe06a1da032208d16e09e7177c0f6c.png" alt="3"></p>
+</li>
+<li><p>展开，发现了一个 id 为 folder 的元素,而且还有两个链接<br><img src="https://cdn.jsdelivr.net/gh/xingjiahui/CDN@latest/2020/10/19/a3d5f94b53d18a799a0b579e9ef0e7f4.png" alt="1"><br><img src="https://cdn.jsdelivr.net/gh/xingjiahui/CDN@latest/2020/10/19/cec3baacb1dc2432fdc59f5589d84a60.png" alt="666"></p>
+</li>
+<li><p>点击链接即可访问子文件夹，无需密码？<br><img src="https://cdn.jsdelivr.net/gh/xingjiahui/CDN@latest/2020/10/19/321c9bc11c9c32f9dd69713423abc2a5.png" alt="2"><br><img src="https://cdn.jsdelivr.net/gh/xingjiahui/CDN@latest/2020/10/19/cec3baacb1dc2432fdc59f5589d84a60.png" alt="666"></p>
+</li>
+<li><p>限制：只可以访问子文件夹以及子文件夹中的文件,无法访问分享根目录文件。</p>
 </li>
 </ul>
 ]]></content>
       <categories>
-        <category>不正经研究</category>
+        <category>笔记</category>
       </categories>
       <tags>
-        <tag>Python</tag>
-        <tag>V2Ray</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>图书馆助手</title>
-    <url>/2020/09/%E5%9B%BE%E4%B9%A6%E9%A6%86%E5%8A%A9%E6%89%8B/</url>
-    <content><![CDATA[<ul>
-<li>利用 python 实现座位预约 Android app 的基本功能</li>
-<li>基于 request 等库发送、接收 HTTP 请求</li>
-<li>使用多线程<del>虽然没什么用…</del><a id="more"></a></li>
-<li><a href="https://github.com/EwigL/UniLibraryHelper">项目地址</a></li>
-</ul>
-<h2 id="数据抓包"><a href="#数据抓包" class="headerlink" title="数据抓包"></a>数据抓包</h2><p>首先对应用网络请求进行抓包，应用未加固且请求未加密。根据抓取到的信息可以得到基本的 header 以及请求体，可以看出请求体格式为 json，因此需要引入对 json 进行处理的库。<br><img src="https://cdn.jsdelivr.net/gh/xingjiahui/CDN@latest/2020/10/19/4c9fec41a972dcd057f8c8045084b776.png" alt="0"></p>
-<p>根据收到的 response 可以看出接收到的相应同样也为 json 格式。<br><img src="https://cdn.jsdelivr.net/gh/xingjiahui/CDN@latest/2020/10/19/46d850181f97683a185f3089870c3fa3.png" alt="1"></p>
-<h2 id="代码编写"><a href="#代码编写" class="headerlink" title="代码编写"></a>代码编写</h2><p>将各个功能分成了不同模块方便调试维护…</p>
-<h3 id="POST-请求相关"><a href="#POST-请求相关" class="headerlink" title="POST 请求相关"></a>POST 请求相关</h3><p>部分代码：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># RequestsContent.py</span></span><br><span class="line"><span class="keyword">import</span> datetime <span class="comment">#请求头部分有时间戳相关数据</span></span><br><span class="line"><span class="keyword">import</span> time <span class="comment">#时间</span></span><br><span class="line"><span class="keyword">import</span> hashlib <span class="comment">#需要用到hash函数</span></span><br><span class="line"></span><br><span class="line">timeStamp = time.time() <span class="comment">#时间戳</span></span><br><span class="line">sec=(int(round(timeStamp * <span class="number">1000</span>))) <span class="comment">#精确到千位</span></span><br><span class="line"></span><br><span class="line">Cookie = <span class="string">&quot;123456789&quot;</span></span><br><span class="line">Auth = <span class="string">&quot;123456789&quot;</span></span><br><span class="line">Connection = <span class="string">&quot;Keep-Alive&quot;</span></span><br><span class="line">UA = <span class="string">&quot;User-Agent&quot;</span></span><br><span class="line"></span><br><span class="line">sign =<span class="string">&quot;sign&quot;</span></span><br><span class="line">sign2=<span class="string">&quot;sign2&quot;</span></span><br><span class="line"><span class="comment"># 各请求对header要求不一因此定义了两个方便调用</span></span><br><span class="line">Headers = &#123;<span class="string">&quot;Cookie&quot;</span>: Cookie, <span class="string">&quot;Authorization&quot;</span>: Auth, <span class="string">&quot;User-Agent&quot;</span>: UA&#125;</span><br><span class="line">aHeaders = &#123;<span class="string">&quot;Cookie&quot;</span>: Cookie, <span class="string">&quot;Authorization&quot;</span>: Auth,</span><br><span class="line">            <span class="string">&quot;User-Agent&quot;</span>: UA, <span class="string">&quot;sign&quot;</span>: sign+str(sec), <span class="string">&quot;sign2&quot;</span>: sign2,</span><br><span class="line">            <span class="string">&quot;Connection&quot;</span>: Connection&#125;</span><br><span class="line"></span><br><span class="line">url = <span class="string">&quot;htt://url&quot;</span></span><br><span class="line"><span class="comment"># 学号</span></span><br><span class="line">userPhysicalCard = <span class="string">&quot;88888888&quot;</span></span><br><span class="line"><span class="comment"># 场馆id</span></span><br><span class="line">libid = <span class="string">&quot;1&quot;</span></span><br><span class="line"><span class="string">&quot;&quot;&quot; RoomId:  ydsgafhbdbd &quot;&quot;&quot;</span></span><br><span class="line">roomId = <span class="string">&quot;gf&quot;</span></span><br><span class="line">seatNo = <span class="string">&quot;fdskjfds&quot;</span></span><br><span class="line">now_time = datetime.datetime.now()</span><br><span class="line">date = now_time + datetime.timedelta(days=<span class="number">1</span>)</span><br><span class="line">dateStr = date.strftime(<span class="string">&quot;%Y-%m-%d&quot;</span>)</span><br><span class="line"><span class="comment"># 起止时间</span></span><br><span class="line">starttime = <span class="string">&quot;06:30&quot;</span></span><br><span class="line">endtime = <span class="string">&quot;22.30&quot;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="获取场馆基本信息"><a href="#获取场馆基本信息" class="headerlink" title="获取场馆基本信息"></a>获取场馆基本信息</h3><p>部分代码：<br><img src="https://cdn.jsdelivr.net/gh/xingjiahui/CDN@latest/2020/10/19/83d176e4f6bf77cb73cee842af42de42.png" alt="3"><br>可以使用 json 库进行 json 的格式化以及数据处理，输出基本场馆以及座位信息。</p>
-<h3 id="获取座位基本信息"><a href="#获取座位基本信息" class="headerlink" title="获取座位基本信息"></a><del>获取座位基本信息</del></h3><p><img src="https://cdn.jsdelivr.net/gh/xingjiahui/CDN@latest/2020/10/19/dd158c22fb77bfad7954b1ce91f7ef16.png" alt="4"></p>
-<h3 id="登陆操作"><a href="#登陆操作" class="headerlink" title="登陆操作"></a><del>登陆操作</del></h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"><span class="keyword">import</span> RequestsContent <span class="keyword">as</span> RC</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">LOGIN</span>():</span></span><br><span class="line">    send_data = &#123;<span class="string">&quot;intf_code&quot;</span>: <span class="string">&quot;QRY_LOGIN&quot;</span>,</span><br><span class="line">                 <span class="string">&quot;params&quot;</span>: &#123;<span class="string">&quot;userPhysicalCard&quot;</span>: RC.userPhysicalCard,</span><br><span class="line">                 <span class="string">&quot;password&quot;</span>: RC.pwd,</span><br><span class="line">                 <span class="string">&quot;imei&quot;</span>: RC.imei,</span><br><span class="line">                 <span class="string">&quot;pushid&quot;</span>: <span class="string">&quot;123459879&quot;</span>,</span><br><span class="line">                 <span class="string">&quot;os&quot;</span>: <span class="string">&quot;android&quot;</span>,</span><br><span class="line">                 <span class="string">&quot;wmac&quot;</span>: RC.wmac,</span><br><span class="line">                 <span class="string">&quot;version&quot;</span>: <span class="string">&quot;2.8.8&quot;</span>,</span><br><span class="line">                 <span class="string">&quot;tversion&quot;</span>: RC.sec,</span><br><span class="line">                 <span class="string">&quot;md5username&quot;</span>: <span class="string">&quot;123456789&quot;</span>&#125;&#125;</span><br><span class="line"></span><br><span class="line">    res_data = requests.post(RC.url, headers=RC.aHeaders,</span><br><span class="line">                             data=json.dumps(send_data))</span><br><span class="line">    res_json = res_data.json()</span><br><span class="line">    print(json.dumps(res_json, indent=<span class="number">4</span>, separators=(<span class="string">&#x27;,&#x27;</span>, <span class="string">&#x27;:&#x27;</span>),ensure_ascii=<span class="literal">False</span>))</span><br><span class="line">    <span class="comment"># print(res_json[&quot;result_data&quot;][&quot;token&quot;])</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span>():</span></span><br><span class="line">    LOGIN()</span><br><span class="line">    <span class="keyword">return</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
-
-<h3 id="抢座-ToDo"><a href="#抢座-ToDo" class="headerlink" title="抢座(ToDo)"></a>抢座(ToDo)</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> RequestsContent <span class="keyword">as</span> RC</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">RequestSeat</span>():</span></span><br><span class="line">    send_data = &#123;<span class="string">&quot;intf_code&quot;</span>: <span class="string">&quot;UPD_PRE_SEAT&quot;</span>,</span><br><span class="line">                 <span class="string">&quot;params&quot;</span>: &#123;<span class="string">&quot;seatNo&quot;</span>: RC.seatNo,</span><br><span class="line">                            <span class="string">&quot;roomId&quot;</span>: RC.roomId,</span><br><span class="line">                            <span class="string">&quot;dateStr&quot;</span>: RC.dateStr,</span><br><span class="line">                            <span class="string">&quot;startHour&quot;</span>: RC.starttime,</span><br><span class="line">                            <span class="string">&quot;endHour&quot;</span>: RC.endtime,</span><br><span class="line">                            <span class="string">&quot;userPhysicalCard&quot;</span>: RC.userPhysicalCard,</span><br><span class="line">                            <span class="string">&quot;version&quot;</span>: <span class="string">&quot;2.8.8&quot;</span>&#125;&#125;</span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        res_data = requests.post(</span><br><span class="line">            RC.url, headers=RC.aHeaders, data=json.dumps(send_data))</span><br><span class="line">        print(res_data.status_code)</span><br><span class="line">        res_json = res_data.json()</span><br><span class="line">        print(json.dumps(res_json, indent=<span class="number">4</span>,</span><br><span class="line">                         separators=(<span class="string">&#x27;,&#x27;</span>, <span class="string">&#x27;:&#x27;</span>), ensure_ascii=<span class="literal">False</span>))</span><br><span class="line">    <span class="keyword">except</span>:</span><br><span class="line">        print(<span class="string">&quot;connection error&quot;</span>)</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;&quot;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="主程序-半成品"><a href="#主程序-半成品" class="headerlink" title="主程序(半成品)"></a>主程序(半成品)</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> getInfo</span><br><span class="line"><span class="keyword">import</span> getSeat</span><br><span class="line"><span class="keyword">import</span> threading</span><br><span class="line"><span class="keyword">import</span> LOGIN</span><br><span class="line"></span><br><span class="line">loop=<span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span>():</span></span><br><span class="line">    <span class="comment"># getInfo.printRoomInfo()</span></span><br><span class="line">    <span class="comment"># getInfo.printSeatsInfo(&quot;8&quot;)</span></span><br><span class="line">    <span class="comment"># LOGIN.LOGIN()</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(loop):</span><br><span class="line">        t1 = threading.Thread(target=getSeat.RequestSeat)</span><br><span class="line">        t2 = threading.Thread(target=getSeat.RequestSeat)</span><br><span class="line">        t1.start()</span><br><span class="line">        t2.start()</span><br></pre></td></tr></table></figure>
-
-<h2 id="后续"><a href="#后续" class="headerlink" title="后续"></a>后续</h2><p>由于预定座位请求头中存在自定义头部 sign，&lt;待更新&gt;…</p>
-]]></content>
-      <categories>
-        <category>不正经研究</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
+        <tag>web</tag>
+        <tag>前端</tag>
+        <tag>网安</tag>
       </tags>
   </entry>
   <entry>
@@ -69,8 +42,25 @@
         <category>不正经研究</category>
       </categories>
       <tags>
-        <tag>前端</tag>
         <tag>web</tag>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Steam手动添加愿望单</title>
+    <url>/2020/10/Steam%E6%89%8B%E5%8A%A8%E6%B7%BB%E5%8A%A0%E6%84%BF%E6%9C%9B%E5%8D%95/</url>
+    <content><![CDATA[<ul>
+<li>在浏览器无法显示锁区游戏时手动添加任意游戏至愿望单<a id="more"></a>
+
+</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">javascript:AddToWishlist( AppID,</span><br><span class="line"><span class="string">&#x27;add_to_wishlist_area&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;add_to_wishlist_area_success&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;add_to_wishlist_area_fail&#x27;</span>,</span><br><span class="line"><span class="string">&quot;1_4_4__145_2&quot;</span>,</span><br><span class="line"><span class="string">&#x27;add_to_wishlist_area2&#x27;</span> );</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>生活娱乐</category>
+      </categories>
+      <tags>
+        <tag>web</tag>
+        <tag>游戏</tag>
       </tags>
   </entry>
   <entry>
@@ -88,8 +78,8 @@
         <category>笔记</category>
       </categories>
       <tags>
-        <tag>前端</tag>
         <tag>web</tag>
+        <tag>前端</tag>
       </tags>
   </entry>
   <entry>
@@ -109,8 +99,8 @@
         <category>笔记</category>
       </categories>
       <tags>
-        <tag>前端</tag>
         <tag>web</tag>
+        <tag>前端</tag>
       </tags>
   </entry>
   <entry>
@@ -120,16 +110,15 @@
 <li>获取事件对象属性  <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> e = ev || <span class="built_in">window</span>.event;</span><br><span class="line"><span class="keyword">var</span> witch = e.witch || e.keyCode || charCode;</span><br></pre></td></tr></table></figure>
 <a id="more"></a></li>
 <li>阻止冒泡  <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">e.stopPropagation ? </span><br><span class="line">  e.stopPropagation() : </span><br><span class="line">  e.cancelBubble = <span class="literal">true</span>;</span><br></pre></td></tr></table></figure></li>
-<li>监听器操作：  <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 跨浏览器兼容添加事件监听器</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">addEvent</span>(<span class="params">node, eventType, funcName</span>) </span>&#123;</span><br><span class="line">  node.addEventListener ?</span><br><span class="line">    node.addEventListener(eventType, funcName, <span class="literal">false</span>) :</span><br><span class="line">    node.attachEvent(<span class="string">&quot;on&quot;</span> + eventType, funcName);</span><br><span class="line">  &#125;</span><br><span class="line"><span class="comment">// 跨浏览器兼容移除事件监听器</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">removeEvent</span>(<span class="params">node, eventType, funcName</span>) </span>&#123;</span><br><span class="line">  node.removeEventListener ?</span><br><span class="line">    node.removeEventListener(eventType, funcName) :</span><br><span class="line">    node.detachEvent(<span class="string">&quot;on&quot;</span> + eventType, funcName);</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
-</li>
+<li>监听器操作：  <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 跨浏览器兼容添加事件监听器</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">addEvent</span>(<span class="params">node, eventType, funcName</span>) </span>&#123;</span><br><span class="line">  node.addEventListener ?</span><br><span class="line">    node.addEventListener(eventType, funcName, <span class="literal">false</span>) :</span><br><span class="line">    node.attachEvent(<span class="string">&quot;on&quot;</span> + eventType, funcName);</span><br><span class="line">  &#125;</span><br><span class="line"><span class="comment">// 跨浏览器兼容移除事件监听器</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">removeEvent</span>(<span class="params">node, eventType, funcName</span>) </span>&#123;</span><br><span class="line">  node.removeEventListener ?</span><br><span class="line">    node.removeEventListener(eventType, funcName) :</span><br><span class="line">    node.detachEvent(<span class="string">&quot;on&quot;</span> + eventType, funcName);</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure></li>
 </ul>
 ]]></content>
       <categories>
         <category>笔记</category>
       </categories>
       <tags>
-        <tag>前端</tag>
         <tag>web</tag>
+        <tag>前端</tag>
       </tags>
   </entry>
   <entry>
@@ -150,8 +139,8 @@
         <category>笔记</category>
       </categories>
       <tags>
-        <tag>前端</tag>
         <tag>web</tag>
+        <tag>前端</tag>
       </tags>
   </entry>
   <entry>
@@ -168,51 +157,23 @@
         <category>笔记</category>
       </categories>
       <tags>
-        <tag>前端</tag>
         <tag>web</tag>
+        <tag>前端</tag>
       </tags>
   </entry>
   <entry>
-    <title>Steam手动添加愿望单</title>
-    <url>/2020/10/Steam%E6%89%8B%E5%8A%A8%E6%B7%BB%E5%8A%A0%E6%84%BF%E6%9C%9B%E5%8D%95/</url>
+    <title>V2Ray路由规则自定义</title>
+    <url>/2021/01/V2Ray%E8%B7%AF%E7%94%B1%E8%A7%84%E5%88%99%E8%87%AA%E5%AE%9A%E4%B9%89/</url>
     <content><![CDATA[<ul>
-<li>在浏览器无法显示锁区游戏时手动添加任意游戏至愿望单<a id="more"></a>
-
-</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">javascript:AddToWishlist( AppID,</span><br><span class="line"><span class="string">&#x27;add_to_wishlist_area&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;add_to_wishlist_area_success&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;add_to_wishlist_area_fail&#x27;</span>,</span><br><span class="line"><span class="string">&quot;1_4_4__145_2&quot;</span>,</span><br><span class="line"><span class="string">&#x27;add_to_wishlist_area2&#x27;</span> );</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>生活娱乐</category>
-      </categories>
-      <tags>
-        <tag>web</tag>
-        <tag>游戏</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>偶然发现的某盘&quot;漏洞&quot;</title>
-    <url>/2020/10/%E5%81%B6%E7%84%B6%E5%8F%91%E7%8E%B0%E7%9A%84%E6%9F%90%E7%9B%98%E6%BC%8F%E6%B4%9E/</url>
-    <content><![CDATA[<ul>
-<li><p>偶然得到一个网盘链接但是没有密码<a id="more"></a><br><img src="https://cdn.jsdelivr.net/gh/xingjiahui/CDN@latest/2020/10/19/b996dcd03a4f2276be76ab40e40bcd1b.png" alt="0"></p>
-</li>
-<li><p>习惯性的 f12，一眼就看到一个 fileview…这是明示<br><img src="https://cdn.jsdelivr.net/gh/xingjiahui/CDN@latest/2020/10/19/6afe06a1da032208d16e09e7177c0f6c.png" alt="3"></p>
-</li>
-<li><p>展开，发现了一个 id 为 folder 的元素,而且还有两个链接<br><img src="https://cdn.jsdelivr.net/gh/xingjiahui/CDN@latest/2020/10/19/a3d5f94b53d18a799a0b579e9ef0e7f4.png" alt="1"><br><img src="https://cdn.jsdelivr.net/gh/xingjiahui/CDN@latest/2020/10/19/cec3baacb1dc2432fdc59f5589d84a60.png" alt="666"></p>
-</li>
-<li><p>点击链接即可访问子文件夹<br><img src="https://cdn.jsdelivr.net/gh/xingjiahui/CDN@latest/2020/10/19/321c9bc11c9c32f9dd69713423abc2a5.png" alt="2"><br><img src="https://cdn.jsdelivr.net/gh/xingjiahui/CDN@latest/2020/10/19/cec3baacb1dc2432fdc59f5589d84a60.png" alt="666"></p>
-</li>
-<li><p>限制：只可以访问子文件夹以及子文件夹中的文件,无法访问分享根目录文件。</p>
-</li>
+<li>V2Ray路由规则自定义备份<a id="more"></a>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">[</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">&quot;remarks&quot;</span>: <span class="string">&quot;拦截&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;port&quot;</span>: <span class="string">&quot;&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;outboundTag&quot;</span>: <span class="string">&quot;block&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;ip&quot;</span>: [],</span><br><span class="line">    <span class="attr">&quot;domain&quot;</span>: [</span><br><span class="line">      <span class="string">&quot;domain:xxx.com&quot;</span>,</span><br><span class="line">      <span class="string">&quot;domain:yyy.com&quot;</span></span><br><span class="line">    ]</span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">&quot;remarks&quot;</span>: <span class="string">&quot;直连&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;port&quot;</span>: <span class="string">&quot;&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;outboundTag&quot;</span>: <span class="string">&quot;direct&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;ip&quot;</span>: [</span><br><span class="line">      <span class="string">&quot;geoip:private&quot;</span>,</span><br><span class="line">      <span class="string">&quot;geoip:cn&quot;</span></span><br><span class="line">    ],</span><br><span class="line">    <span class="attr">&quot;domain&quot;</span>: [</span><br><span class="line">      <span class="string">&quot;geosite:cn&quot;</span>,</span><br><span class="line">      <span class="string">&quot;domain:agefans.net&quot;</span></span><br><span class="line">    ]</span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">&quot;remarks&quot;</span>: <span class="string">&quot;代理&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;port&quot;</span>: <span class="string">&quot;0-65535&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;outboundTag&quot;</span>: <span class="string">&quot;proxy&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;ip&quot;</span>: [],</span><br><span class="line">    <span class="attr">&quot;domain&quot;</span>: []</span><br><span class="line">  &#125;</span><br><span class="line">]</span><br></pre></td></tr></table></figure></li>
 </ul>
 ]]></content>
       <categories>
-        <category>笔记</category>
+        <category>不正经研究</category>
       </categories>
       <tags>
-        <tag>前端</tag>
-        <tag>web</tag>
-        <tag>网安</tag>
+        <tag>V2Ray</tag>
       </tags>
   </entry>
 </search>
