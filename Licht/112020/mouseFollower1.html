@@ -23,8 +23,9 @@
         #div0 {
             width: 400px;
             height: 400px;
-            background: url(imgs/flower.webp) no-repeat;
+            background: url(https://pan.iiyzf.cn/view.php/4967ebb2dec53ccdafddfc38481146d6.webp) no-repeat;
             position: absolute;
+            display: none;
         }
 
         body {
@@ -40,6 +41,7 @@
                 var e = ev || window.event;
                 oDiv.style.left = e.clientX - 200 + "px";
                 oDiv.style.top = e.clientY - 200 + "px";
+                oDiv.style.display = "block";
 
                 for (var i = aDots.length - 1; i > 0; i--) {
                     aDots[i].style.left = aDots[i - 1].offsetLeft + "px";
