@@ -104,6 +104,28 @@
       </tags>
   </entry>
   <entry>
+    <title>前端_定时器</title>
+    <url>/2020/12/%E5%89%8D%E7%AB%AF-%E5%AE%9A%E6%97%B6%E5%99%A8/</url>
+    <content><![CDATA[<ul>
+<li>setTimeout( );setInterval( ):设置定时器  <a id="more"></a>
+<ul>
+<li>clearTimeout( );clearInterval( )：清除定时器</li>
+<li>参数：(函数(名),延迟,函数参数顺延) </li>
+<li>setTimeout：执行后即停止</li>
+<li>setInterval：循环执行</li>
+</ul>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>web</tag>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>前端_原生JS跨浏览器兼容实例</title>
     <url>/2020/12/%E5%89%8D%E7%AB%AF-%E5%8E%9F%E7%94%9FJS%E8%B7%A8%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%BC%E5%AE%B9%E5%AE%9E%E4%BE%8B/</url>
     <content><![CDATA[<ul>
@@ -130,28 +152,6 @@
 </li>
 </ul>
 <p>&emsp;&emsp;将需要添加的大量元素先添加到文档碎片中，再将文档碎片添加到需要插入的位置，大大减少DOM操作，提高性能。<br> 一般：<br>  <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">10000</span>; i++) &#123;</span><br><span class="line">    <span class="keyword">var</span> newDiv = <span class="built_in">document</span>.createElement(<span class="string">&quot;div&quot;</span>);</span><br><span class="line">    <span class="built_in">document</span>.body.appendChild(newDiv);</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure><br>  改进：<br>  <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> node = <span class="built_in">document</span>.createElement(<span class="string">&quot;div&quot;</span>);</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">10000</span>; i++) &#123;</span><br><span class="line">    <span class="keyword">var</span> newDiv = <span class="built_in">document</span>.createElement(<span class="string">&quot;div&quot;</span>);</span><br><span class="line">    node.appendChild(newDiv);</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">document</span>.body.appendChild(node);</span><br></pre></td></tr></table></figure></p>
-]]></content>
-      <categories>
-        <category>笔记</category>
-      </categories>
-      <tags>
-        <tag>web</tag>
-        <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>前端_定时器</title>
-    <url>/2020/12/%E5%89%8D%E7%AB%AF-%E5%AE%9A%E6%97%B6%E5%99%A8/</url>
-    <content><![CDATA[<ul>
-<li>setTimeout( );setInterval( ):设置定时器  <a id="more"></a>
-<ul>
-<li>clearTimeout( );clearInterval( )：清除定时器</li>
-<li>参数：(函数(名),延迟,函数参数顺延) </li>
-<li>setTimeout：执行后即停止</li>
-<li>setInterval：循环执行</li>
-</ul>
-</li>
-</ul>
 ]]></content>
       <categories>
         <category>笔记</category>
