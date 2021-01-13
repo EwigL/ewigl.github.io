@@ -21,7 +21,7 @@
 
 <script class="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"ewigl.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.2.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":4},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeInDown","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInDown","sidebar":"fadeInDown"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}};
+    var CONFIG = {"hostname":"ewigl.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.2.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":4},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":false,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeInDown","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInDown","sidebar":"fadeInDown"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}};
   </script>
 <meta name="description" content="&amp;emsp;&amp;emsp;最近在做Java项目时遇到了一个问题：在使用JDBC向MySQL数据库中插入数据时中文值会变成乱码，但是从数据库中查询数据时中文显示正常。因此乱码产生原因应该在输入过程。">
 <meta property="og:type" content="article">
@@ -312,13 +312,6 @@
       <span class="post-meta-item-text">本文字数：</span>
       <span>466</span>
     </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
 </div>
 
         </div>
@@ -330,7 +323,7 @@
     <div class="post-body" itemprop="articleBody">
         <p>&emsp;&emsp;最近在做Java项目时遇到了一个问题：在使用JDBC向MySQL数据库中插入数据时中文值会变成乱码，但是从数据库中查询数据时中文显示正常。因此乱码产生原因应该在输入过程。<a id="more"></a><br>&emsp;&emsp;推测原因是使用Scanner类创建的输入流输入中文时编码转换产生错误。<br>示例代码如下</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Scanner sc = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">        String sc_str = sc.next();</span><br><span class="line">        String def_str = <span class="string">&quot;你好。&quot;</span>;</span><br><span class="line">        System.out.println(sc_str + def_str);</span><br><span class="line">        sc.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>示例结果如下<br><img data-src="https://cdn.jsdelivr.net/gh/xingjiahui/CDN@latest/2021/01/10/965cc00b946b92e2cd6edda6bd44f6b5.png" alt="示例结果"><br>&emsp;&emsp;可以看到输入的中文变成了乱码，但是预定义的字符串可以正常输出，因此确定是输入时编码存在问题。键盘的输入流的默认格式是GBK格式，控制台的字符编码以及文件编码均为UTF-8，因此造成了乱码。<br>&emsp;&emsp;解决：更改代码<code>Scanner sc = new Scanner(System.in);</code>在实例化Scanner对象时指定编码类型为GBK，即<code>Scanner sc = new Scanner(System.in, &quot;GBK&quot;);</code>。<br>&emsp;&emsp;更改后程序中文输入即可正常编码：<br><img data-src="https://cdn.jsdelivr.net/gh/xingjiahui/CDN@latest/2021/01/10/1196c7ba8fefab51f1ced83e211d0b27.png" alt="更改后"><br>&emsp;&emsp;备注：更改IDE为IntelliJ IDEA时无此问题，果然还是IDEA省事。</p>
+<p>示例结果如下<br><img src="https://cdn.jsdelivr.net/gh/xingjiahui/CDN@latest/2021/01/10/965cc00b946b92e2cd6edda6bd44f6b5.png" alt="示例结果"><br>&emsp;&emsp;可以看到输入的中文变成了乱码，但是预定义的字符串可以正常输出，因此确定是输入时编码存在问题。键盘的输入流的默认格式是GBK格式，控制台的字符编码以及文件编码均为UTF-8，因此造成了乱码。<br>&emsp;&emsp;解决：更改代码<code>Scanner sc = new Scanner(System.in);</code>在实例化Scanner对象时指定编码类型为GBK，即<code>Scanner sc = new Scanner(System.in, &quot;GBK&quot;);</code>。<br>&emsp;&emsp;更改后程序中文输入即可正常编码：<br><img src="https://cdn.jsdelivr.net/gh/xingjiahui/CDN@latest/2021/01/10/1196c7ba8fefab51f1ced83e211d0b27.png" alt="更改后"><br>&emsp;&emsp;备注：更改IDE为IntelliJ IDEA时无此问题，果然还是IDEA省事。</p>
 
     </div>
 
@@ -358,7 +351,7 @@
 </div>
 
           <div class="post-tags">
-              <a href="/tags/Java/" rel="tag"># Java</a>
+              <a href="/tags/Java/" rel="tag"><i class="fa fa-tag"></i> Java</a>
           </div>
 
         
@@ -426,15 +419,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-      <span>站点总字数：</span>
     <span title="站点总字数">2k</span>
-  </span>
-  <span class="post-meta-item">
-    <span class="post-meta-item-icon">
-      <i class="fa fa-coffee"></i>
-    </span>
-      <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">2 分钟</span>
   </span>
 </div>
 
@@ -442,9 +427,9 @@
   </footer>
 
   
+  <script size="400" alpha="0.8" zIndex="-1" src="//cdn.jsdelivr.net/npm/ribbon.js@1.0.2/dist/ribbon.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js"></script>
 <script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
 
