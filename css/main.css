@@ -1,6 +1,6 @@
 :root {
   --body-bg-color: #eee;
-  --content-bg-color: rgba(255,255,255,0.9);
+  --content-bg-color: rgba(255,255,255,0.85);
   --card-bg-color: #f5f5f5;
   --text-color: #555;
   --blockquote-color: #666;
@@ -1559,6 +1559,7 @@ pre code {
   line-height: 1.8;
   overflow: hidden;
   text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .post-toc .nav .nav-child {
   display: none;
@@ -2588,7 +2589,7 @@ ul.breadcrumb li:last-child {
 .main-inner {
   border-radius: initial;
   box-sizing: border-box;
-  width: calc(100% - 244px);
+  width: calc(100% - 248px);
 }
 @media (max-width: 991px) {
   .main-inner {
@@ -2597,7 +2598,7 @@ ul.breadcrumb li:last-child {
   }
 }
 .footer-inner {
-  padding-left: 244px;
+  padding-left: 248px;
 }
 @media (max-width: 991px) {
   .footer-inner {
@@ -2691,10 +2692,10 @@ ul.breadcrumb li:last-child {
   border-bottom-color: #fc6423;
 }
 .sidebar {
-  margin-top: 4px;
+  margin-top: 8px;
   position: -webkit-sticky;
   position: sticky;
-  top: 4px;
+  top: 8px;
   width: 240px;
   visibility: hidden;
 }
@@ -2792,7 +2793,7 @@ ul.breadcrumb li:last-child {
 .main-inner > .pagination:not(:first-child):not(.sub-menu) {
   border-radius: initial;
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12), 0 -1px 0.5px 0 rgba(0,0,0,0.09);
-  margin-top: 4px;
+  margin-top: 8px;
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .main-inner > .sub-menu:not(:first-child):not(.sub-menu),
@@ -2849,13 +2850,13 @@ ul.breadcrumb li:last-child {
     padding: 8px;
   }
   .posts-expand .post-button {
-    margin: 4px 0;
+    margin: 8px 0;
   }
   .post-block {
-    padding: 4px;
+    padding: 8px;
   }
   .comments {
-    padding: 10px 4px;
+    padding: 10px 8px;
   }
 }
 .headband,
