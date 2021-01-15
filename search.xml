@@ -1,48 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Steam手动添加愿望单</title>
-    <url>/Steam%E6%89%8B%E5%8A%A8%E6%B7%BB%E5%8A%A0%E6%84%BF%E6%9C%9B%E5%8D%95/</url>
-    <content><![CDATA[<ul>
-<li>在浏览器无法显示锁区游戏时手动添加任意游戏至愿望单<a id="more"></a>
-
-</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">javascript:AddToWishlist( AppID,</span><br><span class="line"><span class="string">&#x27;add_to_wishlist_area&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;add_to_wishlist_area_success&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;add_to_wishlist_area_fail&#x27;</span>,</span><br><span class="line"><span class="string">&quot;1_4_4__145_2&quot;</span>,</span><br><span class="line"><span class="string">&#x27;add_to_wishlist_area2&#x27;</span> );</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>生活娱乐</category>
-      </categories>
-      <tags>
-        <tag>web</tag>
-        <tag>游戏</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>偶然发现的某盘&quot;漏洞&quot;</title>
-    <url>/%E5%81%B6%E7%84%B6%E5%8F%91%E7%8E%B0%E7%9A%84%E6%9F%90%E7%9B%98%E6%BC%8F%E6%B4%9E/</url>
-    <content><![CDATA[<ul>
-<li><p>偶然得到一个网盘链接但是没有密码<a id="more"></a><br><img src="https://cdn.jsdelivr.net/gh/xingjiahui/CDN@latest/2020/10/19/b996dcd03a4f2276be76ab40e40bcd1b.png" alt="0"></p>
-</li>
-<li><p>习惯性的 f12，一眼就看到一个 fileview…<br><img src="https://cdn.jsdelivr.net/gh/xingjiahui/CDN@latest/2020/10/19/6afe06a1da032208d16e09e7177c0f6c.png" alt="3"></p>
-</li>
-<li><p>展开，发现了一个 id 为 folder 的元素,而且还有两个链接<br><img src="https://cdn.jsdelivr.net/gh/xingjiahui/CDN@latest/2020/10/19/a3d5f94b53d18a799a0b579e9ef0e7f4.png" alt="1"><br><img src="https://cdn.jsdelivr.net/gh/xingjiahui/CDN@latest/2020/10/19/cec3baacb1dc2432fdc59f5589d84a60.png" alt="666"></p>
-</li>
-<li><p>点击链接即可访问子文件夹，无需密码？<br><img src="https://cdn.jsdelivr.net/gh/xingjiahui/CDN@latest/2020/10/19/321c9bc11c9c32f9dd69713423abc2a5.png" alt="2"><br><img src="https://cdn.jsdelivr.net/gh/xingjiahui/CDN@latest/2020/10/19/cec3baacb1dc2432fdc59f5589d84a60.png" alt="666"></p>
-</li>
-<li><p>限制：只可以访问子文件夹以及子文件夹中的文件,无法访问分享根目录文件。</p>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>不正经研究</category>
-      </categories>
-      <tags>
-        <tag>web</tag>
-        <tag>前端</tag>
-        <tag>网安</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Via浏览器自定义主页</title>
     <url>/Via%E6%B5%8F%E8%A7%88%E5%99%A8%E8%87%AA%E5%AE%9A%E4%B9%89%E4%B8%BB%E9%A1%B5/</url>
     <content><![CDATA[<p>&emsp;&emsp;简单的主页动画</p>
@@ -59,106 +17,46 @@
         <category>不正经研究</category>
       </categories>
       <tags>
-        <tag>web</tag>
         <tag>前端</tag>
+        <tag>web</tag>
       </tags>
   </entry>
   <entry>
-    <title>前端_mouseover与mouseenter</title>
-    <url>/%E5%89%8D%E7%AB%AF-mouseover%E4%B8%8Emouseenter/</url>
-    <content><![CDATA[<ul>
-<li><p>mouseover(鼠标覆盖)与mouseenter(鼠标进入)  </p>
-<a id="more"></a>
-
-<p>&emsp;&emsp;mouseenter不会冒泡。它不会被它本身的子元素的状态影响到。<br>&emsp;&emsp;mouseover会被它的子元素影响到,在触发子元素的时候,mouseover会冒泡触发它的父元素。</p>
-</li>
+    <title>前端_笔记</title>
+    <url>/%E5%89%8D%E7%AB%AF_%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<h4 id="mouseover与mouseenter的区别"><a href="#mouseover与mouseenter的区别" class="headerlink" title="mouseover与mouseenter的区别"></a>mouseover与mouseenter的区别</h4>  <a id="more"></a>
+<p>&emsp;&emsp;mouseenter不会冒泡。它不会被它本身的子元素的状态影响到。<br>&emsp;&emsp;mouseover会被它的子元素影响到,在触发子元素的时候,mouseover会冒泡触发它的父元素。  </p>
+<hr>
+<h4 id="setTimeout-setInterval-设置定时器"><a href="#setTimeout-setInterval-设置定时器" class="headerlink" title="setTimeout( );setInterval( ):设置定时器"></a>setTimeout( );setInterval( ):设置定时器</h4><ul>
+<li>clearTimeout( );clearInterval( )：清除定时器</li>
+<li>参数：(函数(名),延迟,函数参数顺延) </li>
+<li>setTimeout：执行后即停止</li>
+<li>setInterval：循环执行  </li>
 </ul>
-]]></content>
-      <categories>
-        <category>笔记</category>
-      </categories>
-      <tags>
-        <tag>web</tag>
-        <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>前端_this重定向</title>
-    <url>/%E5%89%8D%E7%AB%AF-this%E9%87%8D%E5%AE%9A%E5%90%91/</url>
-    <content><![CDATA[<ul>
-<li>call();apply();bind:  this重定向函数  <a id="more"></a>
-<ul>
+<hr>
+<h4 id="文档碎片操作：减少重排，提高效率"><a href="#文档碎片操作：减少重排，提高效率" class="headerlink" title="文档碎片操作：减少重排，提高效率"></a>文档碎片操作：减少重排，提高效率</h4><p>&emsp;&emsp;将需要添加的大量元素先添加到文档碎片中，再将文档碎片添加到需要插入的位置，大大减少DOM操作，提高性能。<br>一般：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">10000</span>; i++) &#123;</span><br><span class="line">    <span class="keyword">var</span> newDiv = <span class="built_in">document</span>.createElement(<span class="string">&quot;div&quot;</span>);</span><br><span class="line">    <span class="built_in">document</span>.body.appendChild(newDiv);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>改进：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> node = <span class="built_in">document</span>.createElement(<span class="string">&quot;div&quot;</span>);</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">10000</span>; i++) &#123;</span><br><span class="line">    <span class="keyword">var</span> newDiv = <span class="built_in">document</span>.createElement(<span class="string">&quot;div&quot;</span>);</span><br><span class="line">    node.appendChild(newDiv);</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">document</span>.body.appendChild(node);</span><br></pre></td></tr></table></figure>
+<hr>
+<h4 id="获取事件对象属性-兼容"><a href="#获取事件对象属性-兼容" class="headerlink" title="获取事件对象属性(兼容)"></a>获取事件对象属性(兼容)</h4><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> e = ev || <span class="built_in">window</span>.event;</span><br><span class="line"><span class="keyword">var</span> witch = e.witch || e.keyCode || charCode;</span><br></pre></td></tr></table></figure>
+<hr>
+<h4 id="阻止冒泡"><a href="#阻止冒泡" class="headerlink" title="阻止冒泡"></a>阻止冒泡</h4><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">e.stopPropagation ? </span><br><span class="line">  e.stopPropagation() : </span><br><span class="line">  e.cancelBubble = <span class="literal">true</span>;</span><br></pre></td></tr></table></figure>
+<hr>
+<h4 id="监听器操作"><a href="#监听器操作" class="headerlink" title="监听器操作"></a>监听器操作</h4><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 跨浏览器兼容添加事件监听器</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">addEvent</span>(<span class="params">node, eventType, funcName</span>) </span>&#123;</span><br><span class="line">  node.addEventListener ?</span><br><span class="line">    node.addEventListener(eventType, funcName, <span class="literal">false</span>) :</span><br><span class="line">    node.attachEvent(<span class="string">&quot;on&quot;</span> + eventType, funcName);</span><br><span class="line">  &#125;</span><br><span class="line"><span class="comment">// 跨浏览器兼容移除事件监听器</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">removeEvent</span>(<span class="params">node, eventType, funcName</span>) </span>&#123;</span><br><span class="line">  node.removeEventListener ?</span><br><span class="line">    node.removeEventListener(eventType, funcName) :</span><br><span class="line">    node.detachEvent(<span class="string">&quot;on&quot;</span> + eventType, funcName);</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h4 id="call-apply-bind-this重定向函数"><a href="#call-apply-bind-this重定向函数" class="headerlink" title="call();apply();bind:  this重定向函数"></a>call();apply();bind:  this重定向函数</h4><ul>
 <li>第一个参数均为this指向对象</li>
 <li>call()与apply()均立即调用，bind 返回的是一个新的函数</li>
 <li>call()原函数参数后移一位，apply()原函数参数作为数组传入，bind()除返回值是函数以外，参数与 call()一样  </li>
 </ul>
-</li>
-</ul>
 ]]></content>
       <categories>
         <category>笔记</category>
       </categories>
       <tags>
-        <tag>web</tag>
         <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>前端_原生JS跨浏览器兼容实例</title>
-    <url>/%E5%89%8D%E7%AB%AF-%E5%8E%9F%E7%94%9FJS%E8%B7%A8%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%BC%E5%AE%B9%E5%AE%9E%E4%BE%8B/</url>
-    <content><![CDATA[<ul>
-<li>获取事件对象属性  <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> e = ev || <span class="built_in">window</span>.event;</span><br><span class="line"><span class="keyword">var</span> witch = e.witch || e.keyCode || charCode;</span><br></pre></td></tr></table></figure>
-<a id="more"></a></li>
-<li>阻止冒泡  <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">e.stopPropagation ? </span><br><span class="line">  e.stopPropagation() : </span><br><span class="line">  e.cancelBubble = <span class="literal">true</span>;</span><br></pre></td></tr></table></figure></li>
-<li>监听器操作：  <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 跨浏览器兼容添加事件监听器</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">addEvent</span>(<span class="params">node, eventType, funcName</span>) </span>&#123;</span><br><span class="line">  node.addEventListener ?</span><br><span class="line">    node.addEventListener(eventType, funcName, <span class="literal">false</span>) :</span><br><span class="line">    node.attachEvent(<span class="string">&quot;on&quot;</span> + eventType, funcName);</span><br><span class="line">  &#125;</span><br><span class="line"><span class="comment">// 跨浏览器兼容移除事件监听器</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">removeEvent</span>(<span class="params">node, eventType, funcName</span>) </span>&#123;</span><br><span class="line">  node.removeEventListener ?</span><br><span class="line">    node.removeEventListener(eventType, funcName) :</span><br><span class="line">    node.detachEvent(<span class="string">&quot;on&quot;</span> + eventType, funcName);</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure></li>
-</ul>
-]]></content>
-      <categories>
-        <category>笔记</category>
-      </categories>
-      <tags>
         <tag>web</tag>
-        <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>前端_定时器</title>
-    <url>/%E5%89%8D%E7%AB%AF-%E5%AE%9A%E6%97%B6%E5%99%A8/</url>
-    <content><![CDATA[<ul>
-<li>setTimeout( );setInterval( ):设置定时器  <a id="more"></a>
-<ul>
-<li>clearTimeout( );clearInterval( )：清除定时器</li>
-<li>参数：(函数(名),延迟,函数参数顺延) </li>
-<li>setTimeout：执行后即停止</li>
-<li>setInterval：循环执行</li>
-</ul>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>笔记</category>
-      </categories>
-      <tags>
-        <tag>web</tag>
-        <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>前端_文档碎片</title>
-    <url>/%E5%89%8D%E7%AB%AF-%E6%96%87%E6%A1%A3%E7%A2%8E%E7%89%87/</url>
-    <content><![CDATA[<ul>
-<li>文档碎片操作：减少重排，提高效率  <a id="more"></a>  
-
-</li>
-</ul>
-<p>&emsp;&emsp;将需要添加的大量元素先添加到文档碎片中，再将文档碎片添加到需要插入的位置，大大减少DOM操作，提高性能。<br> 一般：<br>  <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">10000</span>; i++) &#123;</span><br><span class="line">    <span class="keyword">var</span> newDiv = <span class="built_in">document</span>.createElement(<span class="string">&quot;div&quot;</span>);</span><br><span class="line">    <span class="built_in">document</span>.body.appendChild(newDiv);</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure><br>  改进：<br>  <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> node = <span class="built_in">document</span>.createElement(<span class="string">&quot;div&quot;</span>);</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">10000</span>; i++) &#123;</span><br><span class="line">    <span class="keyword">var</span> newDiv = <span class="built_in">document</span>.createElement(<span class="string">&quot;div&quot;</span>);</span><br><span class="line">    node.appendChild(newDiv);</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">document</span>.body.appendChild(node);</span><br></pre></td></tr></table></figure></p>
-]]></content>
-      <categories>
-        <category>笔记</category>
-      </categories>
-      <tags>
-        <tag>web</tag>
-        <tag>前端</tag>
       </tags>
   </entry>
   <entry>
@@ -183,11 +81,11 @@
       </tags>
   </entry>
   <entry>
-    <title>Java Scanner中文输入乱码问题</title>
+    <title>JavaScanner中文输入乱码解决</title>
     <url>/JavaScanner%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98/</url>
     <content><![CDATA[<p>&emsp;&emsp;最近在做Java项目时遇到了一个问题：在使用JDBC向MySQL数据库中插入数据时中文值会变成乱码，但是从数据库中查询数据时中文显示正常。因此乱码产生原因应该在输入过程。<a id="more"></a><br>&emsp;&emsp;推测原因是使用Scanner类创建的输入流输入中文时编码转换产生错误。<br>示例代码如下</p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Scanner sc = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">        String sc_str = sc.next();</span><br><span class="line">        String def_str = <span class="string">&quot;你好。&quot;</span>;</span><br><span class="line">        System.out.println(sc_str + def_str);</span><br><span class="line">        sc.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>示例结果如下<br><img src="https://cdn.jsdelivr.net/gh/xingjiahui/CDN@latest/2021/01/10/965cc00b946b92e2cd6edda6bd44f6b5.png" alt="示例结果"><br>&emsp;&emsp;可以看到输入的中文变成了乱码，但是预定义的字符串可以正常输出，因此确定是输入时编码存在问题。键盘的输入流的默认格式是GBK格式，控制台的字符编码以及文件编码均为UTF-8，因此造成了乱码。<br>&emsp;&emsp;解决：更改代码<code>Scanner sc = new Scanner(System.in);</code>在实例化Scanner对象时指定编码类型为GBK，即<code>Scanner sc = new Scanner(System.in, &quot;GBK&quot;);</code>。<br>&emsp;&emsp;更改后程序中文输入即可正常编码：<br><img src="https://cdn.jsdelivr.net/gh/xingjiahui/CDN@latest/2021/01/10/1196c7ba8fefab51f1ced83e211d0b27.png" alt="更改后"><br>&emsp;&emsp;备注：更改IDE为IntelliJ IDEA时无此问题，果然还是IDEA省事。</p>
+<p>示例结果如下<br><img src="https://cdn.jsdelivr.net/gh/xingjiahui/CDN@latest/2021/01/10/965cc00b946b92e2cd6edda6bd44f6b5.png" alt="示例结果"><br>&emsp;&emsp;可以看到输入的中文变成了乱码，但是预定义的字符串可以正常输出，因此确定是输入时编码存在问题。键盘的输入流的默认格式是GBK格式，控制台的字符编码以及文件编码均为UTF-8，因此造成了乱码。<br>&emsp;&emsp;解决：更改代码<code>Scanner sc = new Scanner(System.in);</code>在实例化Scanner对象时指定编码类型为GBK，即<code>Scanner sc = new Scanner(System.in, &quot;GBK&quot;);</code>。<br>&emsp;&emsp;更改后程序中文输入即可正常编码：<br><img src="https://cdn.jsdelivr.net/gh/xingjiahui/CDN@latest/2021/01/10/1196c7ba8fefab51f1ced83e211d0b27.png" alt="更改后"><br>&emsp;&emsp;备注：使用IntelliJ IDEA时无此问题，貌似IDEA自动做了优化处理。</p>
 ]]></content>
       <categories>
         <category>笔记</category>
@@ -197,25 +95,43 @@
       </tags>
   </entry>
   <entry>
-    <title>V2Ray相关</title>
-    <url>/V2Ray/</url>
-    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="密码不对。" data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容。">
-  <script id="hbeData" type="hbeData" data-hmacdigest="e8492d6318bea58151acf5849f90a5fb5f4093501bee81f2917dcd6bbd80d61b">bb19e3588e7440443573af731f63596e23e45afaadfcbdf14ee0d1a56dcac13f0940f7d9cfe6b5531d8092dc200b75b87da221758bb7a6c14c196d10b254799b9ac39c2b11b39c0f0f745881ff5c48ea34d5b1b4540760996b11801d981385c3fb9ea515acddcb6502d5813fc9013494dd07dcfb8c7f89b05b9f21a60dbba8faa381f3055d10b8250201babca0dc7db1cbe4df365fcc82893df21c572f5405a4db6a2392c5bc65148ded18c2c6fbcad517686bbeae2f5e95f76aca0dc6c516d697f48d0e97ffaf80c3f38d776e7cfba04fa0967808f920b22af4c26404a7c52909ad9eb2cde3cd46d82686748db7b1bb2ccda89a278ba8350dddc92eae0f3b73c1d51c3dc9fd8643cd713ceb3d3d7f0b519d3322b823eea9027b21fa6c1b52f100d6bc0c17175bd861871bd5daf2bb471070eb09322884888fa1c55faa1c98813e2152f58c98b020b9efff9476ec1a3eda351f1bdf1d7efdf667cbe5c2b69541475fff2d6c057f6bc1f3a24045f1ce53cad98956574683a6c3452a99f1029286adf47bebd52bf3eaf927ac2c7303365f049f8f2950495b0049e66eef22c333ec613e5debdadce203cf7416fae089fdf2ebee368b4663371602c43f0bb10bd39b9cf61f30b87b745f750c0820bc43c65e69939ce001f384656c4ae3f2ba58a075b07b3e59bef4b93d17ede76a619bb89a5ed856af0ea7e808a710df7b0ae2f912ca3a9e1d90407dd4a0098355458dab915348026ccb8017d7fa50456dbc4c139714aa6755f7e1b73bc334679719849f3db606612e8045ad18da728034d9d2cb1d7d4eb6b46d8a6e67be95a55fcaf502d5cf1ac05c95db256590410570e82a3afe29d9aabf59ec4f83e3cf10cd7293e70b9c8a5fc51c1e6dc1844dd21f5431b8225d6b89104c4e2548bbea1aff32e002b8dbac1d76525b93aac0034da823b984945dd8fbcf5cdc8f7759b6522948d87df71972b3ad2f9e68752af9119ad66bd262484bdd7b8a867374a65538d0b62b78a4033bcd1f39e62390ef25646c0d2ff92a4ba4822e19744a556b1c9b2a5200c1492fe38f9caf5238696ce3ee63ab5abf9c14c1e956e349091f1d24a3b902f3df2496511214bf11913aab72296970746e6efbc8caa1b9a6c97bd18c0455eb102e26c0be0c214950c520ee7afb4db52cbb5de41ef33cd39eacf8fa4bc44ee9b1497da952406b35dc53defdbb26fee61b3fa78e495fa8d66333b6c4d6fc2bb063ad5054346a381a34cffe3a7bb7e3c036d242d5c679b0a217d0b06fd02635f78e003279fe9d3768f77be2426b021084c12d00f67d9177f5e418707c419eb18ac8b1ebff350b044f9041dd2c745faceb1d26e8c3fdb6e569fe15438aa33bc577740392e1fb568ac8c18b4b68727f3860969d8ab9d8dfc0831bafb9aad5b2b965cbaa57dbd16cb08b1201abf61e5f06ee540fc35a1797064954a8204019c96a1b0013297284e3ecfe0cfb430110d1f6ba5414c1864fbd43907d0e94fef3d70ebc9445320d08e6e2910f5711ea9707a7da3e14d1084c37c6e02041af8eca46f995fec32f28bb84a5ee711c7338015558a49577514995d9ffea053d54ebfd4a56112758dacc638e083f04073b9948a1700bd60b91a8d7f4bc4c4bef0de123b1669e84a89af57aaef201f36aa9c8561f2e12bd55f1396e7455fbe30590b3677cc3aa4108e47c0acf4aaf6efcab61e116745593874a732aeb604f7122581a2e642642c1b10acd9ff2a39f19aea144acf74fda4f0a8cc8ebae78e81998ed3da82bc8f74bad08a47d7f05220fa450bc86c87bb536aae4c88421c083e22d0324adaf8a1b93c7c73fb12da444a46ab40cee5f2686e9d439cb87ad47d2452fd64d29464d4ff6e1b678fb20862adac4a22635df4c1522d97bfb5a8e14716802ba0dfee7a158666cc62bd7822a1de1c7d79442d42e5caa1a6424aab1e103ba809cc002519fefa4efc17b764c326d850ca2e9b2b078f774c87d90241feb1293e8ca30de2af539956db553d01a8c2f481a6036533ca8f961e63b2ddf06ec2672fa863c692b609548e0c45598e4396ca125ae4fc0186d9e1a3461d881ce8dbe37f04d8840ff5237b7cd398cb5a16a7d1b0c6c6eeb9f13a927051a4946815f5e893af04516bd4e86207361082b46b943fa5999eb14644e6b0d71e588291ca49a0826e071674a7b08df93a128d18abbf17ff8f34b7b1277911ea2fd9f4350a2d75222e3521fdc764553f98a41ccbd9525a60fa6e5383cdf2dfd9836fdb932475444b88827918f219b1a311dc2f0c526098cea1fe6caa7eb18b6de25ab4c53dc5d8d46db570313c0477ab9a26d3b85f8578a5ed8a26936e764bca1e966e4e252c82f6a4b083ed96f7a9dc6bdb6ca7981f7f9dc6deddc982e826112d16cac7699284938fe72fcdcf7120a396b603a280bf6f8ac26148823e89d9737d9ef50fc295ffde92160b05599c83e8087ed96c3cf1585754548c4ef775d6b4892b7688825b67e7273fdca4d9901e5d0b157287a88a9f58d92cf35a60b54e2ad77ebda8b23e47c57493ade8a7cd9abe89704e68eec13377ad6696ace9b830f08cde26cefbec7f3500ac9082fdb92d8cdbce0b67403a1cfdb588a9a8d90d336d5a99ea8424c27800ddbd563ae7b90eb0690383f838fd42fd133dd2379bd6585f0ffe4134b9ce49566089905d246dc486413a370698807355a3ea2fb8582132af07f08ef88ba258290eb5b7c386cc143059e318efdc489b05d8df48f0097cdc8bd7273ea566fff5ad9f7d65c0c001eda424a4a3982d93b40489d1f5cb850324aafdf2668efd0b5c1074186c51436475bae75274f5c7649cbb5ed38612e05079f8c5e91862e61a3e237e2f0ce0a0252613dabed18b9fb72c8f5376f5522b1df8fc09488a9c4fe6d0dbd0478737c77b5814ff7ba5aadea8f79651eb0764ef5219fe15102f38a2af6cced27e0400938c7f7b7e73ff8ab34a9604f06b622ccb0c5ba02f124f0b0aa94d17edff87d0ed65f314b4dfc732d9340890ffabdd3afb307cdf030fc3a8794caae052152baf45e5b44a28afa011861779d9996c8f4d708f99cfdc55223147e55e670e9b4aa519ceccc15dcf0d6e91cb365b3573f87d04a8ea35138eadae5a70f4145547192557c05baad613ce80226e9485bc089939a1a924126b1f49f09aeadbd9b721e5d0a302d16c8f34f6044495a6b1968115971675a4b8b06d87787b2ed24358b4434a571d1336f0ee26a8e713e78d48027ceb5b492843f26ebcfdf7a1abfa6e54911184152e688fc5c84a003b7329df62e2415424bd1afb611cf1bac6fc42bd6c9e779bad30dc5cc943a3db1794289c92c7bd7b1547229fda4822312900238104d8e96d9eff0f706a7ff52e6953522d69d31764e86bf5fc9fee95844c90a95b4c51d36ec0906f3f24a064d367a31a67706a4ec1f440c4e5758d5fcbb9b3584eb6bf7b16f64535ac680fae81b6c893c9aeb05711679d3dc0a7e504f44cddfe775d3364d726b94eab5e72b528b93f16e9a507df02fc75534be97b04991b92328bc9f80c4508849fe64eac851bb66a124a12f4639df7dfb897c9e0040e551b4a63ace6fe311ef7d215d1ab388657f42505af7bea0da110f28c7f419da31c612e0fc5806eee39a7092cb347951dee9245c3e75a6631ef554dc3f74229d66f775a9068a6e54f5a064ab63a225aec8b12019f52d6e4adcbdf9601871846292d8ee26750dddfb55fbe67e7ecc225ad71510a8ca8ae6d4d07a72009a</script>
-  <div class="hbe hbe-content">
-    <div class="hbe hbe-input hbe-input-shrink">
-      <input class="hbe hbe-input-field hbe-input-field-shrink" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-shrink" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-shrink">密码？</span>
-      </label>
-    </div>
-  </div>
-</div>
-<script src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+    <title>Steam手动添加愿望单</title>
+    <url>/Steam%E6%89%8B%E5%8A%A8%E6%B7%BB%E5%8A%A0%E6%84%BF%E6%9C%9B%E5%8D%95/</url>
+    <content><![CDATA[<ul>
+<li>在浏览器无法显示锁区游戏时手动添加任意游戏至愿望单<a id="more"></a>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">javascript:AddToWishlist( AppID,</span><br><span class="line"><span class="string">&#x27;add_to_wishlist_area&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;add_to_wishlist_area_success&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;add_to_wishlist_area_fail&#x27;</span>,</span><br><span class="line"><span class="string">&quot;1_4_4__145_2&quot;</span>,</span><br><span class="line"><span class="string">&#x27;add_to_wishlist_area2&#x27;</span> );</span><br></pre></td></tr></table></figure></li>
+</ul>
+]]></content>
+      <categories>
+        <category>生活娱乐</category>
+      </categories>
+      <tags>
+        <tag>游戏</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>偶然发现的某盘&quot;漏洞&quot;</title>
+    <url>/%E5%81%B6%E7%84%B6%E5%8F%91%E7%8E%B0%E7%9A%84%E6%9F%90%E7%9B%98%E6%BC%8F%E6%B4%9E/</url>
+    <content><![CDATA[<ul>
+<li><p>偶然得到一个网盘链接但是没有密码<a id="more"></a><br><img src="https://cdn.jsdelivr.net/gh/xingjiahui/CDN@latest/2020/10/19/b996dcd03a4f2276be76ab40e40bcd1b.png" alt="0"></p>
+</li>
+<li><p>习惯性的 f12，一眼就看到一个 fileview…<br><img src="https://cdn.jsdelivr.net/gh/xingjiahui/CDN@latest/2020/10/19/6afe06a1da032208d16e09e7177c0f6c.png" alt="3"></p>
+</li>
+<li><p>展开，发现了一个 id 为 folder 的元素,而且还有两个链接<br><img src="https://cdn.jsdelivr.net/gh/xingjiahui/CDN@latest/2020/10/19/a3d5f94b53d18a799a0b579e9ef0e7f4.png" alt="1"></p>
+</li>
+<li><p>点击链接即可访问子文件夹，无需密码？<br><img src="https://cdn.jsdelivr.net/gh/xingjiahui/CDN@latest/2020/10/19/321c9bc11c9c32f9dd69713423abc2a5.png" alt="2"></p>
+</li>
+<li><p>限制：只可以访问子文件夹以及子文件夹中的文件,无法访问分享根目录文件。</p>
+</li>
+</ul>
+]]></content>
       <categories>
         <category>不正经研究</category>
       </categories>
       <tags>
-        <tag>V2Ray</tag>
+        <tag>前端</tag>
+        <tag>网络</tag>
+        <tag>网安</tag>
       </tags>
   </entry>
 </search>
