@@ -1,6 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>JDBC简单使用</title>
+    <url>/JDBC%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<ul>
+<li>使用jdbc连接MySQL数据库的简单(基础)步骤：<a id="more"></a></li>
+<li>新建数据库utils类<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">JdbcUtils</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span>  <span class="keyword">static</span>   Connection con;</span><br><span class="line">    <span class="keyword">static</span>&#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            Class.forName(<span class="string">&quot;com.mysql.cj.jdbc.Driver&quot;</span>);</span><br><span class="line">            con = DriverManager.getConnection(<span class="string">&quot;jdbc:mysql://localhost/table?useUnicode=true&amp;characterEncoding=utf8&amp;serverTimezone=UTC&quot;</span>, <span class="string">&quot;username&quot;</span>, <span class="string">&quot;password&quot;</span>);</span><br><span class="line">        &#125; <span class="keyword">catch</span> (ClassNotFoundException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125; <span class="keyword">catch</span> (SQLException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span>  <span class="keyword">static</span>  Connection   <span class="title">getConnect</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span>    con;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>自定义查询<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">getInfo</span><span class="params">(String... columns)</span> <span class="keyword">throws</span> SQLException </span>&#123;</span><br><span class="line">        <span class="comment">// 建立连接</span></span><br><span class="line">        Connection conn = JdbcUtils.getConn();</span><br><span class="line">        <span class="comment">// 构造sql语句</span></span><br><span class="line">        String sql = <span class="string">&quot; select  *  from  table&quot;</span>;</span><br><span class="line">        <span class="comment">// 预编译sql语句</span></span><br><span class="line">        PreparedStatement preparedStatement = conn.prepareStatement(sql);</span><br><span class="line">        <span class="comment">// 执行语句 将查询结果存入result中</span></span><br><span class="line">        ResultSet result = preparedStatement.executeQuery();</span><br><span class="line">        <span class="comment">// 通过遍历输出查询到的数据</span></span><br><span class="line">        <span class="keyword">while</span> (result.next()) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; columns.length; i++) &#123;</span><br><span class="line">                System.out.print(result.getObject(columns[i]) + <span class="string">&quot;\t&quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            System.out.println();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+主函数调用格式：  <figure class="highlight java"><table><tr><td class="code"><pre><span class="line">classname.getInfo(<span class="string">&quot;key1&quot;</span>,<span class="string">&quot;key2&quot;</span>,<span class="string">&quot;key3&quot;</span>,<span class="string">&quot;key4&quot;</span>);</span><br></pre></td></tr></table></figure></li>
+<li>自定义插入<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">insert</span><span class="params">(Object obj)</span> <span class="keyword">throws</span> SQLException </span>&#123;</span><br><span class="line">        Connection con = JdbcUtils.getConnect();</span><br><span class="line">        String sql = <span class="string">&quot;insert  into  table values(?,?,?,?)&quot;</span>;</span><br><span class="line">        PreparedStatement preparedStatement = con.prepareStatement(sql);</span><br><span class="line">        preparedStatement.setObject(<span class="number">1</span>, obj.getId());</span><br><span class="line">        preparedStatement.setObject(<span class="number">2</span>, obj.getEmpName());</span><br><span class="line">        preparedStatement.setObject(<span class="number">3</span>, obj.getDept_code());</span><br><span class="line">        preparedStatement.setObject(<span class="number">4</span>, obj.getHire_date());</span><br><span class="line">        preparedStatement.executeUpdate();</span><br><span class="line">        System.out.println(<span class="string">&quot;插入数据成功.&quot;</span>);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></li>
+<li>自定义删除  <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">deleteObj</span><span class="params">(<span class="keyword">int</span> id)</span> <span class="keyword">throws</span> SQLException </span>&#123;</span><br><span class="line">        Connection con = JdbcUtils.getConnect();</span><br><span class="line">        String sql = <span class="string">&quot;delete from table where id = &quot;</span> + id;</span><br><span class="line">        PreparedStatement preparedStatement = con.prepareStatement(sql);</span><br><span class="line">        preparedStatement.executeUpdate();</span><br><span class="line">        System.out.println(<span class="string">&quot;删除成功。&quot;</span>);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></li>
+<li>自定义更改<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">altObj</span><span class="params">(<span class="keyword">int</span> id)</span> <span class="keyword">throws</span> SQLException </span>&#123;</span><br><span class="line">        Connection con = JdbcUtils.getConnect();</span><br><span class="line">        System.out</span><br><span class="line">                .println(<span class="string">&quot;输入要更改的键,可选: key1,key2,key3,key4,&quot;</span>);</span><br><span class="line">        String column = sc.next();</span><br><span class="line">        System.out.println(<span class="string">&quot;将修改&quot;</span> + column + <span class="string">&quot;为:&quot;</span>);</span><br><span class="line">        String alt = sc.next();</span><br><span class="line">        String sql = <span class="string">&quot;update table set &quot;</span> + column + <span class="string">&quot; = ? where id = ?&quot;</span>;</span><br><span class="line">        PreparedStatement preparedStatement = con.prepareStatement(sql);</span><br><span class="line">        preparedStatement.setObject(<span class="number">1</span>, alt);</span><br><span class="line">        preparedStatement.setObject(<span class="number">2</span>, id);</span><br><span class="line">        preparedStatement.executeUpdate();</span><br><span class="line">        System.out.println(<span class="string">&quot;更改成功。&quot;</span>);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>MySQL</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>JavaScanner中文输入乱码解决</title>
+    <url>/JavaScanner%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<p>&emsp;&emsp;最近在做Java项目时遇到了一个问题：在使用JDBC向MySQL数据库中插入数据时中文值会变成乱码，但是从数据库中查询数据时中文显示正常。因此乱码产生原因应该在输入过程。<a id="more"></a><br>&emsp;&emsp;推测原因是使用Scanner类创建的输入流输入中文时编码转换产生错误。<br>示例代码如下</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Scanner sc = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">        String sc_str = sc.next();</span><br><span class="line">        String def_str = <span class="string">&quot;你好。&quot;</span>;</span><br><span class="line">        System.out.println(sc_str + def_str);</span><br><span class="line">        sc.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>示例结果如下<br><img src="https://cdn.jsdelivr.net/gh/xingjiahui/CDN@latest/2021/01/10/965cc00b946b92e2cd6edda6bd44f6b5.png" alt="示例结果"><br>&emsp;&emsp;可以看到输入的中文变成了乱码，但是预定义的字符串可以正常输出，因此确定是输入时编码存在问题。键盘的输入流的默认格式是GBK格式，控制台的字符编码以及文件编码均为UTF-8，因此造成了乱码。<br>&emsp;&emsp;解决：更改代码<code>Scanner sc = new Scanner(System.in);</code>在实例化Scanner对象时指定编码类型为GBK，即<code>Scanner sc = new Scanner(System.in, &quot;GBK&quot;);</code>。<br>&emsp;&emsp;更改后程序中文输入即可正常编码：<br><img src="https://cdn.jsdelivr.net/gh/xingjiahui/CDN@latest/2021/01/10/1196c7ba8fefab51f1ced83e211d0b27.png" alt="更改后"><br>&emsp;&emsp;备注：使用IntelliJ IDEA时无此问题，貌似IDEA自动做了优化处理。</p>
+]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Windows10右键菜单定制</title>
+    <url>/Win10%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95%E5%AE%9A%E5%88%B6/</url>
+    <content><![CDATA[<h4 id="删除“使用WindowsDefender扫描”选项"><a href="#删除“使用WindowsDefender扫描”选项" class="headerlink" title="删除“使用WindowsDefender扫描”选项"></a>删除“使用WindowsDefender扫描”选项</h4><a id="more"></a>
+<p>&emsp;&emsp;<code>Win+R</code>输入<code>regedit</code>，回车，打开注册表编辑器。定位至<code>HKEY_CLASSES_ROOT\*\shellex\~ContextMenuHandlers\EPP</code>，右键删除EPP项。再定位至<code>HKEY_CLASSES_ROOT\Directory\shellex\~ContextMenuHandlers\EPP</code>，右键删除该EPP项，Done.</p>
+<h4 id="隐藏选项至shift-右键菜单"><a href="#隐藏选项至shift-右键菜单" class="headerlink" title="隐藏选项至shift+右键菜单"></a>隐藏选项至shift+右键菜单</h4><ul>
+<li>隐藏前：<br><img src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-b1ebbd3c-ca49-405b-957b-effe60782276/89ef416c-d9e5-42dc-8aba-e2fdeeff94c9.png" alt="隐藏前"></li>
+<li>隐藏后：<br><img src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-b1ebbd3c-ca49-405b-957b-effe60782276/7154861a-f92e-4eb7-b7bc-4d312b0978db.png" alt="隐藏后">  </li>
+<li>隐藏后可以使用shift+右键显示隐藏的菜单项。</li>
+<li>操作：定位至需要隐藏的右键菜单项目，例如VSCode的文件夹菜单项位于<code>HKEY_CLASSES_ROOT\Directory\shell\VSCode</code>，在该文件夹中新建名为<code>Extended</code>的字符串值即可。<br><img src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-b1ebbd3c-ca49-405b-957b-effe60782276/d7c65526-8d75-476a-95e7-9db0883fb3e9.png" alt="Extended"></li>
+</ul>
+]]></content>
+      <categories>
+        <category>不正经研究</category>
+      </categories>
+      <tags>
+        <tag>Windows</tag>
+        <tag>操作系统</tag>
+        <tag>Win10</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Steam手动添加愿望单</title>
     <url>/Steam%E6%89%8B%E5%8A%A8%E6%B7%BB%E5%8A%A0%E6%84%BF%E6%9C%9B%E5%8D%95/</url>
     <content><![CDATA[<ul>
@@ -59,62 +115,6 @@
       <tags>
         <tag>前端</tag>
         <tag>web</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>JDBC简单使用</title>
-    <url>/JDBC%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/</url>
-    <content><![CDATA[<ul>
-<li>使用jdbc连接MySQL数据库的简单(基础)步骤：<a id="more"></a></li>
-<li>新建数据库utils类<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">JdbcUtils</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span>  <span class="keyword">static</span>   Connection con;</span><br><span class="line">    <span class="keyword">static</span>&#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            Class.forName(<span class="string">&quot;com.mysql.cj.jdbc.Driver&quot;</span>);</span><br><span class="line">            con = DriverManager.getConnection(<span class="string">&quot;jdbc:mysql://localhost/table?useUnicode=true&amp;characterEncoding=utf8&amp;serverTimezone=UTC&quot;</span>, <span class="string">&quot;username&quot;</span>, <span class="string">&quot;password&quot;</span>);</span><br><span class="line">        &#125; <span class="keyword">catch</span> (ClassNotFoundException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125; <span class="keyword">catch</span> (SQLException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span>  <span class="keyword">static</span>  Connection   <span class="title">getConnect</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span>    con;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li>自定义查询<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">getInfo</span><span class="params">(String... columns)</span> <span class="keyword">throws</span> SQLException </span>&#123;</span><br><span class="line">        <span class="comment">// 建立连接</span></span><br><span class="line">        Connection conn = JdbcUtils.getConn();</span><br><span class="line">        <span class="comment">// 构造sql语句</span></span><br><span class="line">        String sql = <span class="string">&quot; select  *  from  table&quot;</span>;</span><br><span class="line">        <span class="comment">// 预编译sql语句</span></span><br><span class="line">        PreparedStatement preparedStatement = conn.prepareStatement(sql);</span><br><span class="line">        <span class="comment">// 执行语句 将查询结果存入result中</span></span><br><span class="line">        ResultSet result = preparedStatement.executeQuery();</span><br><span class="line">        <span class="comment">// 通过遍历输出查询到的数据</span></span><br><span class="line">        <span class="keyword">while</span> (result.next()) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; columns.length; i++) &#123;</span><br><span class="line">                System.out.print(result.getObject(columns[i]) + <span class="string">&quot;\t&quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            System.out.println();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-主函数调用格式：  <figure class="highlight java"><table><tr><td class="code"><pre><span class="line">classname.getInfo(<span class="string">&quot;key1&quot;</span>,<span class="string">&quot;key2&quot;</span>,<span class="string">&quot;key3&quot;</span>,<span class="string">&quot;key4&quot;</span>);</span><br></pre></td></tr></table></figure></li>
-<li>自定义插入<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">insert</span><span class="params">(Object obj)</span> <span class="keyword">throws</span> SQLException </span>&#123;</span><br><span class="line">        Connection con = JdbcUtils.getConnect();</span><br><span class="line">        String sql = <span class="string">&quot;insert  into  table values(?,?,?,?)&quot;</span>;</span><br><span class="line">        PreparedStatement preparedStatement = con.prepareStatement(sql);</span><br><span class="line">        preparedStatement.setObject(<span class="number">1</span>, obj.getId());</span><br><span class="line">        preparedStatement.setObject(<span class="number">2</span>, obj.getEmpName());</span><br><span class="line">        preparedStatement.setObject(<span class="number">3</span>, obj.getDept_code());</span><br><span class="line">        preparedStatement.setObject(<span class="number">4</span>, obj.getHire_date());</span><br><span class="line">        preparedStatement.executeUpdate();</span><br><span class="line">        System.out.println(<span class="string">&quot;插入数据成功.&quot;</span>);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></li>
-<li>自定义删除  <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">deleteObj</span><span class="params">(<span class="keyword">int</span> id)</span> <span class="keyword">throws</span> SQLException </span>&#123;</span><br><span class="line">        Connection con = JdbcUtils.getConnect();</span><br><span class="line">        String sql = <span class="string">&quot;delete from table where id = &quot;</span> + id;</span><br><span class="line">        PreparedStatement preparedStatement = con.prepareStatement(sql);</span><br><span class="line">        preparedStatement.executeUpdate();</span><br><span class="line">        System.out.println(<span class="string">&quot;删除成功。&quot;</span>);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></li>
-<li>自定义更改<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">altObj</span><span class="params">(<span class="keyword">int</span> id)</span> <span class="keyword">throws</span> SQLException </span>&#123;</span><br><span class="line">        Connection con = JdbcUtils.getConnect();</span><br><span class="line">        System.out</span><br><span class="line">                .println(<span class="string">&quot;输入要更改的键,可选: key1,key2,key3,key4,&quot;</span>);</span><br><span class="line">        String column = sc.next();</span><br><span class="line">        System.out.println(<span class="string">&quot;将修改&quot;</span> + column + <span class="string">&quot;为:&quot;</span>);</span><br><span class="line">        String alt = sc.next();</span><br><span class="line">        String sql = <span class="string">&quot;update table set &quot;</span> + column + <span class="string">&quot; = ? where id = ?&quot;</span>;</span><br><span class="line">        PreparedStatement preparedStatement = con.prepareStatement(sql);</span><br><span class="line">        preparedStatement.setObject(<span class="number">1</span>, alt);</span><br><span class="line">        preparedStatement.setObject(<span class="number">2</span>, id);</span><br><span class="line">        preparedStatement.executeUpdate();</span><br><span class="line">        System.out.println(<span class="string">&quot;更改成功。&quot;</span>);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></li>
-</ul>
-]]></content>
-      <categories>
-        <category>笔记</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-        <tag>MySQL</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Windows10右键菜单定制</title>
-    <url>/Win10%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95%E5%AE%9A%E5%88%B6/</url>
-    <content><![CDATA[<h4 id="删除“使用WindowsDefender扫描”选项"><a href="#删除“使用WindowsDefender扫描”选项" class="headerlink" title="删除“使用WindowsDefender扫描”选项"></a>删除“使用WindowsDefender扫描”选项</h4><a id="more"></a>
-<p>&emsp;&emsp;<code>Win+R</code>输入<code>regedit</code>，回车，打开注册表编辑器。定位至<code>HKEY_CLASSES_ROOT\*\shellex\~ContextMenuHandlers\EPP</code>，右键删除EPP项。再定位至<code>HKEY_CLASSES_ROOT\Directory\shellex\~ContextMenuHandlers\EPP</code>，右键删除该EPP项，Done.</p>
-<h4 id="隐藏选项至shift-右键菜单"><a href="#隐藏选项至shift-右键菜单" class="headerlink" title="隐藏选项至shift+右键菜单"></a>隐藏选项至shift+右键菜单</h4><ul>
-<li>隐藏前：<br><img src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-b1ebbd3c-ca49-405b-957b-effe60782276/89ef416c-d9e5-42dc-8aba-e2fdeeff94c9.png" alt="隐藏前"></li>
-<li>隐藏后：<br><img src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-b1ebbd3c-ca49-405b-957b-effe60782276/7154861a-f92e-4eb7-b7bc-4d312b0978db.png" alt="隐藏后">  </li>
-<li>隐藏后可以使用shift+右键显示隐藏的菜单项。</li>
-<li>操作：定位至需要隐藏的右键菜单项目，例如VSCode的文件夹菜单项位于<code>HKEY_CLASSES_ROOT\Directory\shell\VSCode</code>，在该文件夹中新建名为<code>Extended</code>的字符串值即可。<br><img src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-b1ebbd3c-ca49-405b-957b-effe60782276/d7c65526-8d75-476a-95e7-9db0883fb3e9.png" alt="Extended"></li>
-</ul>
-]]></content>
-      <categories>
-        <category>不正经研究</category>
-      </categories>
-      <tags>
-        <tag>Windows</tag>
-        <tag>操作系统</tag>
-        <tag>Win10</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>JavaScanner中文输入乱码解决</title>
-    <url>/JavaScanner%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98/</url>
-    <content><![CDATA[<p>&emsp;&emsp;最近在做Java项目时遇到了一个问题：在使用JDBC向MySQL数据库中插入数据时中文值会变成乱码，但是从数据库中查询数据时中文显示正常。因此乱码产生原因应该在输入过程。<a id="more"></a><br>&emsp;&emsp;推测原因是使用Scanner类创建的输入流输入中文时编码转换产生错误。<br>示例代码如下</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Scanner sc = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">        String sc_str = sc.next();</span><br><span class="line">        String def_str = <span class="string">&quot;你好。&quot;</span>;</span><br><span class="line">        System.out.println(sc_str + def_str);</span><br><span class="line">        sc.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>示例结果如下<br><img src="https://cdn.jsdelivr.net/gh/xingjiahui/CDN@latest/2021/01/10/965cc00b946b92e2cd6edda6bd44f6b5.png" alt="示例结果"><br>&emsp;&emsp;可以看到输入的中文变成了乱码，但是预定义的字符串可以正常输出，因此确定是输入时编码存在问题。键盘的输入流的默认格式是GBK格式，控制台的字符编码以及文件编码均为UTF-8，因此造成了乱码。<br>&emsp;&emsp;解决：更改代码<code>Scanner sc = new Scanner(System.in);</code>在实例化Scanner对象时指定编码类型为GBK，即<code>Scanner sc = new Scanner(System.in, &quot;GBK&quot;);</code>。<br>&emsp;&emsp;更改后程序中文输入即可正常编码：<br><img src="https://cdn.jsdelivr.net/gh/xingjiahui/CDN@latest/2021/01/10/1196c7ba8fefab51f1ced83e211d0b27.png" alt="更改后"><br>&emsp;&emsp;备注：使用IntelliJ IDEA时无此问题，貌似IDEA自动做了优化处理。</p>
-]]></content>
-      <categories>
-        <category>笔记</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
       </tags>
   </entry>
 </search>
