@@ -148,7 +148,7 @@
 <li>设置GitHub Actions 定时运行程序</li>
 <li>注意设置运行环境与IDEA build环境相同</li>
 <li>当然也可以上传至私人服务器设置定时任务</li>
-<li>由于GitHub Actions 服务器默认时区为GMT0，因此在程序起始需要设置时区为GMT+8</li>
+<li>由于GitHub Actions 服务器默认时区为GMT，因此在程序起始需要设置时区为GMT+8</li>
 </ul>
 ]]></content>
       <categories>
