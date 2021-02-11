@@ -52,6 +52,21 @@
       </tags>
   </entry>
   <entry>
+    <title>Steam手动添加愿望单</title>
+    <url>/Steam%E6%89%8B%E5%8A%A8%E6%B7%BB%E5%8A%A0%E6%84%BF%E6%9C%9B%E5%8D%95/</url>
+    <content><![CDATA[<ul>
+<li>在浏览器无法显示锁区游戏时手动添加任意游戏至愿望单<a id="more"></a>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">javascript:AddToWishlist( AppID,</span><br><span class="line"><span class="string">&#x27;add_to_wishlist_area&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;add_to_wishlist_area_success&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;add_to_wishlist_area_fail&#x27;</span>,</span><br><span class="line"><span class="string">&quot;1_4_4__145_2&quot;</span>,</span><br><span class="line"><span class="string">&#x27;add_to_wishlist_area2&#x27;</span> );</span><br></pre></td></tr></table></figure></li>
+</ul>
+]]></content>
+      <categories>
+        <category>生活娱乐</category>
+      </categories>
+      <tags>
+        <tag>游戏</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Windows10右键菜单定制</title>
     <url>/Win10%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95%E5%AE%9A%E5%88%B6/</url>
     <content><![CDATA[<h4 id="删除“使用WindowsDefender扫描”选项"><a href="#删除“使用WindowsDefender扫描”选项" class="headerlink" title="删除“使用WindowsDefender扫描”选项"></a>删除“使用WindowsDefender扫描”选项</h4><p>&emsp;&emsp;<code>Win+R</code>输入<code>regedit</code>，回车，打开注册表编辑器。定位至<a id="more"></a><code>HKEY_CLASSES_ROOT\*\shellex\~ContextMenuHandlers\EPP</code>，右键删除EPP项。再定位至<code>HKEY_CLASSES_ROOT\Directory\shellex\~ContextMenuHandlers\EPP</code>，右键删除该EPP项，Done.</p>
@@ -72,47 +87,7 @@
       </tags>
   </entry>
   <entry>
-    <title>Steam手动添加愿望单</title>
-    <url>/Steam%E6%89%8B%E5%8A%A8%E6%B7%BB%E5%8A%A0%E6%84%BF%E6%9C%9B%E5%8D%95/</url>
-    <content><![CDATA[<ul>
-<li>在浏览器无法显示锁区游戏时手动添加任意游戏至愿望单<a id="more"></a>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">javascript:AddToWishlist( AppID,</span><br><span class="line"><span class="string">&#x27;add_to_wishlist_area&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;add_to_wishlist_area_success&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;add_to_wishlist_area_fail&#x27;</span>,</span><br><span class="line"><span class="string">&quot;1_4_4__145_2&quot;</span>,</span><br><span class="line"><span class="string">&#x27;add_to_wishlist_area2&#x27;</span> );</span><br></pre></td></tr></table></figure></li>
-</ul>
-]]></content>
-      <categories>
-        <category>生活娱乐</category>
-      </categories>
-      <tags>
-        <tag>游戏</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>偶然发现的某盘&quot;漏洞&quot;</title>
-    <url>/%E5%81%B6%E7%84%B6%E5%8F%91%E7%8E%B0%E7%9A%84%E6%9F%90%E7%9B%98%E6%BC%8F%E6%B4%9E/</url>
-    <content><![CDATA[<ul>
-<li><p>偶然得到一个网盘链接但是没有密码<a id="more"></a><br><img src="https://cdn.jsdelivr.net/gh/xingjiahui/CDN@latest/2020/10/19/b996dcd03a4f2276be76ab40e40bcd1b.png" alt="0"></p>
-</li>
-<li><p>习惯性的 f12，一眼就看到一个 fileview…<br><img src="https://cdn.jsdelivr.net/gh/xingjiahui/CDN@latest/2020/10/19/6afe06a1da032208d16e09e7177c0f6c.png" alt="3"></p>
-</li>
-<li><p>展开，发现了一个 id 为 folder 的元素,而且还有两个链接<br><img src="https://cdn.jsdelivr.net/gh/xingjiahui/CDN@latest/2020/10/19/a3d5f94b53d18a799a0b579e9ef0e7f4.png" alt="1"></p>
-</li>
-<li><p>点击链接即可访问子文件夹，无需密码？<br><img src="https://cdn.jsdelivr.net/gh/xingjiahui/CDN@latest/2020/10/19/321c9bc11c9c32f9dd69713423abc2a5.png" alt="2"></p>
-</li>
-<li><p>限制：只可以访问子文件夹以及子文件夹中的文件,无法访问分享根目录文件。</p>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>不正经研究</category>
-      </categories>
-      <tags>
-        <tag>前端</tag>
-        <tag>网络</tag>
-        <tag>网安</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>记一次自动打卡程序编写过程</title>
+    <title>一个简单自动打卡程序</title>
     <url>/%E8%87%AA%E5%8A%A8%E6%89%93%E5%8D%A1/</url>
     <content><![CDATA[<h2 id="抓包"><a href="#抓包" class="headerlink" title="抓包"></a>抓包</h2><ul>
 <li><p>使用BurpSuite进行抓包，打卡程序客户端为浏览器因此抓包很简单顺利。使用Filter过滤掉无用数据。也可在Options中设置Intercept Responce以拦截一些无用Response  <a id="more"></a><br><img src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-b1ebbd3c-ca49-405b-957b-effe60782276/82a7e3a5-bf1a-4b41-9727-5da47c0fb985.png" alt="filter"></p>
@@ -156,6 +131,31 @@
       </categories>
       <tags>
         <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>偶然发现的某盘&quot;漏洞&quot;</title>
+    <url>/%E5%81%B6%E7%84%B6%E5%8F%91%E7%8E%B0%E7%9A%84%E6%9F%90%E7%9B%98%E6%BC%8F%E6%B4%9E/</url>
+    <content><![CDATA[<ul>
+<li><p>偶然得到一个网盘链接但是没有密码<a id="more"></a><br><img src="https://cdn.jsdelivr.net/gh/xingjiahui/CDN@latest/2020/10/19/b996dcd03a4f2276be76ab40e40bcd1b.png" alt="0"></p>
+</li>
+<li><p>习惯性的 f12，一眼就看到一个 fileview…<br><img src="https://cdn.jsdelivr.net/gh/xingjiahui/CDN@latest/2020/10/19/6afe06a1da032208d16e09e7177c0f6c.png" alt="3"></p>
+</li>
+<li><p>展开，发现了一个 id 为 folder 的元素,而且还有两个链接<br><img src="https://cdn.jsdelivr.net/gh/xingjiahui/CDN@latest/2020/10/19/a3d5f94b53d18a799a0b579e9ef0e7f4.png" alt="1"></p>
+</li>
+<li><p>点击链接即可访问子文件夹，无需密码？<br><img src="https://cdn.jsdelivr.net/gh/xingjiahui/CDN@latest/2020/10/19/321c9bc11c9c32f9dd69713423abc2a5.png" alt="2"></p>
+</li>
+<li><p>限制：只可以访问子文件夹以及子文件夹中的文件,无法访问分享根目录文件。</p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>不正经研究</category>
+      </categories>
+      <tags>
+        <tag>前端</tag>
+        <tag>网络</tag>
+        <tag>网安</tag>
       </tags>
   </entry>
 </search>
