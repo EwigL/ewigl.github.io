@@ -23,22 +23,20 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"ewigl.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.2.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":8},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":false,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeInDown","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInDown","sidebar":"fadeInDown"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}};
   </script>
-<meta name="description" content="删除“使用WindowsDefender扫描”选项&amp;emsp;&amp;emsp;Win+R输入regedit，回车，打开注册表编辑器。定位至">
+<meta name="description" content="删除“使用WindowsDefender扫描”选项&amp;emsp;&amp;emsp;Win+R输入regedit，回车，打开注册表编辑器。定位至HKEY_CLASSES_ROOT\*\shellex\~ContextMenuHandlers\EPP，右键删除EPP项。再定位至HKEY_CLASSES_ROOT\Directory\shellex\~ContextMenuHandlers\EPP，右键删除该E">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Windows10右键菜单定制">
 <meta property="og:url" content="http://ewigl.github.io/Win10%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95%E5%AE%9A%E5%88%B6/index.html">
 <meta property="og:site_name" content="Licht&#39;s Blog">
-<meta property="og:description" content="删除“使用WindowsDefender扫描”选项&amp;emsp;&amp;emsp;Win+R输入regedit，回车，打开注册表编辑器。定位至">
+<meta property="og:description" content="删除“使用WindowsDefender扫描”选项&amp;emsp;&amp;emsp;Win+R输入regedit，回车，打开注册表编辑器。定位至HKEY_CLASSES_ROOT\*\shellex\~ContextMenuHandlers\EPP，右键删除EPP项。再定位至HKEY_CLASSES_ROOT\Directory\shellex\~ContextMenuHandlers\EPP，右键删除该E">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-b1ebbd3c-ca49-405b-957b-effe60782276/89ef416c-d9e5-42dc-8aba-e2fdeeff94c9.png">
 <meta property="og:image" content="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-b1ebbd3c-ca49-405b-957b-effe60782276/7154861a-f92e-4eb7-b7bc-4d312b0978db.png">
 <meta property="og:image" content="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-b1ebbd3c-ca49-405b-957b-effe60782276/d7c65526-8d75-476a-95e7-9db0883fb3e9.png">
 <meta property="article:published_time" content="2021-01-22T06:03:29.000Z">
-<meta property="article:modified_time" content="2021-02-08T07:23:38.837Z">
+<meta property="article:modified_time" content="2021-02-12T11:11:43.027Z">
 <meta property="article:author" content="EwigLicht">
-<meta property="article:tag" content="Windows">
-<meta property="article:tag" content="操作系统">
-<meta property="article:tag" content="Win10">
+<meta property="article:tag" content="Windows10">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-b1ebbd3c-ca49-405b-957b-effe60782276/89ef416c-d9e5-42dc-8aba-e2fdeeff94c9.png">
 
@@ -198,7 +196,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-count">7</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -298,7 +296,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-02-08 15:23:38" itemprop="dateModified" datetime="2021-02-08T15:23:38+08:00">2021-02-08</time>
+        <time title="修改时间：2021-02-12 19:11:43" itemprop="dateModified" datetime="2021-02-12T19:11:43+08:00">2021-02-12</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -320,12 +318,16 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h4 id="删除“使用WindowsDefender扫描”选项"><a href="#删除“使用WindowsDefender扫描”选项" class="headerlink" title="删除“使用WindowsDefender扫描”选项"></a>删除“使用WindowsDefender扫描”选项</h4><p>&emsp;&emsp;<code>Win+R</code>输入<code>regedit</code>，回车，打开注册表编辑器。定位至<a id="more"></a><code>HKEY_CLASSES_ROOT\*\shellex\~ContextMenuHandlers\EPP</code>，右键删除EPP项。再定位至<code>HKEY_CLASSES_ROOT\Directory\shellex\~ContextMenuHandlers\EPP</code>，右键删除该EPP项，Done.</p>
+        <h4 id="删除“使用WindowsDefender扫描”选项"><a href="#删除“使用WindowsDefender扫描”选项" class="headerlink" title="删除“使用WindowsDefender扫描”选项"></a>删除“使用WindowsDefender扫描”选项</h4><p>&emsp;&emsp;<code>Win+R</code>输入<code>regedit</code>，回车，打开注册表编辑器。定位至<code>HKEY_CLASSES_ROOT\*\shellex\~ContextMenuHandlers\EPP</code>，右键删除EPP项。再定位至<code>HKEY_CLASSES_ROOT\Directory\shellex\~ContextMenuHandlers\EPP</code>，右键删除该EPP项，Done.</p>
 <h4 id="隐藏选项至shift-右键菜单"><a href="#隐藏选项至shift-右键菜单" class="headerlink" title="隐藏选项至shift+右键菜单"></a>隐藏选项至shift+右键菜单</h4><ul>
-<li>隐藏前：<br><img src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-b1ebbd3c-ca49-405b-957b-effe60782276/89ef416c-d9e5-42dc-8aba-e2fdeeff94c9.png" alt="隐藏前"></li>
-<li>隐藏后：<br><img src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-b1ebbd3c-ca49-405b-957b-effe60782276/7154861a-f92e-4eb7-b7bc-4d312b0978db.png" alt="隐藏后">  </li>
-<li>隐藏后可以使用shift+右键显示隐藏的菜单项。  </li>
-<li>操作：定位至需要隐藏的右键菜单项目，例如VSCode的文件夹菜单项位于<code>HKEY_CLASSES_ROOT\Directory\shell\VSCode</code>，在该文件夹中新建名为<code>Extended</code>的字符串值即可。<br><img src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-b1ebbd3c-ca49-405b-957b-effe60782276/d7c65526-8d75-476a-95e7-9db0883fb3e9.png" alt="Extended"></li>
+<li><p>隐藏前：<br><img src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-b1ebbd3c-ca49-405b-957b-effe60782276/89ef416c-d9e5-42dc-8aba-e2fdeeff94c9.png" alt="隐藏前">  </p>
+</li>
+<li><p>隐藏后：<br><img src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-b1ebbd3c-ca49-405b-957b-effe60782276/7154861a-f92e-4eb7-b7bc-4d312b0978db.png" alt="隐藏后">  </p>
+</li>
+<li><p>隐藏后可以使用shift+右键显示隐藏的菜单项。  </p>
+</li>
+<li><p>操作：定位至需要隐藏的右键菜单项目，例如VSCode的文件夹菜单项位于<code>HKEY_CLASSES_ROOT\Directory\shell\VSCode</code>，在该文件夹中新建名为<code>Extended</code>的字符串值即可。<br><img src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-b1ebbd3c-ca49-405b-957b-effe60782276/d7c65526-8d75-476a-95e7-9db0883fb3e9.png" alt="Extended"></p>
+</li>
 </ul>
 
     </div>
@@ -354,9 +356,7 @@
 </div>
 
           <div class="post-tags">
-              <a href="/tags/Windows/" rel="tag"><i class="fa fa-tag"></i> Windows</a>
-              <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" rel="tag"><i class="fa fa-tag"></i> 操作系统</a>
-              <a href="/tags/Win10/" rel="tag"><i class="fa fa-tag"></i> Win10</a>
+              <a href="/tags/Windows10/" rel="tag"><i class="fa fa-tag"></i> Windows10</a>
           </div>
 
         
