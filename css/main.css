@@ -1958,7 +1958,7 @@ pre code {
 }
 @media (max-width: 991px) {
   .post-body {
-    text-align: justify;
+    text-align: left;
   }
 }
 .post-body h1,
