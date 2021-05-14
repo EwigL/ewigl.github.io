@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.3.0">
+<meta name="generator" content="Hexo 5.4.0">
 
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
@@ -16,13 +16,10 @@
 
 
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.2/css/all.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css" integrity="sha256-2H3fkXt6FEmrReK448mDVGKb3WW2ZZw35gI7vqHOE4Y=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script class="hexo-configurations">
-    var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"ewigl.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.2.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":8},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":false,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeInDown","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInDown","sidebar":"fadeInDown"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}};
-  </script>
+<script class="next-config" data-name="main" type="application/json">{&quot;hostname&quot;:&quot;ewigl.github.io&quot;,&quot;root&quot;:&quot;&#x2F;&quot;,&quot;images&quot;:&quot;&#x2F;images&quot;,&quot;scheme&quot;:&quot;Gemini&quot;,&quot;version&quot;:&quot;8.4.0&quot;,&quot;exturl&quot;:false,&quot;sidebar&quot;:{&quot;position&quot;:&quot;left&quot;,&quot;display&quot;:&quot;post&quot;,&quot;padding&quot;:18,&quot;offset&quot;:8},&quot;copycode&quot;:true,&quot;bookmark&quot;:{&quot;enable&quot;:false,&quot;color&quot;:&quot;#222&quot;,&quot;save&quot;:&quot;auto&quot;},&quot;fancybox&quot;:false,&quot;mediumzoom&quot;:true,&quot;lazyload&quot;:false,&quot;pangu&quot;:true,&quot;comments&quot;:{&quot;style&quot;:&quot;tabs&quot;,&quot;active&quot;:null,&quot;storage&quot;:true,&quot;lazyload&quot;:false,&quot;nav&quot;:null},&quot;motion&quot;:{&quot;enable&quot;:true,&quot;async&quot;:false,&quot;transition&quot;:{&quot;post_block&quot;:&quot;fadeInDown&quot;,&quot;post_header&quot;:&quot;fadeInDown&quot;,&quot;post_body&quot;:&quot;fadeInDown&quot;,&quot;coll_header&quot;:&quot;fadeInDown&quot;,&quot;sidebar&quot;:&quot;fadeInDown&quot;}},&quot;prism&quot;:false,&quot;i18n&quot;:{&quot;placeholder&quot;:&quot;搜索...&quot;,&quot;empty&quot;:&quot;没有找到任何搜索结果：${query}&quot;,&quot;hits_time&quot;:&quot;找到 ${hits} 个搜索结果（用时 ${time} 毫秒）&quot;,&quot;hits&quot;:&quot;找到 ${hits} 个搜索结果&quot;}}</script>
 <meta name="description" content="抓包 使用BurpSuite进行抓包，打卡程序客户端为浏览器因此抓包很简单顺利。使用Filter过滤掉无用数据。也可在Options中设置Intercept Responce以拦截一些无用Response">
 <meta property="og:type" content="article">
 <meta property="og:title" content="一个简单自动打卡程序">
@@ -45,56 +42,19 @@
 <link rel="canonical" href="http://ewigl.github.io/%E8%87%AA%E5%8A%A8%E6%89%93%E5%8D%A1/">
 
 
-<script class="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome : false,
-    isPost : true,
-    lang   : 'zh-CN'
-  };
-</script>
-<title>一个简单自动打卡程序 | Licht's Blog</title>
+
+<script class="next-config" data-name="page" type="application/json">{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:false,&quot;isPost&quot;:true,&quot;lang&quot;:&quot;zh-CN&quot;,&quot;comments&quot;:true,&quot;permalink&quot;:&quot;http:&#x2F;&#x2F;ewigl.github.io&#x2F;%E8%87%AA%E5%8A%A8%E6%89%93%E5%8D%A1&#x2F;&quot;,&quot;path&quot;:&quot;自动打卡&#x2F;&quot;,&quot;title&quot;:&quot;一个简单自动打卡程序&quot;}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">&quot;&quot;</script>
+<title>一个简单自动打卡程序 | Licht's Blog</title><script src="/js/config.js"></script>
   
 
 
 
 
   <noscript>
-  <style>
-  body { margin-top: 2rem; }
-
-  .use-motion .menu-item,
-  .use-motion .sidebar,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header {
-    visibility: visible;
-  }
-
-  .use-motion .header,
-  .use-motion .site-brand-container .toggle,
-  .use-motion .footer { opacity: initial; }
-
-  .use-motion .site-title,
-  .use-motion .site-subtitle,
-  .use-motion .custom-logo-image {
-    opacity: initial;
-    top: initial;
-  }
-
-  .use-motion .logo-line {
-    transform: scaleX(1);
-  }
-
-  .search-pop-overlay, .sidebar-nav { display: none; }
-  .sidebar-panel { display: block; }
-  </style>
-</noscript>
-
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
@@ -184,7 +144,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-count">4</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -197,7 +157,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -245,7 +205,7 @@
     </header>
 
     
-  <div class="back-to-top" role="button">
+  <div class="back-to-top" role="button" aria-label="返回顶部">
     <i class="fa fa-arrow-up"></i>
     <span>0%</span>
   </div>
@@ -320,7 +280,7 @@
     
     <div class="post-body" itemprop="articleBody">
         <h2 id="抓包"><a href="#抓包" class="headerlink" title="抓包"></a>抓包</h2><ul>
-<li><p>使用BurpSuite进行抓包，打卡程序客户端为浏览器因此抓包很简单顺利。使用Filter过滤掉无用数据。也可在Options中设置Intercept Responce以拦截一些无用Response  <a id="more"></a><br><img src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-b1ebbd3c-ca49-405b-957b-effe60782276/82a7e3a5-bf1a-4b41-9727-5da47c0fb985.png" alt="filter"></p>
+<li><p>使用BurpSuite进行抓包，打卡程序客户端为浏览器因此抓包很简单顺利。使用Filter过滤掉无用数据。也可在Options中设置Intercept Responce以拦截一些无用Response  <span id="more"></span><br><img src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-b1ebbd3c-ca49-405b-957b-effe60782276/82a7e3a5-bf1a-4b41-9727-5da47c0fb985.png" alt="filter"></p>
 </li>
 <li><p>对抓取到的数据进行分析，经过分析发现，提交表单使用常用的POST请求。<br><img src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-b1ebbd3c-ca49-405b-957b-effe60782276/d301eb70-36eb-446a-98a6-1276a321a004.png" alt="post"></p>
 </li>
@@ -342,12 +302,20 @@
 <li>程序主要包含Start入口，ConfigData储存数据，HttpUtil网络相关方法，Login登录，Submit提交表单，SendMail发送程序报告至邮箱。</li>
 <li>Start入口，主函数中调用登录以及提交表单方法。<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">startLogin</span><span class="params">()</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">		ConfigData.setCookie(Login.getAccess());</span><br><span class="line">		<span class="keyword">if</span> (Login.isOff()) &#123;</span><br><span class="line">			System.out.println(<span class="string">&quot;登录失败次数过多，程序已退出&quot;</span>);</span><br><span class="line">			SendMail.send(<span class="keyword">new</span> String[] &#123; <span class="string">&quot;提交失败&quot;</span>, <span class="string">&quot;登录失败次数过多，程序已退出。请检查程序&quot;</span> &#125;);</span><br><span class="line">			System.exit(<span class="number">0</span>);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">		TimeZone.setDefault(TimeZone.getTimeZone(<span class="string">&quot;GMT+8&quot;</span>));</span><br><span class="line">		System.out.println(<span class="string">&quot;登录......&quot;</span>);</span><br><span class="line">		startLogin();</span><br><span class="line">		Submit.submit();</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure></li>
 <li>Login登录,部分代码<br>// GetAccess方法返回Cookie<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">JSONObject response = JSONObject</span><br><span class="line">				.fromObject(HttpUtil.sendPost(ConfigData.loginUrl, <span class="string">&quot;username=&quot;</span> + ConfigData.username, route));</span><br><span class="line">		<span class="keyword">if</span> (response.getJSONObject(<span class="string">&quot;data&quot;</span>).get(<span class="string">&quot;authenticated&quot;</span>).toString().equals(<span class="string">&quot;true&quot;</span>)) &#123;</span><br><span class="line">			System.out.println(<span class="string">&quot;已获取授权......&quot;</span>);</span><br><span class="line">			<span class="keyword">return</span> <span class="string">&quot;route=&quot;</span> + ConfigData.route + <span class="string">&quot;; healthLoginName1=&quot;</span> + ConfigData.healthLoginName1</span><br><span class="line">					+ <span class="string">&quot;; healthLastLoginTime=&quot;</span> + ConfigData.healthLastLoginTime + <span class="string">&quot;; JSESSIONID=&quot;</span></span><br><span class="line">					+ ConfigData.JSESSIONID;</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			System.out.println(<span class="string">&quot;登陆失败&quot;</span>);</span><br><span class="line">			SendMail.send(<span class="keyword">new</span> String[] &#123; <span class="string">&quot;提交失败&quot;</span>, <span class="string">&quot;获取授权失败，程序已退出。请检查程序&quot;</span> &#125;);</span><br><span class="line">			System.exit(<span class="number">0</span>);</span><br><span class="line">		&#125;</span><br></pre></td></tr></table></figure>
-// 验证登录<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">boolean</span> <span class="title">isOff</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	JSONObject response = JSONObject</span><br><span class="line">			.fromObject(HttpUtil.sendPost(ConfigData.loginUrl, <span class="string">&quot;username=&quot;</span> + ConfigData.username, route));</span><br><span class="line">	<span class="keyword">if</span> (response.getJSONObject(<span class="string">&quot;data&quot;</span>).get(<span class="string">&quot;authenticated&quot;</span>).toString().equals(<span class="string">&quot;true&quot;</span>)) &#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">	&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-// 获取route<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title">getRoute</span><span class="params">(HttpURLConnection conn)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">return</span> conn.getHeaderField(<span class="string">&quot;Set-Cookie&quot;</span>).split(<span class="string">&quot;;&quot;</span>)[<span class="number">0</span>].split(<span class="string">&quot;=&quot;</span>)[<span class="number">1</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-登陆成功后获取到Cookie即可进行表单提交操作。<br>// 构建表单<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">JSONObject CardForm = <span class="keyword">new</span> JSONObject(<span class="keyword">new</span> LinkedHashMap());</span><br><span class="line">CardForm.put(<span class="string">&quot;remark&quot;</span>, <span class="string">&quot;!@##^@#($#)%#(&quot;</span>);</span><br></pre></td></tr></table></figure>
-// 提交表单并获取ResponseBody<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">String AddResult = HttpUtil.sendPost(ConfigData.AddUrl, CardForm.toString(),ConfigData.getCookieHeaders());</span><br></pre></td></tr></table></figure>
-// 获取结果后发送结果至指定E-Mail，MailTitle与MailContent根据程序运行过程逐步添加/更改。<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">System.out.println(SendMail.send(<span class="keyword">new</span> String[] &#123; MailTitle, MailContent &#125;));</span><br></pre></td></tr></table></figure>
-<h2 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h2></li>
+// 验证登录<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">boolean</span> <span class="title">isOff</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	JSONObject response = JSONObject</span><br><span class="line">			.fromObject(HttpUtil.sendPost(ConfigData.loginUrl, <span class="string">&quot;username=&quot;</span> + ConfigData.username, route));</span><br><span class="line">	<span class="keyword">if</span> (response.getJSONObject(<span class="string">&quot;data&quot;</span>).get(<span class="string">&quot;authenticated&quot;</span>).toString().equals(<span class="string">&quot;true&quot;</span>)) &#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">	&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<p>// 获取route</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title">getRoute</span><span class="params">(HttpURLConnection conn)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">return</span> conn.getHeaderField(<span class="string">&quot;Set-Cookie&quot;</span>).split(<span class="string">&quot;;&quot;</span>)[<span class="number">0</span>].split(<span class="string">&quot;=&quot;</span>)[<span class="number">1</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>登陆成功后获取到Cookie即可进行表单提交操作。<br>// 构建表单</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">JSONObject CardForm = <span class="keyword">new</span> JSONObject(<span class="keyword">new</span> LinkedHashMap());</span><br><span class="line">CardForm.put(<span class="string">&quot;remark&quot;</span>, <span class="string">&quot;!@##^@#($#)%#(&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+<p>// 提交表单并获取ResponseBody</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">String AddResult = HttpUtil.sendPost(ConfigData.AddUrl, CardForm.toString(),ConfigData.getCookieHeaders());</span><br></pre></td></tr></table></figure>
+<p>// 获取结果后发送结果至指定E-Mail，MailTitle与MailContent根据程序运行过程逐步添加/更改。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">System.out.println(SendMail.send(<span class="keyword">new</span> String[] &#123; MailTitle, MailContent &#125;));</span><br></pre></td></tr></table></figure>
+
+<h2 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h2><ul>
 <li>使用IDEA将程序打包成jar</li>
 <li>上传至GitHub</li>
 <li>设置GitHub Actions 定时运行程序</li>
@@ -404,29 +372,7 @@
 
 
 
-
-
-<script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
-    }
-    if (activeClass) {
-      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
-      }
-    }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      const commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
-  }
-</script>
+<script src="/js/comments.js"></script>
 </div>
   </main>
 
@@ -448,9 +394,9 @@
 
   
   <script size="256" alpha="0.85" zIndex="-1" src="https://cdn.jsdelivr.net/npm/ribbon.js@1.0.2/dist/ribbon.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js" integrity="sha256-EdPgYcPk/IIrw7FYeuJQexva49pVRZNmt3LculEr7zM=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
 <script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
 
   
