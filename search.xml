@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Steam手动添加愿望单</title>
+    <url>/Steam%E6%89%8B%E5%8A%A8%E6%B7%BB%E5%8A%A0%E6%84%BF%E6%9C%9B%E5%8D%95/</url>
+    <content><![CDATA[<ul>
+<li>在浏览器无法显示锁区游戏时手动添加任意游戏至愿望单<span id="more"></span>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">javascript:AddToWishlist( AppID,</span><br><span class="line"><span class="string">&#x27;add_to_wishlist_area&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;add_to_wishlist_area_success&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;add_to_wishlist_area_fail&#x27;</span>,</span><br><span class="line"><span class="string">&quot;1_4_4__145_2&quot;</span>,</span><br><span class="line"><span class="string">&#x27;add_to_wishlist_area2&#x27;</span> );</span><br></pre></td></tr></table></figure></li>
+</ul>
+]]></content>
+      <categories>
+        <category>生活娱乐</category>
+      </categories>
+      <tags>
+        <tag>游戏</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Via浏览器自定义主页</title>
     <url>/Via%E6%B5%8F%E8%A7%88%E5%99%A8%E8%87%AA%E5%AE%9A%E4%B9%89%E4%B8%BB%E9%A1%B5/</url>
     <content><![CDATA[<p>&emsp;&emsp;简单的主页动画</p>
@@ -18,21 +33,6 @@
       </categories>
       <tags>
         <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Steam手动添加愿望单</title>
-    <url>/Steam%E6%89%8B%E5%8A%A8%E6%B7%BB%E5%8A%A0%E6%84%BF%E6%9C%9B%E5%8D%95/</url>
-    <content><![CDATA[<ul>
-<li>在浏览器无法显示锁区游戏时手动添加任意游戏至愿望单<span id="more"></span>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">javascript:AddToWishlist( AppID,</span><br><span class="line"><span class="string">&#x27;add_to_wishlist_area&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;add_to_wishlist_area_success&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;add_to_wishlist_area_fail&#x27;</span>,</span><br><span class="line"><span class="string">&quot;1_4_4__145_2&quot;</span>,</span><br><span class="line"><span class="string">&#x27;add_to_wishlist_area2&#x27;</span> );</span><br></pre></td></tr></table></figure></li>
-</ul>
-]]></content>
-      <categories>
-        <category>生活娱乐</category>
-      </categories>
-      <tags>
-        <tag>游戏</tag>
       </tags>
   </entry>
   <entry>
