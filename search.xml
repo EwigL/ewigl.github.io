@@ -16,26 +16,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Via浏览器自定义主页</title>
-    <url>/Via%E6%B5%8F%E8%A7%88%E5%99%A8%E8%87%AA%E5%AE%9A%E4%B9%89%E4%B8%BB%E9%A1%B5/</url>
-    <content><![CDATA[<p>&emsp;&emsp;简单的主页动画</p>
-<ul>
-<li>自定义logo:<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h4</span> <span class="attr">id</span>=<span class="string">&quot;Licht&quot;</span>&gt;</span>Licht<span class="tag">&lt;/<span class="name">h4</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<span id="more"></span></li>
-<li>自定义css:<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-id">#content</span> &#123;</span><br><span class="line">        <span class="attribute">top</span>: <span class="number">192px</span>;</span><br><span class="line">        <span class="attribute">animation</span>: fadeIn <span class="number">0.4s</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="selector-id">#Licht</span> &#123;</span><br><span class="line">        <span class="attribute">color</span>: gray;</span><br><span class="line">        <span class="attribute">width</span>: <span class="number">64px</span>;</span><br><span class="line">        <span class="attribute">margin</span>: <span class="number">0px</span> auto;</span><br><span class="line">        <span class="attribute">animation</span>: a_scale <span class="number">0.8s</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="selector-class">.search_bar</span> &#123;</span><br><span class="line">        <span class="attribute">border-bottom</span>: <span class="number">1px</span> solid gray;</span><br><span class="line">        <span class="attribute">margin-top</span>: <span class="number">64px</span>;</span><br><span class="line">        <span class="attribute">animation</span>: a_expand <span class="number">0.8s</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="selector-class">.title</span>,</span><br><span class="line">    <span class="selector-class">.url</span> &#123;</span><br><span class="line">        <span class="attribute">animation</span>: a_scale <span class="number">0.8s</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="selector-class">.search</span> &#123;</span><br><span class="line">        <span class="attribute">text-align</span>: center;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="selector-id">#search_submit</span> &#123;</span><br><span class="line">        <span class="attribute">display</span>: none <span class="meta">!important</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">@keyframes</span> a_expand &#123;</span><br><span class="line">        0% &#123;</span><br><span class="line">            <span class="attribute">max-width</span>: <span class="number">25%</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        100% &#123;</span><br><span class="line">            <span class="attribute">max-width</span>: <span class="number">100%</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">@keyframes</span> a_scale &#123;</span><br><span class="line">        0% &#123;</span><br><span class="line">            <span class="attribute">transform</span>: <span class="built_in">scale</span>(<span class="number">0.4</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        100% &#123;</span><br><span class="line">            <span class="attribute">transform</span>: <span class="built_in">scale</span>(<span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">@keyframes</span> fadeIn &#123;</span><br><span class="line">        0% &#123;</span><br><span class="line">            <span class="attribute">opacity</span>: <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        100% &#123;</span><br><span class="line">            <span class="attribute">opacity</span>: <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure></li>
-<li>效果<center>
-<iframe src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-imgbed/f1bf88d7-10e7-4626-ba2d-81231d643da5.mp4" frameborder="0" height="533"></iframe>
-</center></li>
-</ul>
-]]></content>
-      <categories>
-        <category>不正经研究</category>
-      </categories>
-      <tags>
-        <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>一个简单自动打卡程序</title>
     <url>/%E8%87%AA%E5%8A%A8%E6%89%93%E5%8D%A1/</url>
     <content><![CDATA[<h2 id="抓包"><a href="#抓包" class="headerlink" title="抓包"></a>抓包</h2><ul>
@@ -88,6 +68,26 @@
       </categories>
       <tags>
         <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Via浏览器自定义主页</title>
+    <url>/Via%E6%B5%8F%E8%A7%88%E5%99%A8%E8%87%AA%E5%AE%9A%E4%B9%89%E4%B8%BB%E9%A1%B5/</url>
+    <content><![CDATA[<p>&emsp;&emsp;简单的主页动画</p>
+<ul>
+<li>自定义logo:<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h4</span> <span class="attr">id</span>=<span class="string">&quot;Licht&quot;</span>&gt;</span>Licht<span class="tag">&lt;/<span class="name">h4</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<span id="more"></span></li>
+<li>自定义css:<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-id">#content</span> &#123;</span><br><span class="line">        <span class="attribute">top</span>: <span class="number">192px</span>;</span><br><span class="line">        <span class="attribute">animation</span>: fadeIn <span class="number">0.4s</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="selector-id">#Licht</span> &#123;</span><br><span class="line">        <span class="attribute">color</span>: gray;</span><br><span class="line">        <span class="attribute">width</span>: <span class="number">64px</span>;</span><br><span class="line">        <span class="attribute">margin</span>: <span class="number">0px</span> auto;</span><br><span class="line">        <span class="attribute">animation</span>: a_scale <span class="number">0.8s</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="selector-class">.search_bar</span> &#123;</span><br><span class="line">        <span class="attribute">border-bottom</span>: <span class="number">1px</span> solid gray;</span><br><span class="line">        <span class="attribute">margin-top</span>: <span class="number">64px</span>;</span><br><span class="line">        <span class="attribute">animation</span>: a_expand <span class="number">0.8s</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="selector-class">.title</span>,</span><br><span class="line">    <span class="selector-class">.url</span> &#123;</span><br><span class="line">        <span class="attribute">animation</span>: a_scale <span class="number">0.8s</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="selector-class">.search</span> &#123;</span><br><span class="line">        <span class="attribute">text-align</span>: center;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="selector-id">#search_submit</span> &#123;</span><br><span class="line">        <span class="attribute">display</span>: none <span class="meta">!important</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">@keyframes</span> a_expand &#123;</span><br><span class="line">        0% &#123;</span><br><span class="line">            <span class="attribute">max-width</span>: <span class="number">25%</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        100% &#123;</span><br><span class="line">            <span class="attribute">max-width</span>: <span class="number">100%</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">@keyframes</span> a_scale &#123;</span><br><span class="line">        0% &#123;</span><br><span class="line">            <span class="attribute">transform</span>: <span class="built_in">scale</span>(<span class="number">0.4</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        100% &#123;</span><br><span class="line">            <span class="attribute">transform</span>: <span class="built_in">scale</span>(<span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">@keyframes</span> fadeIn &#123;</span><br><span class="line">        0% &#123;</span><br><span class="line">            <span class="attribute">opacity</span>: <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        100% &#123;</span><br><span class="line">            <span class="attribute">opacity</span>: <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure></li>
+<li>效果<center>
+<iframe src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-imgbed/f1bf88d7-10e7-4626-ba2d-81231d643da5.mp4" frameborder="0" height="533"></iframe>
+</center></li>
+</ul>
+]]></content>
+      <categories>
+        <category>不正经研究</category>
+      </categories>
+      <tags>
+        <tag>前端</tag>
       </tags>
   </entry>
   <entry>
