@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Steam手动添加愿望单</title>
+    <url>/Steam%E6%89%8B%E5%8A%A8%E6%B7%BB%E5%8A%A0%E6%84%BF%E6%9C%9B%E5%8D%95/</url>
+    <content><![CDATA[<ul>
+<li>在浏览器无法显示锁区游戏时手动添加任意游戏至愿望单<span id="more"></span>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">javascript:AddToWishlist( AppID,</span><br><span class="line"><span class="string">&#x27;add_to_wishlist_area&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;add_to_wishlist_area_success&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;add_to_wishlist_area_fail&#x27;</span>,</span><br><span class="line"><span class="string">&quot;1_4_4__145_2&quot;</span>,</span><br><span class="line"><span class="string">&#x27;add_to_wishlist_area2&#x27;</span> );</span><br></pre></td></tr></table></figure></li>
+</ul>
+]]></content>
+      <categories>
+        <category>生活娱乐</category>
+      </categories>
+      <tags>
+        <tag>游戏</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Via浏览器自定义主页</title>
     <url>/Via%E6%B5%8F%E8%A7%88%E5%99%A8%E8%87%AA%E5%AE%9A%E4%B9%89%E4%B8%BB%E9%A1%B5/</url>
     <content><![CDATA[<p>&emsp;&emsp;简单的主页动画</p>
@@ -18,21 +33,6 @@
       </categories>
       <tags>
         <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Steam手动添加愿望单</title>
-    <url>/Steam%E6%89%8B%E5%8A%A8%E6%B7%BB%E5%8A%A0%E6%84%BF%E6%9C%9B%E5%8D%95/</url>
-    <content><![CDATA[<ul>
-<li>在浏览器无法显示锁区游戏时手动添加任意游戏至愿望单<span id="more"></span>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">javascript:AddToWishlist( AppID,</span><br><span class="line"><span class="string">&#x27;add_to_wishlist_area&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;add_to_wishlist_area_success&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;add_to_wishlist_area_fail&#x27;</span>,</span><br><span class="line"><span class="string">&quot;1_4_4__145_2&quot;</span>,</span><br><span class="line"><span class="string">&#x27;add_to_wishlist_area2&#x27;</span> );</span><br></pre></td></tr></table></figure></li>
-</ul>
-]]></content>
-      <categories>
-        <category>生活娱乐</category>
-      </categories>
-      <tags>
-        <tag>游戏</tag>
       </tags>
   </entry>
   <entry>
@@ -56,61 +56,6 @@
       </categories>
       <tags>
         <tag>Windows10</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>一个简单自动打卡程序</title>
-    <url>/%E8%87%AA%E5%8A%A8%E6%89%93%E5%8D%A1/</url>
-    <content><![CDATA[<h2 id="抓包"><a href="#抓包" class="headerlink" title="抓包"></a>抓包</h2><ul>
-<li><p>使用BurpSuite进行抓包，打卡程序客户端为浏览器因此抓包很简单顺利。使用Filter过滤掉无用数据。也可在Options中设置Intercept Responce以拦截一些无用Response  <span id="more"></span><br><img src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-b1ebbd3c-ca49-405b-957b-effe60782276/82a7e3a5-bf1a-4b41-9727-5da47c0fb985.png" alt="filter"></p>
-</li>
-<li><p>对抓取到的数据进行分析，经过分析发现，提交表单使用常用的POST请求。<br><img src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-b1ebbd3c-ca49-405b-957b-effe60782276/d301eb70-36eb-446a-98a6-1276a321a004.png" alt="post"></p>
-</li>
-<li><p>RequestBody 是一个json表单，在程序中使用JsonObject构建即可。表单中包含的时间字段使用Date或者Calendar类获取并Format，某一字段需要使用随机数填充。其余字段均为固定值。<br><img src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-b1ebbd3c-ca49-405b-957b-effe60782276/7487412e-4bdb-4916-a825-f7115ee03238.png" alt="body"></p>
-</li>
-<li><p>RequestHeader中的Cookie字段包含了四个字段，其中两个字段已加密，明显为用户用户名密码加密后的密文。但是似乎并不需要知晓加密方法。因为通过分析前面的HTTP请求部分可知此字段可通过POST请求从服务器获取。<br><img src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-b1ebbd3c-ca49-405b-957b-effe60782276/e57aaaaa-1af6-4604-b4f0-0e07dd885daa.png" alt="Cookie"></p>
-</li>
-<li><p>至此，结合前文分析，抓包部分结束。</p>
-<blockquote>
-<ul>
-<li>首先通过站内GET请求获取route字段。</li>
-<li>RequestHeader携带route，RequestBody携带用户信息，发送POST请求获取字段2、3以及JSESSIONID。</li>
-<li>Cookie携带route、字段2、3以及JSESSIONID提交表单。</li>
-</ul>
-</blockquote>
-</li>
-</ul>
-<h2 id="程序"><a href="#程序" class="headerlink" title="程序"></a>程序</h2><ul>
-<li>程序主要包含Start入口，ConfigData储存数据，HttpUtil网络相关方法，Login登录，Submit提交表单，SendMail发送程序报告至邮箱。</li>
-<li>Start入口，主函数中调用登录以及提交表单方法。<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">startLogin</span><span class="params">()</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">		ConfigData.setCookie(Login.getAccess());</span><br><span class="line">		<span class="keyword">if</span> (Login.isOff()) &#123;</span><br><span class="line">			System.out.println(<span class="string">&quot;登录失败次数过多，程序已退出&quot;</span>);</span><br><span class="line">			SendMail.send(<span class="keyword">new</span> String[] &#123; <span class="string">&quot;提交失败&quot;</span>, <span class="string">&quot;登录失败次数过多，程序已退出。请检查程序&quot;</span> &#125;);</span><br><span class="line">			System.exit(<span class="number">0</span>);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">		TimeZone.setDefault(TimeZone.getTimeZone(<span class="string">&quot;GMT+8&quot;</span>));</span><br><span class="line">		System.out.println(<span class="string">&quot;登录......&quot;</span>);</span><br><span class="line">		startLogin();</span><br><span class="line">		Submit.submit();</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure></li>
-<li>Login登录,部分代码<br>// GetAccess方法返回Cookie<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">JSONObject response = JSONObject</span><br><span class="line">				.fromObject(HttpUtil.sendPost(ConfigData.loginUrl, <span class="string">&quot;username=&quot;</span> + ConfigData.username, route));</span><br><span class="line">		<span class="keyword">if</span> (response.getJSONObject(<span class="string">&quot;data&quot;</span>).get(<span class="string">&quot;authenticated&quot;</span>).toString().equals(<span class="string">&quot;true&quot;</span>)) &#123;</span><br><span class="line">			System.out.println(<span class="string">&quot;已获取授权......&quot;</span>);</span><br><span class="line">			<span class="keyword">return</span> <span class="string">&quot;route=&quot;</span> + ConfigData.route + <span class="string">&quot;; healthLoginName1=&quot;</span> + ConfigData.healthLoginName1</span><br><span class="line">					+ <span class="string">&quot;; healthLastLoginTime=&quot;</span> + ConfigData.healthLastLoginTime + <span class="string">&quot;; JSESSIONID=&quot;</span></span><br><span class="line">					+ ConfigData.JSESSIONID;</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			System.out.println(<span class="string">&quot;登陆失败&quot;</span>);</span><br><span class="line">			SendMail.send(<span class="keyword">new</span> String[] &#123; <span class="string">&quot;提交失败&quot;</span>, <span class="string">&quot;获取授权失败，程序已退出。请检查程序&quot;</span> &#125;);</span><br><span class="line">			System.exit(<span class="number">0</span>);</span><br><span class="line">		&#125;</span><br></pre></td></tr></table></figure>
-// 验证登录<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">boolean</span> <span class="title">isOff</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	JSONObject response = JSONObject</span><br><span class="line">			.fromObject(HttpUtil.sendPost(ConfigData.loginUrl, <span class="string">&quot;username=&quot;</span> + ConfigData.username, route));</span><br><span class="line">	<span class="keyword">if</span> (response.getJSONObject(<span class="string">&quot;data&quot;</span>).get(<span class="string">&quot;authenticated&quot;</span>).toString().equals(<span class="string">&quot;true&quot;</span>)) &#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">	&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-</ul>
-<p>// 获取route</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title">getRoute</span><span class="params">(HttpURLConnection conn)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">return</span> conn.getHeaderField(<span class="string">&quot;Set-Cookie&quot;</span>).split(<span class="string">&quot;;&quot;</span>)[<span class="number">0</span>].split(<span class="string">&quot;=&quot;</span>)[<span class="number">1</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>登陆成功后获取到Cookie即可进行表单提交操作。<br>// 构建表单</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">JSONObject CardForm = <span class="keyword">new</span> JSONObject(<span class="keyword">new</span> LinkedHashMap());</span><br><span class="line">CardForm.put(<span class="string">&quot;remark&quot;</span>, <span class="string">&quot;!@##^@#($#)%#(&quot;</span>);</span><br></pre></td></tr></table></figure>
-
-<p>// 提交表单并获取ResponseBody</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">String AddResult = HttpUtil.sendPost(ConfigData.AddUrl, CardForm.toString(),ConfigData.getCookieHeaders());</span><br></pre></td></tr></table></figure>
-<p>// 获取结果后发送结果至指定E-Mail，MailTitle与MailContent根据程序运行过程逐步添加/更改。</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">System.out.println(SendMail.send(<span class="keyword">new</span> String[] &#123; MailTitle, MailContent &#125;));</span><br></pre></td></tr></table></figure>
-
-<h2 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h2><ul>
-<li>使用IDEA将程序打包成jar</li>
-<li>上传至GitHub</li>
-<li>设置GitHub Actions 定时运行程序</li>
-<li>注意设置运行环境与IDEA build环境相同</li>
-<li>当然也可以上传至私人服务器设置定时任务</li>
-<li>由于GitHub Actions 服务器默认时区为GMT，因此在程序起始需要设置时区为GMT+8</li>
-</ul>
-]]></content>
-      <categories>
-        <category>笔记</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
       </tags>
   </entry>
 </search>
